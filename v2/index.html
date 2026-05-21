@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<title>Prime Production Media — Discover the 4-step system to scale any brand</title>
+<title>Prime — Discover the 4-step system to scale any brand</title>
 <meta name="description" content="The 4-step in-house system to scale any brand: strategy, production, paid media and AI creative." />
 <link rel="icon" href="../img/P-green-on-black.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,440 +11,413 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --bg:#FFFFFF;
-  --bg-2:#FAFAF8;
-  --ink:#0F0F10;
-  --text:#1A1A1C;
-  --muted:#5A5A60;
-  --dim:#9A9AA0;
-  --line:#E8E8E5;
-  --line-2:#DCDCD8;
-  --green:#C6FF3D;
-  --green-d:#9BD117;
-  --green-text:#3F5A00;
-  --ease: cubic-bezier(.22,.61,.36,1);
-  --ease-out: cubic-bezier(.16,1,.3,1);
+  --bg:#0B0B11;
+  --bg-2:#101019;
+  --card:#16161F;
+  --card-2:#1B1B26;
+  --line:rgba(198,255,61,.18);
+  --line-soft:rgba(255,255,255,.06);
+  --text:#FFFFFF;
+  --muted:rgba(255,255,255,.66);
+  --dim:rgba(255,255,255,.42);
+  --accent:#C6FF3D;
+  --accent-2:#9BD117;
+  --accent-deep:#7AA811;
+  --red:#FF4D4D;
+  --ease:cubic-bezier(.22,.61,.36,1);
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth}
 html,body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-weight:400;line-height:1.55;overflow-x:hidden}
-body{padding-bottom:90px}
-@media (min-width:880px){ body{padding-bottom:0} }
+body{
+  background:
+    radial-gradient(700px 500px at 50% -10%, rgba(198,255,61,.06), transparent 60%),
+    radial-gradient(900px 700px at 50% 50%, rgba(198,255,61,.025), transparent 70%),
+    var(--bg);
+}
 a{color:inherit;text-decoration:none}
 img,svg{display:block;max-width:100%}
-::selection{background:var(--green);color:var(--ink)}
+::selection{background:var(--accent);color:#000}
 
-.eyebrow{font-weight:700;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
-.pd{color:var(--green-d)}
+.wrap{max-width:720px;margin:0 auto;padding:0 22px;position:relative}
+@media (min-width:880px){ .wrap{max-width:780px;padding:0 30px} }
 
-.wrap{max-width:1080px;margin:0 auto;padding:0 22px;position:relative}
-@media (min-width:880px){ .wrap{padding:0 40px} .wrap-narrow{max-width:920px} }
+/* Eyebrow with flanking dashes — "— EL SISTEMA —" style */
+.divider-eyebrow{display:flex;align-items:center;justify-content:center;gap:18px;margin:0 auto 30px;max-width:560px;text-align:center}
+.divider-eyebrow .ln{flex:1;height:1px;background:linear-gradient(90deg, transparent, var(--accent-2), transparent);opacity:.55;max-width:140px}
+.divider-eyebrow .txt{font-weight:700;font-size:11px;letter-spacing:.36em;text-transform:uppercase;color:var(--accent);white-space:nowrap}
+@media (min-width:880px){ .divider-eyebrow{margin-bottom:36px} }
 
-/* NAV */
-nav.top{position:sticky;top:0;z-index:50;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-nav.top .brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:15px;letter-spacing:-.02em;color:var(--ink)}
-nav.top .brand .mark{width:26px;height:26px;background:var(--ink);border-radius:7px;display:grid;place-items:center}
-nav.top .brand .mark svg{width:18px;height:18px}
-nav.top .cta-sm{display:none}
-@media (min-width:760px){
-  nav.top{padding:16px 40px}
-  nav.top .cta-sm{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);background:var(--green);padding:11px 18px;border-radius:8px;transition:all .3s var(--ease)}
-  nav.top .cta-sm:hover{background:var(--green-d);transform:translateY(-1px)}
-}
-
-/* BUTTONS */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--ink);color:#fff;padding:18px 26px;font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:all .3s var(--ease);border-radius:10px;width:100%;border:none}
-.btn.green{background:var(--green);color:var(--ink)}
-.btn.green:hover{background:var(--green-d);transform:translateY(-2px);box-shadow:0 12px 28px -8px rgba(155,209,23,.5)}
-.btn:hover{background:#000;transform:translateY(-2px);box-shadow:0 12px 28px -8px rgba(0,0,0,.25)}
-.btn .arr{transition:transform .3s var(--ease)}
-.btn:hover .arr{transform:translateX(5px)}
-@media (min-width:560px){ .btn{width:auto} }
+/* Top exclusive label */
+.top-label{padding:18px 22px 0;text-align:center;font-weight:600;font-size:10px;letter-spacing:.30em;text-transform:uppercase;color:var(--muted)}
+.top-label em{color:var(--accent);font-style:italic;font-weight:700;letter-spacing:.20em}
 
 /* HERO */
-.hero{padding:50px 22px 70px;text-align:left;position:relative}
-.hero .tag{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid var(--line-2);background:var(--bg-2);border-radius:999px;font-weight:700;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:26px}
-.hero .tag .dot{width:6px;height:6px;border-radius:50%;background:var(--green-d);box-shadow:0 0 8px var(--green-d)}
-.hero h1{font-weight:900;font-size:clamp(36px,8vw,68px);letter-spacing:-.025em;line-height:1.03;color:var(--ink);margin-bottom:22px;max-width:18ch}
-.hero h1 .hl{background:var(--green);padding:0 8px;border-radius:6px;display:inline-block;line-height:1}
-.hero p.sub{font-size:17px;color:var(--muted);line-height:1.55;max-width:46ch;margin-bottom:30px}
-.hero .cta-row{display:flex;flex-direction:column;gap:10px;max-width:380px}
-@media (min-width:560px){ .hero .cta-row{flex-direction:row;max-width:none} }
-.hero .event{margin-top:30px;display:flex;align-items:center;gap:14px;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:var(--bg-2);max-width:fit-content;flex-wrap:wrap}
-.hero .event .dot{width:7px;height:7px;border-radius:50%;background:#FF4D4D;animation:blink 1.5s ease-in-out infinite;flex-shrink:0}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.hero .event span{font-weight:700;font-size:11px;letter-spacing:.20em;text-transform:uppercase;color:var(--ink)}
-.hero .event .sep{color:var(--line-2)}
-@media (min-width:880px){ .hero{padding:80px 40px 110px} .hero h1{font-size:clamp(52px,6.2vw,84px)} }
+.hero{padding:18px 22px 50px;text-align:center}
+.hero h1{font-weight:900;font-size:clamp(28px,7.5vw,52px);line-height:1.08;letter-spacing:-.02em;color:#fff;margin:18px auto 28px;max-width:18ch}
+.hero h1 .hl{color:var(--accent)}
+@media (min-width:880px){ .hero{padding:24px 22px 70px} .hero h1{font-size:clamp(46px,5vw,68px);margin-top:24px} }
 
-/* SOCIAL PROOF */
-.proof{padding:30px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-2);overflow:hidden;position:relative}
-.proof .lbl{text-align:center;font-weight:700;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);margin-bottom:20px}
-.marquee{display:flex;overflow:hidden;mask-image:linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%)}
-.marquee .track{display:flex;gap:55px;padding:0 25px;white-space:nowrap;animation:slide 32s linear infinite;align-items:center}
-.marquee .logo{font-weight:900;font-size:20px;letter-spacing:-.02em;color:var(--muted);font-style:italic;opacity:.65;transition:opacity .3s;display:inline-flex;align-items:center;gap:8px}
-.marquee .logo:hover{opacity:1;color:var(--ink)}
-.marquee .logo::before{content:"●";color:var(--green-d);font-size:9px}
+/* Validated by — logo marquee */
+.validated{margin:20px auto 26px;max-width:640px}
+.validated .lbl{display:flex;align-items:center;justify-content:center;gap:16px;font-weight:700;font-size:10px;letter-spacing:.36em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.validated .lbl .ln{flex:1;height:1px;background:linear-gradient(90deg, transparent, var(--accent-2), transparent);opacity:.55;max-width:100px}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%)}
+.marquee-track{display:flex;gap:40px;align-items:center;animation:slide 28s linear infinite;width:max-content;padding:0 20px}
 @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.marquee-logo{font-weight:900;font-size:16px;letter-spacing:-.01em;color:var(--muted);font-style:italic;opacity:.7;white-space:nowrap;display:flex;align-items:center;gap:8px}
+.marquee-logo::before{content:"●";color:var(--accent);font-size:7px;opacity:.7}
 
-/* SECTIONS */
-section{padding:70px 0;position:relative}
-@media (min-width:880px){ section{padding:110px 0} }
+/* Event date pill */
+.event-pill{display:inline-flex;align-items:center;gap:14px;padding:10px 22px;border:1px solid var(--line);border-radius:999px;font-weight:700;font-size:11px;letter-spacing:.22em;text-transform:uppercase;background:rgba(198,255,61,.04);margin-bottom:22px}
+.event-pill .lbl{color:#fff}
+.event-pill .date{color:var(--accent)}
+.event-pill .time{color:#fff}
+.event-pill .sep{color:var(--line);font-weight:400}
 
-.sec-head{margin-bottom:42px}
-.sec-head .eyebrow{margin-bottom:14px;display:block;color:var(--green-text)}
-.sec-head h2{font-weight:900;font-size:clamp(30px,6vw,52px);letter-spacing:-.02em;line-height:1.05;color:var(--ink)}
-.sec-head h2 .hl{background:var(--green);padding:0 8px;border-radius:6px;display:inline-block}
-.sec-head p{margin-top:16px;color:var(--muted);font-size:16px;max-width:54ch;line-height:1.55}
-@media (min-width:880px){ .sec-head{margin-bottom:60px} .sec-head h2{font-size:clamp(36px,4.6vw,58px)} }
+/* Form */
+.form-block{max-width:380px;margin:0 auto}
+.form-block .title{font-weight:700;font-size:15px;color:#fff;margin-bottom:14px;text-align:center}
+.form-block input{display:block;width:100%;background:var(--card);border:1px solid var(--line-soft);color:#fff;padding:16px 20px;font-family:inherit;font-size:14px;border-radius:999px;margin-bottom:10px;outline:none;transition:border-color .3s}
+.form-block input::placeholder{color:var(--dim)}
+.form-block input:focus{border-color:var(--accent)}
 
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease-out), transform .8s var(--ease-out)}
+/* CTA Button — glow pill (gold→green) */
+.btn-glow{display:inline-flex;align-items:center;justify-content:center;width:100%;background:linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 50%, var(--accent-deep) 100%);color:#0A0A0A;padding:18px 28px;font-weight:900;font-size:13px;letter-spacing:.20em;text-transform:uppercase;cursor:pointer;border-radius:999px;border:none;font-family:inherit;
+  box-shadow:0 0 0 1px rgba(198,255,61,.5), 0 0 40px rgba(198,255,61,.3), 0 0 80px rgba(198,255,61,.15);
+  transition:all .35s var(--ease);text-decoration:none}
+.btn-glow:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(198,255,61,.7), 0 0 60px rgba(198,255,61,.5), 0 0 120px rgba(198,255,61,.25)}
+.cta-center{display:flex;justify-content:center;margin:40px 0}
+.cta-center .btn-glow{max-width:340px}
+
+/* SECTION */
+section{padding:60px 0;position:relative}
+@media (min-width:880px){ section{padding:80px 0} }
+
+/* STORY */
+.story-block{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px 22px;text-align:center}
+@media (min-width:880px){ .story-block{padding:44px 50px} }
+.story-img{width:170px;height:170px;border-radius:50%;overflow:hidden;margin:0 auto 28px;position:relative;border:3px solid rgba(198,255,61,.3)}
+.story-img img{width:100%;height:100%;object-fit:cover}
+@media (min-width:880px){ .story-img{width:200px;height:200px} }
+.story-block h2{font-weight:900;font-size:clamp(26px,6vw,40px);letter-spacing:-.015em;line-height:1.05;color:#fff;margin-bottom:24px}
+.story-block .body{text-align:left;color:rgba(255,255,255,.85);font-size:15px;line-height:1.7}
+.story-block .body p{margin-bottom:16px}
+.story-block .body strong{color:var(--accent);font-weight:700}
+.story-block .quote{margin:24px 0;color:var(--accent);font-weight:600;font-style:italic;font-size:17px;line-height:1.45;text-align:left}
+.story-block .quote .em{color:var(--accent);font-weight:700}
+.story-block .sig{margin-top:22px;color:var(--dim);font-weight:600;font-size:13px;text-align:left;border-top:1px solid var(--line-soft);padding-top:16px}
+.story-block .sig::before{content:"— "}
+
+/* SYSTEM PILLARS */
+.pillars{display:grid;grid-template-columns:1fr;gap:16px}
+@media (min-width:880px){ .pillars{grid-template-columns:1fr 1fr;gap:18px} }
+.pillar{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px 24px;display:grid;grid-template-columns:1fr 80px;gap:14px;align-items:start;position:relative;transition:all .35s var(--ease)}
+.pillar:hover{border-color:var(--accent);background:var(--card-2);transform:translateY(-2px)}
+.pillar .info .num{font-weight:900;font-size:32px;letter-spacing:.04em;color:var(--accent);line-height:1;margin-bottom:14px;font-variant-numeric:tabular-nums}
+.pillar .info h4{font-weight:900;font-size:22px;letter-spacing:-.01em;color:#fff;margin-bottom:10px}
+.pillar .info p{font-size:14px;color:var(--muted);line-height:1.55}
+.pillar .gear{width:80px;height:80px;display:grid;place-items:center}
+.pillar .gear svg{width:100%;height:100%}
+@media (min-width:880px){ .pillar{padding:30px 28px;grid-template-columns:1fr 90px} .pillar .gear{width:90px;height:90px} }
+
+/* QUAL */
+.qual-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media (min-width:760px){ .qual-grid{grid-template-columns:1fr 1fr;gap:18px} }
+.qual-col{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px 24px}
+.qual-col.no{border-color:rgba(255,77,77,.35)}
+.qual-col h3{font-weight:900;font-size:28px;letter-spacing:-.005em;text-align:center;margin-bottom:24px;color:#fff;line-height:1.1}
+.qual-col.no h3 .red{color:var(--red);text-decoration:underline;text-underline-offset:4px}
+.qual-col ul{list-style:none;display:flex;flex-direction:column;gap:0}
+.qual-col li{display:flex;gap:14px;align-items:flex-start;font-size:14px;line-height:1.55;color:#fff;padding:14px 0;border-bottom:1px solid var(--line-soft)}
+.qual-col li:last-child{border-bottom:none}
+.qual-col li .icon{flex-shrink:0;font-weight:900;font-size:14px;margin-top:1px}
+.qual-col.yes li .icon{color:var(--accent)}
+.qual-col.no li .icon{color:var(--red)}
+@media (min-width:880px){ .qual-col{padding:36px 30px} }
+
+/* FOOTER */
+footer{padding:40px 22px 50px;text-align:center}
+footer .logo-block{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:18px}
+footer .logo-block svg{width:34px;height:34px}
+footer .logo-block .name{font-weight:900;font-size:24px;letter-spacing:-.02em;color:#fff}
+footer .event-pill{margin:0 auto}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease), transform .8s var(--ease)}
 .reveal.in{opacity:1;transform:translateY(0)}
 .reveal.d1{transition-delay:.08s}
 .reveal.d2{transition-delay:.16s}
 .reveal.d3{transition-delay:.24s}
-
-/* STORY */
-#story{border-top:1px solid var(--line)}
-.story{display:grid;grid-template-columns:1fr;gap:30px}
-@media (min-width:880px){ .story{grid-template-columns:1.1fr 1.4fr;gap:60px;align-items:start} }
-.story .img{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:var(--bg-2)}
-.story .img img{width:100%;height:100%;object-fit:cover}
-.story .txt h3{font-weight:900;font-size:clamp(24px,5vw,38px);letter-spacing:-.015em;line-height:1.1;margin-bottom:22px;color:var(--ink)}
-.story .txt p{font-size:16px;color:var(--text);line-height:1.7;margin-bottom:18px}
-.story .txt p strong{font-weight:700;color:var(--ink)}
-.story .quote{margin:30px 0;padding:24px 26px;background:var(--bg-2);border:1px solid var(--line);border-left:4px solid var(--green-d);border-radius:12px;font-weight:600;font-style:italic;font-size:18px;line-height:1.45;color:var(--ink)}
-.story .quote .pd{color:var(--green-d);font-style:normal}
-.story .sig{margin-top:28px;padding-top:22px;border-top:1px solid var(--line);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.story .sig .nm{font-weight:900;font-size:15px;color:var(--ink)}
-.story .sig .rl{font-weight:700;font-size:10px;letter-spacing:.22em;color:var(--green-text);text-transform:uppercase;margin-top:2px}
-
-/* SYSTEM */
-#system{border-top:1px solid var(--line);background:var(--bg-2)}
-.system-grid{display:flex;flex-direction:column;gap:14px}
-@media (min-width:880px){ .system-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px} }
-.pillar{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px 26px;position:relative;transition:all .35s var(--ease);overflow:hidden}
-.pillar:hover{border-color:var(--green-d);transform:translateY(-3px);box-shadow:0 12px 32px -10px rgba(0,0,0,.08)}
-.pillar .head{display:flex;align-items:center;gap:18px;margin-bottom:18px}
-.pillar .num{font-weight:900;font-size:42px;letter-spacing:-.04em;color:var(--green-d);line-height:1;font-variant-numeric:tabular-nums}
-.pillar .ico{width:48px;height:48px;display:grid;place-items:center;background:var(--bg-2);color:var(--ink);border-radius:12px;margin-left:auto}
-.pillar h4{font-weight:900;font-size:22px;letter-spacing:-.01em;margin-bottom:10px;color:var(--ink)}
-.pillar p{font-size:15px;color:var(--muted);line-height:1.6}
-@media (min-width:880px){ .pillar{padding:36px 32px} .pillar h4{font-size:24px} }
-
-/* QUALIFICATION */
-#qual{border-top:1px solid var(--line)}
-.qual-grid{display:grid;grid-template-columns:1fr;gap:18px}
-@media (min-width:760px){ .qual-grid{grid-template-columns:1fr 1fr;gap:22px} }
-.qual-col{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px 26px}
-.qual-col h4{font-weight:900;font-size:13px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:24px}
-.qual-col.yes h4{color:var(--green-text)}
-.qual-col.no h4{color:var(--dim)}
-.qual-col ul{list-style:none;display:flex;flex-direction:column;gap:14px}
-.qual-col li{display:flex;gap:14px;align-items:flex-start;font-size:15px;line-height:1.5;color:var(--text)}
-.qual-col li .icon{flex-shrink:0;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;margin-top:1px;font-size:11px;font-weight:900}
-.qual-col.yes li .icon{background:var(--green);color:var(--ink)}
-.qual-col.no li .icon{background:#F0F0EC;color:var(--dim)}
-.qual-col.no li{color:var(--muted)}
-@media (min-width:880px){ .qual-col{padding:36px 32px} }
-
-/* CTA SECTION */
-.cta-sec{padding:80px 22px;border-top:1px solid var(--line);text-align:center;background:var(--ink);color:#fff;position:relative;overflow:hidden}
-.cta-sec::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center, rgba(198,255,61,.12), transparent 70%);z-index:0}
-.cta-sec .wrap{position:relative;z-index:2}
-.cta-sec .eyebrow{color:var(--green);display:block;margin-bottom:18px}
-.cta-sec h2{font-weight:900;font-size:clamp(32px,7vw,64px);letter-spacing:-.025em;line-height:1.02;margin-bottom:20px;max-width:16ch;margin-left:auto;margin-right:auto}
-.cta-sec h2 .hl{background:var(--green);color:var(--ink);padding:0 8px;border-radius:6px;display:inline-block}
-.cta-sec p{color:rgba(255,255,255,.7);font-size:16px;max-width:42ch;margin:0 auto 32px}
-.cta-sec .btn-wrap{display:flex;justify-content:center;margin-bottom:28px}
-.cta-sec .event{display:inline-flex;align-items:center;gap:14px;padding:14px 20px;border:1px solid rgba(255,255,255,.15);border-radius:12px;background:rgba(255,255,255,.03);flex-wrap:wrap;justify-content:center}
-.cta-sec .event .dot{width:7px;height:7px;border-radius:50%;background:#FF4D4D;animation:blink 1.5s ease-in-out infinite}
-.cta-sec .event span{font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#fff}
-.cta-sec .event .sep{color:rgba(255,255,255,.2)}
-.cta-sec .mail{margin-top:32px;display:inline-flex;flex-direction:column;gap:6px;font-size:13px;color:rgba(255,255,255,.5)}
-.cta-sec .mail a{font-weight:800;font-size:16px;color:#fff;border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:5px;transition:all .3s;word-break:break-all;margin-top:4px}
-.cta-sec .mail a:hover{color:var(--green);border-color:var(--green)}
-@media (min-width:880px){ .cta-sec{padding:130px 40px} }
-
-/* FOOTER */
-footer{padding:36px 22px 30px;background:var(--ink);color:rgba(255,255,255,.5);border-top:1px solid rgba(255,255,255,.06)}
-.f-row{display:flex;flex-direction:column;gap:18px;align-items:center;text-align:center}
-@media (min-width:760px){ .f-row{flex-direction:row;justify-content:space-between;text-align:left} footer{padding:36px 40px 30px} }
-.f-row .brand-l{display:flex;align-items:center;gap:12px;font-weight:900;font-size:18px;letter-spacing:-.02em;color:#fff}
-.f-row .brand-l .mark{width:28px;height:28px;background:#fff;border-radius:7px;display:grid;place-items:center}
-.f-row .brand-l .mark svg{width:20px;height:20px}
-.f-row .event{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:10px;letter-spacing:.20em;text-transform:uppercase;flex-wrap:wrap;justify-content:center}
-.f-row .event .dot{width:6px;height:6px;border-radius:50%;background:#FF4D4D;animation:blink 1.5s infinite}
-.f-bottom{margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,.06);text-align:center;font-weight:600;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.3)}
-
-/* STICKY MOBILE CTA */
-.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(255,255,255,.95);backdrop-filter:blur(20px);border-top:1px solid var(--line);display:flex;gap:10px;align-items:center;transform:translateY(120%);transition:transform .5s var(--ease)}
-.sticky-cta.show{transform:translateY(0)}
-.sticky-cta .info{flex:1;min-width:0}
-.sticky-cta .info .l1{font-weight:900;font-size:12px;line-height:1.1;color:var(--ink)}
-.sticky-cta .info .l2{font-weight:700;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--green-text);margin-top:3px}
-.sticky-cta .btn{width:auto;padding:13px 18px;font-size:11px;flex-shrink:0;border-radius:8px}
-@media (min-width:880px){ .sticky-cta{display:none} body{padding-bottom:0} }
 </style>
 </head>
 <body>
 
-<nav class="top">
-  <a class="brand" href="#top">
-    <span class="mark">
-      <svg viewBox="0 0 100 100">
-        <path fill="#C6FF3D" d="M30 12 H62 Q86 12 86 38 Q86 60 62 60 H44 V88 H30 Z M44 26 V46 H60 Q72 46 72 36 Q72 26 60 26 Z"/>
-        <path fill="#C6FF3D" d="M30 60 L44 60 L44 78 L30 88 Z"/>
-      </svg>
-    </span>
-    PRIME<span class="pd">.</span>
-  </a>
-  <a href="#contact" class="cta-sm">I want in →</a>
-</nav>
+<div class="top-label">Exclusive for <em>brand owners</em></div>
 
 <!-- HERO -->
 <header class="hero" id="top">
-  <div class="wrap">
-    <div class="tag"><span class="dot"></span>Exclusive for brand owners</div>
-    <h1>Discover the <span class="hl">4-step system</span> to scale any brand<span class="pd">.</span></h1>
-    <p class="sub">Strategy, production, paid media and AI creative — under one roof. Built to compound, not to bill hours.</p>
-    <div class="cta-row">
-      <a href="#contact" class="btn green">I want in <span class="arr">→</span></a>
+  <h1>Discover the 4-step system to scale <span class="hl">any brand</span></h1>
+
+  <div class="validated">
+    <div class="lbl"><span class="ln"></span><span>Validated by</span><span class="ln"></span></div>
+    <div class="marquee">
+      <div class="marquee-track">
+        <span class="marquee-logo">CASA REYES</span>
+        <span class="marquee-logo">NORTHGATE</span>
+        <span class="marquee-logo">PULSE ATHLETICS</span>
+        <span class="marquee-logo">VELA</span>
+        <span class="marquee-logo">ATLAS REALTY</span>
+        <span class="marquee-logo">MESA &amp; CO.</span>
+        <span class="marquee-logo">CASA REYES</span>
+        <span class="marquee-logo">NORTHGATE</span>
+        <span class="marquee-logo">PULSE ATHLETICS</span>
+        <span class="marquee-logo">VELA</span>
+        <span class="marquee-logo">ATLAS REALTY</span>
+        <span class="marquee-logo">MESA &amp; CO.</span>
+      </div>
     </div>
-    <div class="event">
-      <span class="dot"></span>
-      <span>Now booking</span>
-      <span class="sep">·</span>
-      <span>Q3 2026</span>
-      <span class="sep">·</span>
-      <span>4 slots left</span>
-    </div>
+  </div>
+
+  <div class="event-pill">
+    <span class="lbl">Now booking</span>
+    <span class="sep">·</span>
+    <span class="date">Q3 2026</span>
+    <span class="sep">·</span>
+    <span class="time">4 slots</span>
+  </div>
+
+  <div class="form-block">
+    <div class="title">Reserve your spot — limited slots</div>
+    <input type="text" placeholder="Your name" />
+    <input type="email" placeholder="Your email" />
+    <a href="mailto:primeproductionmediallc@gmail.com" class="btn-glow">I want in</a>
   </div>
 </header>
 
-<!-- SOCIAL PROOF -->
-<section class="proof">
-  <div class="lbl">Trusted by founders building real brands</div>
-  <div class="marquee">
-    <div class="track">
-      <span class="logo">CASA REYES</span>
-      <span class="logo">NORTHGATE</span>
-      <span class="logo">PULSE ATHLETICS</span>
-      <span class="logo">VELA</span>
-      <span class="logo">ATLAS REALTY</span>
-      <span class="logo">MESA &amp; CO.</span>
-      <span class="logo">CASA REYES</span>
-      <span class="logo">NORTHGATE</span>
-      <span class="logo">PULSE ATHLETICS</span>
-      <span class="logo">VELA</span>
-      <span class="logo">ATLAS REALTY</span>
-      <span class="logo">MESA &amp; CO.</span>
-    </div>
-  </div>
-</section>
-
 <!-- STORY -->
-<section id="story">
+<section>
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">The story behind</span>
-      <h2>Why I do this<span class="pd">.</span></h2>
+    <div class="divider-eyebrow reveal">
+      <span class="ln"></span><span class="txt">The story behind</span><span class="ln"></span>
     </div>
-    <div class="story">
-      <div class="img reveal">
-        <img src="img/founder-light.png" alt="Kevin Rodriguez, founder of Prime Production Media" loading="lazy" />
+
+    <div class="story-block reveal d1">
+      <div class="story-img">
+        <img src="img/founder-light.png" alt="Kevin Rodriguez" loading="lazy" />
       </div>
-      <div class="txt reveal d1">
-        <p>I've spent more than a decade building businesses in industries that had nothing in common. Different products, different markets, different rules — yet every time the brand actually scaled, the same pattern repeated.</p>
-        <p><strong>The same four gears. In the same order. Built the same way.</strong></p>
+
+      <h2>Why I do this?</h2>
+
+      <div class="body">
+        <p>I've spent more than a decade building businesses in industries that had nothing in common. Different products, different markets, different rules.</p>
+        <p>And during that whole time I saw how completely different projects ended up needing the same pieces, the same rules, the same logic.</p>
+        <p>Until at some point I realized that of all of them, those that broke, in the moment of growth, needed exactly the same thing.</p>
+
         <div class="quote">
-          "Strategy<span class="pd">.</span> Production<span class="pd">.</span> Media<span class="pd">.</span> AI<span class="pd">.</span> In that order — every single time<span class="pd">.</span>"
+          <em class="em">The same four gears. In the same order. Built the same way.</em>
         </div>
-        <p>The brands that broke had one thing in common too: the chain. A strategy agency that didn't shoot. A production house that didn't run ads. A media buyer who never saw the brief. Three vendors, zero accountability.</p>
-        <p>So I stopped the hand-offs and put the whole system under one roof. <strong>Prime is what I wish I had ten years ago</strong> — a team that owns the result, not the deliverable.</p>
-        <div class="sig">
-          <div>
-            <div class="nm">Kevin Rodriguez</div>
-            <div class="rl">Founder · Director</div>
-          </div>
-        </div>
+
+        <p>That discovery completely changed the way I built businesses. And I spent years thinking that some day I'd tell it openly, because most founders who know me ask me exactly the same thing: how did I explain in four steps what they had taken years to learn or ever understand.</p>
+
+        <p><strong>PRIME is exactly that.</strong> The day where your business stops improvising and starts working with the structure it needed from day one.</p>
+
+        <div class="sig">Kevin Rodriguez · Founder</div>
       </div>
+    </div>
+
+    <div class="cta-center">
+      <a href="mailto:primeproductionmediallc@gmail.com" class="btn-glow">I want in</a>
     </div>
   </div>
 </section>
 
 <!-- SYSTEM -->
-<section id="system">
+<section>
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">The system</span>
-      <h2>The <span class="hl">4 steps</span><span class="pd">.</span></h2>
-      <p>Every brand we touch runs through this pipeline. Same order. Every time. No exceptions.</p>
+    <div class="divider-eyebrow reveal">
+      <span class="ln"></span><span class="txt">The system</span><span class="ln"></span>
     </div>
 
-    <div class="system-grid">
+    <div class="pillars">
       <div class="pillar reveal">
-        <div class="head">
-          <div class="num">01</div>
-          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg></div>
+        <div class="info">
+          <div class="num">0 1</div>
+          <h4>Strategy</h4>
+          <p>How to build a real client engine that runs on a predictable system. Without relying on what you publish that day, who likes you, or who recommends you. A real engine that turns your business into something that pulls in instead of chasing.</p>
         </div>
-        <h4>Strategy<span class="pd">.</span></h4>
-        <p>Funnel first. We start with the business goal, not the moodboard. Positioning, audience, offer and KPIs — locked before we touch a camera.</p>
+        <div class="gear">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="gearGrad1" cx="40%" cy="40%">
+                <stop offset="0%" stop-color="#3A3A45"/>
+                <stop offset="60%" stop-color="#22222C"/>
+                <stop offset="100%" stop-color="#0F0F15"/>
+              </radialGradient>
+            </defs>
+            <g transform="translate(50,50)">
+              <g fill="url(#gearGrad1)" stroke="rgba(198,255,61,.25)" stroke-width=".8">
+                <path d="M -8 -42 L 8 -42 L 10 -34 L -10 -34 Z"/>
+                <path d="M -8 42 L 8 42 L 10 34 L -10 34 Z"/>
+                <path d="M -42 -8 L -42 8 L -34 10 L -34 -10 Z"/>
+                <path d="M 42 -8 L 42 8 L 34 10 L 34 -10 Z"/>
+                <path transform="rotate(45)" d="M -8 -42 L 8 -42 L 10 -34 L -10 -34 Z"/>
+                <path transform="rotate(45)" d="M -8 42 L 8 42 L 10 34 L -10 34 Z"/>
+                <path transform="rotate(45)" d="M -42 -8 L -42 8 L -34 10 L -34 -10 Z"/>
+                <path transform="rotate(45)" d="M 42 -8 L 42 8 L 34 10 L 34 -10 Z"/>
+                <circle r="35"/>
+                <circle r="13" fill="#0B0B11"/>
+              </g>
+            </g>
+          </svg>
+        </div>
       </div>
 
       <div class="pillar reveal d1">
-        <div class="head">
-          <div class="num">02</div>
-          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="14" height="12" rx="1"/><path d="M17 10l4-2v8l-4-2z"/></svg></div>
+        <div class="info">
+          <div class="num">0 2</div>
+          <h4>Production</h4>
+          <p>How to make clients who come in say yes consistently. Without depending on the day's luck. A process that closes independently of who executes it. In-house studio, direction, edit and motion — we shoot it, we cut it, we ship it.</p>
         </div>
-        <h4>Production<span class="pd">.</span></h4>
-        <p>In-house studio. Direction, cinema, edit, motion. From a single UGC reel to a 30-spot campaign. We shoot it. We cut it. We deliver it.</p>
+        <div class="gear">
+          <svg viewBox="0 0 100 100">
+            <g transform="translate(50,50)">
+              <g fill="url(#gearGrad1)" stroke="rgba(198,255,61,.25)" stroke-width=".8">
+                <path d="M -8 -42 L 8 -42 L 10 -34 L -10 -34 Z"/>
+                <path d="M -8 42 L 8 42 L 10 34 L -10 34 Z"/>
+                <path d="M -42 -8 L -42 8 L -34 10 L -34 -10 Z"/>
+                <path d="M 42 -8 L 42 8 L 34 10 L 34 -10 Z"/>
+                <path transform="rotate(45)" d="M -8 -42 L 8 -42 L 10 -34 L -10 -34 Z"/>
+                <path transform="rotate(45)" d="M -8 42 L 8 42 L 10 34 L -10 34 Z"/>
+                <path transform="rotate(45)" d="M -42 -8 L -42 8 L -34 10 L -34 -10 Z"/>
+                <path transform="rotate(45)" d="M 42 -8 L 42 8 L 34 10 L 34 -10 Z"/>
+                <circle r="35"/>
+                <circle r="13" fill="#0B0B11"/>
+              </g>
+            </g>
+          </svg>
+        </div>
       </div>
 
       <div class="pillar reveal d2">
-        <div class="head">
-          <div class="num">03</div>
-          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></div>
+        <div class="info">
+          <div class="num">0 3</div>
+          <h4>Media</h4>
+          <p>How to build the internal structure that makes your operation work with order and process. So that each week is a distinct version of the previous one and so it doesn't all depend on you being in the center. Meta, TikTok, YouTube — daily optimization, weekly creative refresh.</p>
         </div>
-        <h4>Media<span class="pd">.</span></h4>
-        <p>Meta, TikTok, YouTube. Daily optimization, weekly creative refresh. Test 18 hooks, keep 3, scale the winner. If it doesn't move CAC, we kill it.</p>
+        <div class="gear">
+          <svg viewBox="0 0 100 100">
+            <g transform="translate(50,50)">
+              <g fill="url(#gearGrad1)" stroke="rgba(198,255,61,.25)" stroke-width=".8">
+                <path d="M -8 -42 L 8 -42 L 10 -34 L -10 -34 Z"/>
+                <path d="M -8 42 L 8 42 L 10 34 L -10 34 Z"/>
+                <path d="M -42 -8 L -42 8 L -34 10 L -34 -10 Z"/>
+                <path d="M 42 -8 L 42 8 L 34 10 L 34 -10 Z"/>
+                <path transform="rotate(45)" d="M -8 -42 L 8 -42 L 10 -34 L -10 -34 Z"/>
+                <path transform="rotate(45)" d="M -8 42 L 8 42 L 10 34 L -10 34 Z"/>
+                <path transform="rotate(45)" d="M -42 -8 L -42 8 L -34 10 L -34 -10 Z"/>
+                <path transform="rotate(45)" d="M 42 -8 L 42 8 L 34 10 L 34 -10 Z"/>
+                <circle r="35"/>
+                <circle r="13" fill="#0B0B11"/>
+              </g>
+            </g>
+          </svg>
+        </div>
       </div>
 
       <div class="pillar reveal d3">
-        <div class="head">
-          <div class="num">04</div>
-          <div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M5 19l3-3M16 8l3-3"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <div class="info">
+          <div class="num">0 4</div>
+          <h4>AI Creative</h4>
+          <p>How to guarantee that what you promise is delivered consistently and scalably. Without quality dropping each time you have to grow. Generative video, image and copy at scale — avatars, product shots, variant hooks. Ten ad versions before lunch.</p>
         </div>
-        <h4>AI Creative<span class="pd">.</span></h4>
-        <p>Generative video, image and copy at scale. Avatars, product shots, variant hooks. Ten ad versions before lunch — not next quarter.</p>
+        <div class="gear">
+          <svg viewBox="0 0 100 100">
+            <g transform="translate(50,50)">
+              <g fill="url(#gearGrad1)" stroke="rgba(198,255,61,.25)" stroke-width=".8">
+                <path d="M -8 -42 L 8 -42 L 10 -34 L -10 -34 Z"/>
+                <path d="M -8 42 L 8 42 L 10 34 L -10 34 Z"/>
+                <path d="M -42 -8 L -42 8 L -34 10 L -34 -10 Z"/>
+                <path d="M 42 -8 L 42 8 L 34 10 L 34 -10 Z"/>
+                <path transform="rotate(45)" d="M -8 -42 L 8 -42 L 10 -34 L -10 -34 Z"/>
+                <path transform="rotate(45)" d="M -8 42 L 8 42 L 10 34 L -10 34 Z"/>
+                <path transform="rotate(45)" d="M -42 -8 L -42 8 L -34 10 L -34 -10 Z"/>
+                <path transform="rotate(45)" d="M 42 -8 L 42 8 L 34 10 L 34 -10 Z"/>
+                <circle r="35"/>
+                <circle r="13" fill="#0B0B11"/>
+              </g>
+            </g>
+          </svg>
+        </div>
       </div>
+    </div>
+
+    <div class="cta-center">
+      <a href="mailto:primeproductionmediallc@gmail.com" class="btn-glow">I want in</a>
     </div>
   </div>
 </section>
 
 <!-- QUALIFICATION -->
-<section id="qual">
+<section>
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">Honest check</span>
-      <h2>Is this for you<span class="pd">?</span></h2>
+    <div class="divider-eyebrow reveal">
+      <span class="ln"></span><span class="txt">Is it for you?</span><span class="ln"></span>
     </div>
 
     <div class="qual-grid">
       <div class="qual-col yes reveal">
-        <h4>This is for you if:</h4>
+        <h3>THIS IS<br/>FOR YOU IF:</h3>
         <ul>
-          <li><span class="icon">✓</span> You're a founder tired of stitching agencies together.</li>
-          <li><span class="icon">✓</span> You ship products and need creative that performs, not just looks good.</li>
-          <li><span class="icon">✓</span> You want a team that owns strategy, production and ads end-to-end.</li>
-          <li><span class="icon">✓</span> You're ready to test fast and kill what doesn't work.</li>
-          <li><span class="icon">✓</span> You measure success in CAC, ROAS and revenue — not awards.</li>
+          <li><span class="icon">✓</span> You have a business already billing and you want it to grow with structure</li>
+          <li><span class="icon">✓</span> You're not clear where the next client is coming from</li>
+          <li><span class="icon">✓</span> You work hard but the business doesn't grow at the pace it should</li>
+          <li><span class="icon">✓</span> You know structure is missing but don't know exactly where to start</li>
+          <li><span class="icon">✓</span> You're willing to implement, not just listen</li>
         </ul>
       </div>
 
       <div class="qual-col no reveal d1">
-        <h4>This is not for you if:</h4>
+        <h3>THIS IS <span class="red">NOT</span><br/>FOR YOU IF:</h3>
         <ul>
-          <li><span class="icon">✕</span> You want a vendor that quietly does what it's told for 12 months.</li>
-          <li><span class="icon">✕</span> Your only KPI is "brand awareness."</li>
-          <li><span class="icon">✕</span> You want pretty work that no one will measure.</li>
+          <li><span class="icon">✕</span> You don't yet have a business or a defined offer</li>
+          <li><span class="icon">✕</span> You're looking for a fast shortcut without implementing anything</li>
+          <li><span class="icon">✕</span> You're in idea phase and don't yet have your first clients</li>
         </ul>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- CTA -->
-<section class="cta-sec" id="contact">
-  <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">Let's go</span>
-      <h2>Build the <span class="hl">next one</span><span class="pd">.</span></h2>
-      <p>Two-week kickoff. Strategy, shoot, first ads live. Q3 2026 has 4 slots open.</p>
-      <div class="btn-wrap">
-        <a href="mailto:primeproductionmediallc@gmail.com" class="btn green" style="max-width:300px">I want in <span class="arr">→</span></a>
-      </div>
-      <div class="event">
-        <span class="dot"></span>
-        <span>Now booking</span>
-        <span class="sep">·</span>
-        <span>Q3 2026</span>
-        <span class="sep">·</span>
-        <span>4 slots left</span>
-      </div>
-      <div class="mail">
-        Direct
-        <a href="mailto:primeproductionmediallc@gmail.com">primeproductionmediallc@gmail.com</a>
-      </div>
+    <div class="cta-center">
+      <a href="mailto:primeproductionmediallc@gmail.com" class="btn-glow">I want in</a>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="f-row">
-    <div class="brand-l">
-      <span class="mark">
-        <svg viewBox="0 0 100 100">
-          <path fill="#0F0F10" d="M30 12 H62 Q86 12 86 38 Q86 60 62 60 H44 V88 H30 Z M44 26 V46 H60 Q72 46 72 36 Q72 26 60 26 Z"/>
-          <path fill="#0F0F10" d="M30 60 L44 60 L44 78 L30 88 Z"/>
-        </svg>
-      </span>
-      PRIME<span class="pd">.</span>
-    </div>
-    <div class="event">
-      <span class="dot"></span>
-      <span>Now booking</span>
-      <span style="color:rgba(255,255,255,.2)">·</span>
-      <span>Q3 2026</span>
-      <span style="color:rgba(255,255,255,.2)">·</span>
-      <span>4 slots left</span>
-    </div>
+  <div class="logo-block">
+    <svg viewBox="0 0 100 100">
+      <path fill="#C6FF3D" d="M30 12 H62 Q86 12 86 38 Q86 60 62 60 H44 V88 H30 Z M44 26 V46 H60 Q72 46 72 36 Q72 26 60 26 Z"/>
+      <path fill="#C6FF3D" d="M30 60 L44 60 L44 78 L30 88 Z"/>
+    </svg>
+    <span class="name">PRIME.</span>
   </div>
-  <div class="f-bottom">
-    © 2026 Prime Production Media LLC<span class="pd"> .</span> Marketing · Production · Media · AI
+  <div class="event-pill">
+    <span class="lbl">Now booking</span>
+    <span class="sep">·</span>
+    <span class="date">Q3 2026</span>
+    <span class="sep">·</span>
+    <span class="time">4 slots</span>
   </div>
 </footer>
 
-<!-- STICKY MOBILE CTA -->
-<div class="sticky-cta" id="stickyCta">
-  <div class="info">
-    <div class="l1">Q3 2026 · 4 slots left</div>
-    <div class="l2">Now booking</div>
-  </div>
-  <a href="#contact" class="btn green">I want in →</a>
-</div>
-
 <script>
-// Reveal
 (function(){
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
   },{threshold:.1, rootMargin:'0px 0px -60px 0px'});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 })();
-
-// Sticky CTA
-(function(){
-  const sticky = document.getElementById('stickyCta');
-  if(!sticky) return;
-  const hero = document.querySelector('.hero');
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(en=>{ sticky.classList.toggle('show', !en.isIntersecting); });
-  },{threshold:0});
-  io.observe(hero);
-})();
-
-// Smooth anchor
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click', e=>{
-    const id = a.getAttribute('href');
-    if(id.length>1){
-      const t = document.querySelector(id);
-      if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth', block:'start'}); }
-    }
-  });
-});
 </script>
 
 </body>
