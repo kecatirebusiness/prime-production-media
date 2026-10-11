@@ -1,460 +1,699 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Prime Production Media — Make. Ship. Repeat.</title>
-<meta name="description" content="A marketing studio that ships strategy, production, media and AI creative." />
-<link rel="icon" href="img/P-green-on-black.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prime Production Media — Content that brings clients.</title>
+<meta name="description" content="Organic content strategy, production and distribution under one roof. We plan, film and publish your content every week. Book a free content audit.">
+<meta property="og:title" content="Prime Production Media — Make. Ship. Repeat.">
+<meta property="og:description" content="Organic content strategy, production and distribution under one roof.">
+<meta property="og:image" content="assets/og.png">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 <style>
-:root{
-  --black:#0B0B0C;
-  --ink:#101012;
-  --surface:#15151A;
-  --white:#FFFFFF;
-  --green:#C6FF3D;
-  --soft:#E2FF8A;
-  --muted: rgba(255,255,255,.62);
-  --dim:   rgba(255,255,255,.36);
-  --line:  rgba(255,255,255,.08);
-  --line-2:rgba(255,255,255,.14);
-  --ease: cubic-bezier(.22,.61,.36,1);
-  --ease-out: cubic-bezier(.16,1,.3,1);
-  --r:14px;
-}
-*{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased}
-html{scroll-behavior:smooth}
-html,body{background:var(--black);color:var(--white);font-family:'Inter',sans-serif;font-weight:400;line-height:1.6;overflow-x:hidden}
+:root{--ink:#0A0A0A;--ink2:#121212;--ink3:#1A1A1A;--line:#262626;--line2:#333;--white:#fff;--dim:#9a9a9a;--mute:#6b6b6b;--g:#C6FF3D;--gs:#E2FF8A;--ease:cubic-bezier(.2,.8,.2,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:auto}
+body{background:var(--ink);color:var(--white);font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-img,svg{display:block;max-width:100%}
-::selection{background:var(--green);color:var(--ink)}
-
-.eyebrow{font-weight:600;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
-.eyebrow .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin-right:10px;vertical-align:1px;box-shadow:0 0 12px var(--green);animation:pulse 2s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
-.pd{color:var(--green)}
-
-/* Atmosphere */
-.grain{position:fixed;inset:-50%;pointer-events:none;z-index:2;opacity:.08;mix-blend-mode:overlay;
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-  animation:grain 1.8s steps(6) infinite}
-@keyframes grain{
-  0%{transform:translate(0,0)} 20%{transform:translate(-3%,2%)}
-  40%{transform:translate(2%,-4%)} 60%{transform:translate(-1%,3%)}
-  80%{transform:translate(3%,1%)} 100%{transform:translate(0,0)}
-}
-.glow-bg{position:fixed;inset:0;pointer-events:none;z-index:1;background:
-  radial-gradient(800px 600px at 90% 10%, rgba(198,255,61,.04), transparent 70%),
-  radial-gradient(700px 500px at 10% 90%, rgba(198,255,61,.03), transparent 70%)}
-
-.wrap{max-width:1280px;margin:0 auto;padding:0 40px;position:relative}
-@media (max-width:720px){ .wrap{padding:0 22px} }
-
-/* NAV */
-nav.top{position:fixed;top:0;left:0;right:0;z-index:50;padding:22px 40px;display:flex;align-items:center;justify-content:space-between;
-  transition:background .4s var(--ease), padding .4s var(--ease), border-color .4s var(--ease);
-  border-bottom:1px solid transparent}
-nav.top.scrolled{background:rgba(11,11,12,.78);backdrop-filter:blur(20px);padding:14px 40px;border-bottom-color:var(--line)}
-nav.top .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:-.01em;font-size:14px}
-nav.top ul{list-style:none;display:flex;gap:30px}
-nav.top ul a{font-weight:600;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--dim);position:relative;padding:6px 0;transition:color .3s}
-nav.top ul a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--green);transition:width .45s var(--ease)}
-nav.top ul a:hover{color:var(--white)}
-nav.top ul a:hover::after{width:100%}
-nav.top .cta{font-weight:600;font-size:11px;letter-spacing:.28em;text-transform:uppercase;padding:11px 18px;border:1px solid var(--line-2);color:var(--white);transition:all .35s var(--ease);white-space:nowrap;border-radius:999px}
-nav.top .cta:hover{background:var(--green);color:var(--ink);border-color:var(--green)}
-@media (max-width:880px){ nav.top ul{display:none} nav.top, nav.top.scrolled{padding:14px 18px} nav.top .cta{padding:9px 14px;font-size:10px} }
-
-/* Buttons */
-.btn-primary{display:inline-flex;align-items:center;gap:14px;background:var(--green);color:var(--ink);padding:18px 26px;font-weight:600;font-size:11px;letter-spacing:.28em;text-transform:uppercase;cursor:pointer;transition:all .35s var(--ease);border-radius:999px}
-.btn-primary:hover{background:var(--soft);transform:translateY(-2px);box-shadow:0 14px 40px -10px rgba(198,255,61,.4)}
-.btn-primary .arr{transition:transform .35s var(--ease)}
-.btn-primary:hover .arr{transform:translateX(6px)}
-.btn-ghost{display:inline-flex;align-items:center;gap:14px;background:transparent;color:var(--white);padding:18px 26px;font-weight:600;font-size:11px;letter-spacing:.28em;text-transform:uppercase;cursor:pointer;border:1px solid var(--line-2);transition:all .35s var(--ease);border-radius:999px}
-.btn-ghost:hover{border-color:var(--white);background:rgba(255,255,255,.04)}
-
-/* HERO — clean, atmospheric, no portrait */
-.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:140px 24px 100px;overflow:hidden;z-index:3}
-.hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden;background:
-  radial-gradient(800px 600px at 50% 30%, rgba(198,255,61,.05), transparent 70%),
-  radial-gradient(900px 500px at 50% 90%, rgba(198,255,61,.03), transparent 70%),
-  linear-gradient(180deg, #0B0B0C 0%, #08080A 100%)}
-.hero-bg::after{content:"";position:absolute;inset:0;
-  background-image:
-    linear-gradient(to right, rgba(255,255,255,.025) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255,255,255,.025) 1px, transparent 1px);
-  background-size:60px 60px;
-  mask-image:radial-gradient(ellipse at center, black, transparent 70%)}
-
-.hero .badge{position:relative;z-index:4;display:inline-flex;align-items:center;gap:10px;padding:9px 16px;border:1px solid var(--line-2);background:rgba(15,15,17,.5);backdrop-filter:blur(8px);margin-bottom:48px;border-radius:999px;opacity:0;animation:rise 1s var(--ease-out) .3s forwards;transform:translateY(20px)}
-.hero .badge .dot{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green);animation:pulse 2s ease-in-out infinite}
-
-.title{position:relative;z-index:4;font-weight:900;letter-spacing:-.04em;line-height:.86;font-size:clamp(56px,13vw,200px)}
-.title .line{display:block;overflow:hidden}
-.title .line > span{display:inline-block;transform:translateY(110%);animation:rise 1.1s var(--ease-out) forwards}
-.title .line:nth-child(1) span{animation-delay:.5s}
-.title .line:nth-child(2) span{animation-delay:.7s}
-.title .line:nth-child(3) span{animation-delay:.9s}
-@keyframes rise{to{transform:translateY(0);opacity:1}}
-
-.hero .sub{position:relative;z-index:4;margin-top:48px;font-size:18px;color:rgba(255,255,255,.78);max-width:560px;opacity:0;animation:rise 1s var(--ease-out) 1.2s forwards;transform:translateY(20px)}
-.hero .actions{position:relative;z-index:4;margin-top:40px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;opacity:0;animation:rise 1s var(--ease-out) 1.4s forwards;transform:translateY(20px)}
-@media (max-width:560px){
-  .hero .actions{width:100%;flex-direction:column;align-items:stretch;padding:0 12px}
-  .hero .actions a{justify-content:center}
-}
-
-.hero .scroll-ind{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:5;display:flex;flex-direction:column;align-items:center;gap:10px;opacity:0;animation:fadeIn 1s ease 2s forwards}
-@keyframes fadeIn{to{opacity:1}}
-.hero .scroll-ind .ln{width:1px;height:50px;background:linear-gradient(180deg, transparent, var(--green));position:relative;overflow:hidden}
-.hero .scroll-ind .ln::after{content:"";position:absolute;top:-50%;left:0;width:100%;height:50%;background:var(--green);animation:scrollDot 1.6s var(--ease) infinite}
-@keyframes scrollDot{0%{top:-50%}100%{top:100%}}
-.hero .scroll-ind span{font-weight:600;font-size:9px;letter-spacing:.30em;color:var(--dim);text-transform:uppercase}
-
-/* Sections */
-section{position:relative;z-index:3;padding:140px 0}
-@media (max-width:720px){ section{padding:90px 0} }
-
-.reveal{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease-out), transform 1s var(--ease-out)}
-.reveal.in{opacity:1;transform:translateY(0)}
-.reveal.d1{transition-delay:.08s}
-.reveal.d2{transition-delay:.16s}
-.reveal.d3{transition-delay:.24s}
-
-.sec-head{text-align:center;margin-bottom:80px;max-width:680px;margin-left:auto;margin-right:auto}
-.sec-head .eyebrow{margin-bottom:24px;display:block}
-.sec-head h2{font-weight:900;font-size:clamp(40px,5.5vw,72px);letter-spacing:-.025em;line-height:1.02}
-.sec-head p{margin-top:24px;color:var(--muted);font-size:16px}
-@media (max-width:720px){ .sec-head{margin-bottom:50px} }
-
-/* STUDIO — split with camera (the only "me" image) */
-#studio{border-top:1px solid var(--line)}
-.studio-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-@media (max-width:980px){ .studio-grid{grid-template-columns:1fr;gap:40px} }
-.studio-grid .img-block{position:relative;overflow:hidden;border-radius:var(--r);aspect-ratio:4/5}
-.studio-grid .img-block .ph{position:absolute;inset:0;background-image:url('img/founder.png');background-size:cover;background-position:center top;transition:transform 1.4s var(--ease)}
-.studio-grid .img-block:hover .ph{transform:scale(1.04)}
-.studio-grid .img-block::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, transparent 65%, rgba(11,11,12,.5) 100%);pointer-events:none}
-.studio-grid .img-block .cap{position:absolute;left:18px;bottom:18px;font-weight:600;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--white);z-index:2;display:flex;align-items:center;gap:10px}
-.studio-grid .img-block .cap::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2s ease-in-out infinite}
-.studio-grid .txt h2{font-weight:900;font-size:clamp(36px,5vw,60px);letter-spacing:-.025em;line-height:1.05;margin-bottom:28px}
-.studio-grid .txt .eyebrow{margin-bottom:24px;display:block}
-.studio-grid .txt p{font-size:16px;color:var(--muted);line-height:1.65;max-width:42ch}
-.studio-grid .txt p + p{margin-top:16px}
-.studio-grid .txt .sig{margin-top:36px;padding-top:24px;border-top:1px solid var(--line);max-width:280px}
-.studio-grid .txt .sig .nm{font-weight:900;font-size:14px;letter-spacing:-.01em}
-.studio-grid .txt .sig .rl{font-weight:600;font-size:10px;letter-spacing:.28em;color:var(--green);text-transform:uppercase;margin-top:4px}
-
-/* SERVICES — softened cards with rounded corners */
-#services{border-top:1px solid var(--line)}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-@media (max-width:980px){ .svc-grid{grid-template-columns:repeat(2,1fr)} }
-@media (max-width:600px){ .svc-grid{grid-template-columns:1fr} }
-.svc{background:var(--surface);padding:36px 32px;position:relative;overflow:hidden;cursor:pointer;transition:all .4s var(--ease);min-height:240px;display:flex;flex-direction:column;justify-content:space-between;border-radius:var(--r);border:1px solid var(--line)}
-@media (max-width:560px){ .svc{padding:30px 24px;min-height:auto} }
-.svc::before{content:"";position:absolute;left:24px;right:24px;top:0;height:2px;background:var(--green);transform:scaleX(0);transform-origin:left;transition:transform .55s var(--ease);border-radius:2px}
-.svc:hover::before{transform:scaleX(1)}
-.svc:hover{background:#1a1a20;border-color:var(--line-2);transform:translateY(-3px)}
-.svc .ico{width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--line-2);color:var(--green);margin-bottom:28px;border-radius:10px;transition:all .4s var(--ease)}
-.svc:hover .ico{border-color:var(--green);background:rgba(198,255,61,.08)}
-.svc h3{font-weight:900;font-size:22px;letter-spacing:-.01em;margin-bottom:10px}
-.svc p{font-size:14px;color:var(--muted);line-height:1.6}
-.svc .tag-ai{position:absolute;top:24px;right:24px;font-weight:600;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--ink);background:var(--green);padding:4px 9px;border-radius:999px}
-
-/* PROCESS — pipeline, friendlier on desktop, beautiful on mobile */
-.process{border-top:1px solid var(--line);background:var(--ink)}
-.pipeline{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--surface)}
-.pipeline .step{position:relative;padding:36px 28px;border-right:1px solid var(--line);transition:background .4s var(--ease)}
-.pipeline .step:last-child{border-right:none}
-.pipeline .step:hover{background:rgba(198,255,61,.04)}
-.pipeline .step .n{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(198,255,61,.1);color:var(--green);font-weight:900;font-size:13px;letter-spacing:-.01em;margin-bottom:22px;border:1px solid rgba(198,255,61,.25)}
-.pipeline .step h4{font-weight:900;font-size:17px;letter-spacing:-.005em;margin-bottom:10px}
-.pipeline .step p{font-size:13px;color:var(--muted);line-height:1.55}
-.pipeline .step .arr{position:absolute;right:-9px;top:50%;transform:translateY(-50%);width:18px;height:18px;background:var(--ink);display:grid;place-items:center;border-radius:50%;color:var(--green);font-size:11px;z-index:2;border:1px solid var(--line)}
-.pipeline .step:last-child .arr{display:none}
-
-/* Mobile pipeline — vertical timeline */
-@media (max-width:760px){
-  .pipeline{display:flex;flex-direction:column;background:transparent;border:none;border-radius:0}
-  .pipeline .step{padding:24px 22px 24px 64px;border-right:none;border-bottom:none;background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-bottom:14px;position:relative}
-  .pipeline .step:last-child{margin-bottom:0}
-  .pipeline .step .n{position:absolute;left:18px;top:24px;margin-bottom:0;width:32px;height:32px;font-size:12px}
-  .pipeline .step .arr{display:none}
-  .pipeline .step h4{font-size:16px;margin-bottom:6px}
-  .pipeline .step p{font-size:13px}
-  .pipeline::before{content:"";position:absolute;left:33px;top:60px;bottom:60px;width:1px;background:linear-gradient(180deg, rgba(198,255,61,.5), rgba(198,255,61,.05));z-index:-1}
-}
-
-/* CTA — split with monitor */
-.cta-sec{padding:0;position:relative;overflow:hidden;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;min-height:75vh}
-@media (max-width:880px){ .cta-sec{grid-template-columns:1fr} }
-.cta-sec .img-side{position:relative;overflow:hidden;background:#000;min-height:50vh}
-.cta-sec .img-side .ph{position:absolute;inset:0;background-image:url('img/monitor.png');background-size:cover;background-position:center;filter:contrast(1.04)}
-.cta-sec .img-side::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, transparent 60%, rgba(11,11,12,.75) 100%)}
-.cta-sec .img-side .cap{position:absolute;right:24px;bottom:24px;z-index:2;font-weight:600;font-size:10px;letter-spacing:.28em;color:var(--green);text-transform:uppercase;display:flex;align-items:center;gap:8px}
-.cta-sec .img-side .cap::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green);animation:pulse 2s ease-in-out infinite}
-.cta-sec .txt-side{padding:120px 60px;display:flex;flex-direction:column;justify-content:center}
-@media (max-width:720px){ .cta-sec .txt-side{padding:70px 22px} .cta-sec .img-side{min-height:50vh} }
-.cta-sec .txt-side .eyebrow{margin-bottom:24px;display:block;color:var(--green)}
-.cta-sec h2{font-weight:900;font-size:clamp(38px,5vw,68px);letter-spacing:-.03em;line-height:.98}
-.cta-sec .sub{margin-top:22px;color:var(--muted);font-size:16px;max-width:38ch;line-height:1.6}
-.cta-sec .actions{margin-top:36px;display:flex;gap:12px;flex-wrap:wrap}
-.cta-sec .mail{margin-top:40px;display:flex;flex-direction:column;gap:6px}
-.cta-sec .mail .lbl{font-weight:600;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--dim)}
-.cta-sec .mail a{font-weight:900;font-size:18px;color:var(--white);border-bottom:1px solid var(--line);padding-bottom:8px;transition:all .3s;width:max-content;max-width:100%;word-break:break-all}
-.cta-sec .mail a:hover{color:var(--green);border-color:var(--green)}
-
-/* FOOTER */
-footer{border-top:1px solid var(--line);padding:50px 0 32px;position:relative;z-index:3;background:var(--ink)}
-.f-row{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
-.f-row .brand-l{display:flex;align-items:center;gap:14px;font-weight:900;font-size:20px;letter-spacing:-.01em}
-.f-row .links{display:flex;gap:28px;flex-wrap:wrap}
-.f-row .links a{font-weight:600;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--dim);transition:color .3s}
-.f-row .links a:hover{color:var(--green)}
-.f-bottom{margin-top:30px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-weight:600;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--dim)}
-
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+img{display:block;max-width:100%}
+.g{color:var(--g)}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+.eyebrow{font-weight:600;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--dim)}
+.eyebrow .dot{display:inline-block;width:7px;height:7px;background:var(--g);margin-right:10px;vertical-align:1px}
+h1,h2,h3{font-weight:900;letter-spacing:-.035em;line-height:.95}
+h2{font-size:clamp(40px,9vw,96px)}
+.lead{font-size:18px;color:#cfcfcf;max-width:560px}
+section{position:relative}
+.sec{padding:110px 0}
+.line-mask{display:block;overflow:hidden;padding-bottom:.06em}
+.line-mask>span{display:block}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase;padding:20px 26px;border-radius:999px;transition:transform .35s var(--ease),background .25s}
+.btn-g{background:var(--g);color:var(--ink)}
+.btn-g:hover{background:var(--gs);transform:translateY(-2px)}
+.btn-o{border:1px solid var(--line2);color:var(--white)}
+.btn-o:hover{border-color:var(--white)}
+.btn .arr{display:inline-block;transition:transform .35s var(--ease)}
+.btn:hover .arr{transform:translateX(4px)}
+/* nav */
+nav.top{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:rgba(10,10,10,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+nav.top.scrolled{border-bottom-color:var(--line)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.02em;font-size:20px}
+.brand img{width:30px;height:30px}
+.nav-r{display:flex;align-items:center;gap:10px}
+.lang{display:flex;border:1px solid var(--line2);border-radius:999px;overflow:hidden;font-weight:600;font-size:11px;letter-spacing:.15em}
+.lang button{padding:8px 11px;color:var(--dim)}
+.lang button.on{background:var(--white);color:var(--ink)}
+.nav-cta{display:none}
+@media(min-width:760px){.nav-cta{display:inline-flex;padding:12px 18px;font-size:11px}}
+/* loader */
+#loader{position:fixed;inset:0;z-index:100;background:var(--ink);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:22px;animation:loaderSafety .5s 3.2s forwards}
+@keyframes loaderSafety{to{opacity:0;visibility:hidden}}
+#loader img{width:70px;height:70px}
+#loader .words{font-weight:900;font-size:clamp(30px,9vw,64px);letter-spacing:-.04em;display:flex;gap:.28em}
+#loader .words>span{opacity:0;transform:translateY(30px);display:inline-block}
+/* hero */
+.hero{min-height:100svh;padding:110px 0 60px;display:flex;align-items:center}
+.hero-grid{display:grid;gap:48px;align-items:center}
+.hero-grid>*{min-width:0}
+.shot .hero{min-height:844px}
+@media(min-width:980px){.hero-grid{grid-template-columns:1.15fr .85fr}}
+.hero h1{font-size:clamp(50px,13.6vw,150px);margin:22px 0 26px}
+.hero .sub{font-size:18px;color:#d0d0d0;max-width:520px}
+.hero .ctas{display:flex;flex-direction:column;gap:12px;margin-top:32px}
+@media(min-width:560px){.hero .ctas{flex-direction:row}}
+.micro{font-size:13px;color:var(--mute);margin-top:16px}
+.micro b{color:var(--dim);font-weight:600}
+/* phone */
+.stage{position:relative;display:flex;flex-direction:column;align-items:center;padding:10px 0 30px}
+.chips{display:flex;gap:8px;width:100%;max-width:360px;margin-top:16px}
+.chips .chip{position:static;flex:1;min-width:0}
+.phone{position:relative;width:270px;height:560px;border-radius:44px;border:10px solid #1f1f1f;background:#000;overflow:hidden}
+.phone .notch{position:absolute;top:10px;left:50%;width:90px;height:24px;margin-left:-45px;border-radius:14px;background:#000;z-index:5;border:1px solid #1f1f1f}
+.ad{position:absolute;inset:0;background:var(--ink2);display:flex;flex-direction:column;justify-content:space-between;padding:52px 18px 18px}
+.ad .bars{display:flex;gap:4px}
+.ad .bars i{flex:1;height:3px;background:#333;position:relative;overflow:hidden}
+.ad .bars i b{position:absolute;inset:0;background:var(--white);transform-origin:0 50%;transform:scaleX(0)}
+.ad .acct{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:12px;font-weight:600}
+.ad .acct img{width:26px;height:26px;border-radius:50%;background:var(--ink)}
+.ad .acct span{color:var(--mute);font-weight:500}
+.hookbox{position:relative;flex:1;display:flex;align-items:center}
+.hook{position:absolute;left:0;right:0;font-weight:900;font-size:34px;line-height:.98;letter-spacing:-.035em}
+.ad .shop{display:flex;justify-content:space-between;align-items:center;background:var(--g);color:var(--ink);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:13px 16px;border-radius:12px}
+.chip{position:absolute;background:var(--white);color:var(--ink);border-radius:14px;padding:10px 14px;font-weight:700;font-size:12px;line-height:1.1;min-width:116px}
+.chip small{display:block;font-weight:600;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#666;margin-bottom:4px}
+.chip strong{font-size:20px;font-weight:900;letter-spacing:-.03em}
+.chip .up{color:#1a7f00;font-size:11px;margin-left:4px}
+.chip.c2{background:var(--g)}
+@media(min-width:560px){.chip strong{font-size:24px}.chips{display:block;margin:0;max-width:none}.chips .chip{position:absolute;min-width:116px}.chip.c1{left:calc(50% - 250px);top:90px}.chip.c2{right:calc(50% - 250px);top:250px}.chip.c3{left:calc(50% - 240px);bottom:150px}}
+.illus{margin-top:12px;text-align:center;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+/* marquee */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:18px 0}
+.marquee .track{display:inline-flex;gap:0;will-change:transform}
+.marquee span{font-weight:900;font-size:clamp(26px,5vw,44px);letter-spacing:-.03em;padding-right:36px}
+.marquee span i{font-style:normal;color:var(--g)}
+/* problem */
+.cards3{display:grid;gap:14px;margin-top:56px}
+@media(min-width:860px){.cards3{grid-template-columns:repeat(3,1fr)}}
+.pcard{border:1px solid var(--line);border-radius:22px;padding:28px;background:var(--ink2)}
+.cards3>*{min-width:0}
+.pcard .num .u{font-size:.46em;letter-spacing:-.02em;margin-left:.32em}
+.pcard .num{font-weight:900;font-size:clamp(60px,16vw,84px);white-space:nowrap;letter-spacing:-.05em;line-height:1.08;position:relative;display:inline-flex;align-items:baseline;padding-top:2px}
+.pcard .num .strike{position:absolute;left:-6px;right:-6px;top:64%;height:6px;background:var(--g);transform-origin:0 50%;transform:scaleX(0)}
+.pcard h3{font-size:24px;margin:14px 0 10px;letter-spacing:-.02em}
+.pcard p{color:var(--dim);font-size:15px}
+/* pipeline */
+.pipe{display:grid;gap:56px}
+@media(min-width:980px){.pipe{grid-template-columns:.9fr 1.1fr;gap:80px}}
+.steps{position:relative;padding-left:34px}
+.steps .rail{position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.steps .rail b{position:absolute;inset:0;background:var(--g);transform-origin:50% 0;transform:scaleY(0)}
+.step{position:relative;padding:4px 0 46px;opacity:.28;transition:opacity .4s}
+.step.on{opacity:1}
+.step .knot{position:absolute;left:-34px;top:8px;width:20px;height:20px;border-radius:50%;background:var(--ink);border:2px solid var(--line2);transition:all .4s}
+.step.on .knot{background:var(--g);border-color:var(--g)}
+.step .n{font-weight:600;font-size:12px;letter-spacing:.25em;color:var(--dim)}
+.step h3{font-size:clamp(34px,6vw,54px);margin:6px 0 10px}
+.step p{color:#c9c9c9;max-width:440px}
+/* week */
+.week{margin-top:56px;border:1px solid var(--line);border-radius:24px;padding:22px;background:var(--ink2);position:relative;overflow:hidden}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;position:relative}
+.day{border-radius:10px;padding:12px 0;text-align:center;background:var(--ink3);transition:background .3s,color .3s}
+.day .d{font-weight:900;font-size:11px;letter-spacing:0}
+@media(min-width:560px){.days{gap:8px}.day{padding:16px 6px;border-radius:14px}.day .d{font-size:15px}}
+.day.on{background:var(--g);color:var(--ink)}
+.dayinfo{margin-top:22px;min-height:84px}
+.dayinfo .k{font-weight:600;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--g)}
+.dayinfo .t{font-weight:900;font-size:clamp(28px,6vw,46px);letter-spacing:-.03em;line-height:1}
+.playhead{position:absolute;top:0;bottom:0;width:2px;background:var(--white);left:0;opacity:.0}
+/* test grid */
+.tgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:48px;max-width:720px}
+.tile{aspect-ratio:9/16;border-radius:10px;background:var(--ink3);border:1px solid var(--line2);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:7px}
+.tile .h{font-weight:700;font-size:9px;letter-spacing:.12em;color:var(--dim)}
+.tile .bar{height:4px;border-radius:2px;background:#2c2c2c;margin-top:6px;overflow:hidden}
+.tile .bar b{display:block;height:100%;width:0;background:var(--white)}
+.tile .x{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:28px;color:#555;opacity:0}
+.tile.keep{border-color:var(--g)}
+.tile.win{background:var(--g);color:var(--ink)}
+.tile.win .h{color:var(--ink)}
+.tstats{display:flex;gap:26px;margin-top:28px;flex-wrap:wrap}
+.tstats div{font-weight:900;font-size:48px;letter-spacing:-.04em;line-height:1}
+.tstats small{display:block;font-weight:600;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--dim);margin-top:6px}
+/* services */
+.svc{display:grid;gap:0;margin-top:48px;border-top:1px solid var(--line)}
+.svc .row{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:26px 0;border-bottom:1px solid var(--line);align-items:start}
+@media(min-width:860px){.svc .row{grid-template-columns:80px 1fr 1fr;align-items:center}}
+.svc .i{font-weight:600;font-size:12px;letter-spacing:.25em;color:var(--g);padding-top:8px}
+.svc h3{font-size:clamp(26px,4.4vw,40px)}
+.svc p{color:var(--dim);grid-column:2}
+@media(min-width:860px){.svc p{grid-column:auto}}
+/* founder */
+.founder{display:grid;gap:36px;align-items:center}
+@media(min-width:900px){.founder{grid-template-columns:.8fr 1.2fr;gap:70px}}
+.fimg{border-radius:26px;overflow:hidden;aspect-ratio:4/5;position:relative}
+.fimg img{width:100%;height:100%;object-fit:cover}
+.fimg .tag{position:absolute;left:16px;bottom:16px;background:var(--ink);border-radius:999px;padding:9px 14px;font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.quote{font-weight:900;font-size:clamp(30px,5.2vw,52px);letter-spacing:-.035em;line-height:1.02}
+/* fit */
+.fit{display:grid;gap:14px;margin-top:48px}
+@media(min-width:860px){.fit{grid-template-columns:1fr 1fr}}
+.fbox{border-radius:22px;padding:30px;border:1px solid var(--line)}
+.fbox.yes{background:var(--white);color:var(--ink);border-color:var(--white)}
+.fbox h3{font-size:26px;margin-bottom:18px}
+.fbox li{list-style:none;display:flex;gap:12px;padding:10px 0;border-top:1px solid rgba(0,0,0,.1);font-weight:500}
+.fbox.no li{border-top-color:var(--line);color:var(--dim)}
+.fbox li b{flex-shrink:0;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;margin-top:1px}
+.fbox.yes li b{background:var(--ink);color:var(--g)}
+.fbox.no li b{background:var(--ink3);color:#777}
+/* offer + form */
+.offer{border-radius:30px;background:var(--white);color:var(--ink);padding:34px 22px;display:grid;gap:36px}
+@media(min-width:980px){.offer{grid-template-columns:1fr 1fr;padding:60px;gap:60px}}
+.offer .eyebrow{color:#666}
+.offer h2{font-size:clamp(40px,7vw,76px);margin:16px 0 22px}
+.olist{margin-top:26px}
+.olist div{display:grid;grid-template-columns:38px 1fr;gap:12px;padding:14px 0;border-top:1px solid #e6e6e6;font-weight:600}
+.olist div span{font-weight:900;font-size:14px;width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--g);display:flex;align-items:center;justify-content:center}
+.slots{display:flex;align-items:center;gap:10px;margin-top:22px;font-weight:600;font-size:13px;letter-spacing:.06em}
+.slots i{width:12px;height:12px;border-radius:3px;background:var(--ink)}
+form.funnel{background:var(--ink);color:var(--white);border-radius:24px;padding:24px;position:relative;overflow:hidden}
+.fprog{height:4px;background:var(--ink3);border-radius:2px;overflow:hidden;margin-bottom:22px}
+.fprog b{display:block;height:100%;width:25%;background:var(--g);transition:width .5s var(--ease)}
+.fstep{display:none}
+.fstep.on{display:block}
+.fstep .q{font-weight:900;font-size:26px;letter-spacing:-.03em;line-height:1.05;margin-bottom:18px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;justify-content:space-between;text-align:left;width:100%;padding:17px 18px;border:1px solid var(--line2);border-radius:14px;font-weight:600;font-size:15px;transition:all .2s}
+.opt:hover,.opt.sel{border-color:var(--g);background:rgba(198,255,61,.08)}
+.opt .k{font-size:11px;color:var(--mute);letter-spacing:.2em}
+.field{margin-bottom:12px}
+.field label{display:block;font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin-bottom:7px}
+.field input{width:100%;padding:16px;border-radius:12px;border:1px solid var(--line2);background:var(--ink2);color:var(--white);font:inherit;font-size:16px;outline:none}
+.field input:focus{border-color:var(--g)}
+.fnav{display:flex;justify-content:space-between;align-items:center;margin-top:18px}
+.back{font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+.fdone{text-align:center;padding:30px 6px}
+.fdone .big{font-weight:900;font-size:40px;letter-spacing:-.03em}
+.err{color:#ff8a8a;font-size:13px;margin-top:8px;min-height:18px}
+/* faq */
+.faq{margin-top:44px;border-top:1px solid var(--line)}
+.qa{border-bottom:1px solid var(--line)}
+.qa button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;text-align:left;padding:24px 0;font-weight:700;font-size:19px;letter-spacing:-.01em}
+.qa button i{font-style:normal;width:30px;height:30px;flex-shrink:0;border-radius:50%;border:1px solid var(--line2);display:flex;align-items:center;justify-content:center;transition:transform .35s var(--ease)}
+.qa.open button i{transform:rotate(45deg);background:var(--g);color:var(--ink);border-color:var(--g)}
+.qa .a{height:0;overflow:hidden;color:var(--dim);transition:height .4s var(--ease)}
+.qa .a p{padding:0 0 24px;max-width:720px}
+/* final */
+.final{text-align:center;padding:140px 0 120px}
+.final h2{font-size:clamp(64px,16vw,190px);letter-spacing:-.05em}
+.final p{color:var(--dim);margin:22px auto 34px;max-width:460px}
+footer{border-top:1px solid var(--line);padding:34px 0 120px;color:var(--mute);font-size:13px}
+footer .wrap{display:flex;flex-direction:column;gap:16px}
+@media(min-width:760px){footer .wrap{flex-direction:row;justify-content:space-between;align-items:center}footer{padding-bottom:40px}}
+/* sticky mobile cta */
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:70;transform:translateY(140%);transition:transform .45s var(--ease)}
+.sticky.show{transform:none}
+.sticky .btn{width:100%;padding:18px}
+@media(min-width:760px){.sticky{display:none}}
+.reveal{opacity:0;transform:translateY(40px)}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none}#loader{display:none}}
 </style>
 </head>
 <body>
 
-<div class="glow-bg"></div>
-<div class="grain"></div>
+<div id="loader" aria-hidden="true">
+  <img src="assets/p.png" alt="">
+  <div class="words"><span>Make<span class="g">.</span></span><span>Ship<span class="g">.</span></span><span>Repeat<span class="g">.</span></span></div>
+</div>
 
-<!-- NAV -->
 <nav class="top" id="nav">
-  <a class="brand" href="#top">
-    <svg viewBox="0 0 100 100" width="28" height="28">
-      <path fill="#C6FF3D" d="M30 12 H62 Q86 12 86 38 Q86 60 62 60 H44 V88 H30 Z M44 26 V46 H60 Q72 46 72 36 Q72 26 60 26 Z"/>
-      <path fill="#C6FF3D" d="M30 60 L44 60 L44 78 L30 88 Z"/>
-    </svg>
-    PRIME<span class="pd">.</span>
-  </a>
-  <ul>
-    <li><a href="#studio">Studio</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a href="#contact" class="cta">Start →</a>
+  <a class="brand" href="#top"><img src="assets/p.png" alt="Prime">PRIME<span class="g">.</span></a>
+  <div class="nav-r">
+    <div class="lang" role="group" aria-label="Language"><button data-lang="en" class="on">EN</button><button data-lang="es">ES</button></div>
+    <a href="#audit" class="btn btn-g nav-cta" data-es="Auditoría gratis">Free audit</a>
+  </div>
 </nav>
 
-<!-- HERO -->
-<header class="hero" id="top">
-  <div class="hero-bg"></div>
-
-  <div class="badge">
-    <span class="dot"></span>
-    <span class="eyebrow" style="color:var(--white)">Now booking · Q3 · 2026</span>
+<main id="top">
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow h-in"><span class="dot"></span><span data-es="Estudio de estrategia de contenido · Miami">Content strategy studio · Miami</span></div>
+      <h1>
+        <span class="line-mask"><span data-es="Contenido que">Content that</span></span>
+        <span class="line-mask"><span data-es="trae clientes<span class='g'>.</span>">brings clients<span class="g">.</span></span></span>
+        <span class="line-mask"><span data-es="Sin pagar ads<span class='g'>.</span>">No ad spend<span class="g">.</span></span></span>
+      </h1>
+      <p class="sub h-in" data-es="Armamos tu estrategia de contenido, grabamos y editamos cada pieza y movemos tus redes con un sistema semanal. Crecimiento propio, no alquilado.">We build your content strategy, film and edit every piece and run your channels on a weekly system. Growth you own, not rent.</p>
+      <div class="ctas h-in">
+        <a href="#audit" class="btn btn-g"><span data-es="Pide tu auditoría gratis">Get a free content audit</span><span class="arr">→</span></a>
+        <a href="#system" class="btn btn-o" data-es="Mira cómo funciona">See how it works</a>
+      </div>
+      <p class="micro h-in" data-es="<b>30 minutos.</b> Sin presentaciones de ventas. Te vas con 3 ideas de contenido para tu nicho.">
+        <b>30 minutes.</b> No pitch deck. You leave with 3 content ideas built for your niche.</p>
+    </div>
+    <div class="stage h-in">
+      <div class="phone">
+        <div class="notch"></div>
+        <div class="ad">
+          <div>
+            <div class="bars"><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i></div>
+            <div class="acct"><img src="assets/p.png" alt="">yourbrand <span data-es="· Reel">· Reel</span></div>
+          </div>
+          <div class="hookbox" id="hookbox"></div>
+          <div class="shop"><span data-es="Seguir">Follow</span><span>+</span></div>
+        </div>
+      </div>
+      <div class="chips">
+      <div class="chip c1"><small data-es="Vistas">Views</small><strong data-count="248" data-dec="0" data-suf="K">0</strong><span class="up">▲</span></div>
+      <div class="chip c2"><small data-es="Guardados">Saves</small><strong data-count="3.1" data-dec="1" data-suf="K">0</strong></div>
+      <div class="chip c3"><small data-es="Seguidores nuevos">New followers</small><strong data-count="1.9" data-pre="+" data-dec="1" data-suf="K">0</strong><span class="up">▲</span></div>
+      </div>
+      <div class="illus" data-es="Ejemplo ilustrativo">Illustrative example</div>
+    </div>
   </div>
+</section>
 
-  <h1 class="title">
-    <span class="line"><span>Make<span class="pd">.</span></span></span>
-    <span class="line"><span>Ship<span class="pd">.</span></span></span>
-    <span class="line"><span>Repeat<span class="pd">.</span></span></span>
-  </h1>
+<div class="marquee" aria-hidden="true"><div class="track" id="mq">
+  <span>STRATEGY<i>.</i></span><span>SCRIPTS<i>.</i></span><span>SHOOT<i>.</i></span><span>EDIT<i>.</i></span><span>REELS<i>.</i></span><span>CAROUSELS<i>.</i></span><span>INSTAGRAM<i>.</i></span><span>TIKTOK<i>.</i></span><span>YOUTUBE<i>.</i></span>
+</div></div>
 
-  <p class="sub">Marketing, production, media and AI creative — under one roof.</p>
-
-  <div class="actions">
-    <a href="#contact" class="btn-primary">Start a project <span class="arr">→</span></a>
-    <a href="#services" class="btn-ghost">What we do</a>
-  </div>
-
-  <div class="scroll-ind">
-    <span>Scroll</span>
-    <div class="ln"></div>
-  </div>
-</header>
-
-<!-- STUDIO -->
-<section id="studio">
+<!-- ============ PROBLEM ============ -->
+<section class="sec" id="problem">
   <div class="wrap">
-    <div class="studio-grid">
-      <div class="img-block reveal">
-        <div class="ph"></div>
-        <div class="cap">Studio · Miami</div>
-      </div>
-      <div class="txt reveal d1">
-        <span class="eyebrow">The studio</span>
-        <h2>We shoot it<span class="pd">.</span><br/>We run it<span class="pd">.</span></h2>
-        <p>Prime is the studio that designs the strategy, films the spot, edits the cut and runs the paid media against it. Same room. Same week.</p>
-        <p>No agency hand-offs. No vendor stacks. The director sits next to the media buyer — that's the whole pitch.</p>
-        <div class="sig">
-          <div class="nm">Kevin Rodriguez</div>
-          <div class="rl">Founder · Director</div>
-        </div>
-      </div>
+    <div class="eyebrow reveal"><span class="dot"></span><span data-es="El problema">The problem</span></div>
+    <h2 class="split" style="margin-top:22px" data-es="Tu contenido no falla<span class='g'>.</span> Falla tu sistema<span class='g'>.</span>">Your content isn't failing<span class="g">.</span> Your system is<span class="g">.</span></h2>
+    <div class="cards3">
+      <div class="pcard reveal"><div class="num"><span data-count="4" data-dec="0">0</span><span class="u" data-es="h al día">hrs a day</span><i class="strike"></i></div>
+        <h3 data-es="Haciendo contenido tú solo.">Making content alone.</h3><p data-es="Guion, grabación, edición y publicación. Mientras tanto, tu negocio espera.">Scripting, shooting, editing, posting. Meanwhile, your business waits.</p></div>
+      <div class="pcard reveal"><div class="num"><span data-count="1" data-dec="0">0</span><span class="u" data-es="idea">idea</span><i class="strike"></i></div>
+        <h3 data-es="Repetida hasta que muere.">Recycled until it dies.</h3><p data-es="Los mismos temas que tu nicho ya vio cien veces. La gente pasa de largo.">The same topics your niche has seen a hundred times. People scroll past.</p></div>
+      <div class="pcard reveal"><div class="num"><span data-count="0" data-dec="0">0</span><span class="u" data-es="sistema">system</span><i class="strike"></i></div>
+        <h3 data-es="Publicar y rezar.">Post and pray.</h3><p data-es="Sin hooks probados, sin leer los datos, sin plan para la próxima semana.">No hooks tested, no data read, no plan for next week.</p></div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services">
+<!-- ============ SYSTEM ============ -->
+<section class="sec" id="system" style="padding-top:40px">
+  <div class="wrap pipe">
+    <div>
+      <div class="eyebrow reveal"><span class="dot"></span><span data-es="El sistema Prime">The Prime system</span></div>
+      <h2 class="split" style="margin-top:22px" data-es="Un equipo<span class='g'>.</span> Un techo<span class='g'>.</span> Un número<span class='g'>.</span>">One team<span class="g">.</span> One roof<span class="g">.</span> One number<span class="g">.</span></h2>
+      <p class="lead reveal" style="margin-top:26px" data-es="El estratega se sienta al lado del editor. La estrategia, la grabación y la publicación pasan en el mismo cuarto, la misma semana.">The strategist sits next to the editor. Strategy, shoot and publishing happen in the same room, the same week.</p>
+    </div>
+    <div class="steps" id="steps">
+      <div class="rail"><b id="rail"></b></div>
+      <div class="step"><i class="knot"></i><div class="n">01</div><h3 data-es="Estrategia<span class='g'>.</span>">Strategy<span class="g">.</span></h3><p data-es="Posicionamiento, pilares de contenido y un banco de hooks basado en lo que tu cliente busca, guarda y comparte. Cada pieza nace de una meta de negocio.">Positioning, content pillars and a hook bank built from what your buyer searches, saves and shares. Every piece starts from a business goal.</p></div>
+      <div class="step"><i class="knot"></i><div class="n">02</div><h3 data-es="Producción<span class='g'>.</span>">Production<span class="g">.</span></h3><p data-es="Guiones, grabación, edición, motion e IA. Todo en casa. Tú solo apareces frente a la cámara.">Scripts, shoot, edit, motion and AI. All in-house. You just show up on camera.</p></div>
+      <div class="step"><i class="knot"></i><div class="n">03</div><h3 data-es="Distribución<span class='g'>.</span>">Distribution<span class="g">.</span></h3><p data-es="Instagram, TikTok, YouTube y LinkedIn. Publicamos con calendario, escribimos los captions y cuidamos la comunidad.">Instagram, TikTok, YouTube and LinkedIn. We publish on a calendar, write the captions and work the community.</p></div>
+      <div class="step"><i class="knot"></i><div class="n">04</div><h3 data-es="Repetir<span class='g'>.</span>">Repeat<span class="g">.</span></h3><p data-es="Cada semana leemos retención, guardados y seguidores. Lo que funciona se vuelve serie. Lo que no, se cambia.">Every week we read retention, saves and follows. Winners become series. Losers get cut.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7-DAY CYCLE ============ -->
+<section class="sec" id="cycle" style="padding-top:40px">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">What we ship</span>
-      <h2>One pipeline<span class="pd">.</span> Five services<span class="pd">.</span></h2>
-    </div>
-
-    <div class="svc-grid">
-      <div class="svc reveal">
-        <div>
-          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg></div>
-          <h3>Marketing<span class="pd">.</span></h3>
-          <p>Strategy, positioning and funnels. Campaigns reverse-engineered from the business goal.</p>
-        </div>
-      </div>
-      <div class="svc reveal d1">
-        <div>
-          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="14" height="12" rx="1"/><path d="M17 10l4-2v8l-4-2z"/></svg></div>
-          <h3>Production<span class="pd">.</span></h3>
-          <p>In-house studio. Direction, cinema, edit, motion. We shoot it. We cut it. We ship it.</p>
-        </div>
-      </div>
-      <div class="svc reveal d2">
-        <div>
-          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></div>
-          <h3>Media<span class="pd">.</span></h3>
-          <p>Meta, TikTok, YouTube. Daily optimization, weekly refresh. If it doesn't move CAC, we kill it.</p>
-        </div>
-      </div>
-      <div class="svc reveal">
-        <span class="tag-ai">New</span>
-        <div>
-          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M5 19l3-3M16 8l3-3"/><circle cx="12" cy="12" r="3"/></svg></div>
-          <h3>AI Creative<span class="pd">.</span></h3>
-          <p>Generative video, image and copy at scale. Avatars, product shots, hooks — ten variations before lunch.</p>
-        </div>
-      </div>
-      <div class="svc reveal d1">
-        <div>
-          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-          <h3>Brand systems<span class="pd">.</span></h3>
-          <p>Identity, guidelines and motion principles. A toolkit that survives ten ad iterations.</p>
-        </div>
-      </div>
-      <div class="svc reveal d2" style="display:flex;justify-content:center;align-items:center;text-align:center">
-        <div>
-          <div class="eyebrow" style="margin-bottom:14px;color:var(--green)">Custom →</div>
-          <p style="font-size:14px;max-width:24ch;margin:0 auto;color:var(--muted)">Need something else? Tell us what you're trying to ship.</p>
-          <a href="#contact" class="eyebrow" style="margin-top:20px;display:inline-block;color:var(--white);border-bottom:1px solid var(--line);padding-bottom:4px">Talk to us</a>
-        </div>
-      </div>
+    <div class="eyebrow reveal"><span class="dot"></span><span data-es="El ciclo de 7 días">The 7-day cycle</span></div>
+    <h2 class="split" style="margin-top:22px" data-es="Estrategia el lunes<span class='g'>.</span> Publicado el viernes<span class='g'>.</span>">Strategy Monday<span class="g">.</span> Posted Friday<span class="g">.</span></h2>
+    <div class="week reveal" id="week">
+      <div class="days" id="days"></div>
+      <div class="dayinfo"><div class="k" id="dk"></div><div class="t" id="dt"></div></div>
     </div>
   </div>
 </section>
 
-<!-- PROCESS -->
-<section id="process" class="process">
+<!-- ============ TEST 18 ============ -->
+<section class="sec" id="test" style="padding-top:40px">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">How we work</span>
-      <h2>Concept to live<br/>in seven days<span class="pd">.</span></h2>
-    </div>
+    <div class="eyebrow reveal"><span class="dot"></span><span data-es="Cómo encontramos ganadores">How we find winners</span></div>
+    <h2 class="split" style="margin-top:22px" data-es="Publicamos 18<span class='g'>.</span> Quedan 3<span class='g'>.</span> 1 se vuelve serie<span class='g'>.</span>">Post 18<span class="g">.</span> Keep 3<span class="g">.</span> Turn 1 into a series<span class="g">.</span></h2>
+    <p class="lead reveal" style="margin-top:24px" data-es="La mayoría publica y espera. Nosotros publicamos 18 hooks al mes, leemos la retención y los guardados, y convertimos al ganador en una serie que trae seguidores cada semana.">Most brands post and hope. We publish 18 hooks a month, read retention and saves, and turn the winner into a series that brings followers every week.</p>
+    <div class="tgrid" id="tgrid"></div>
+    <div class="tstats"><div><span id="sTested">0</span><small data-es="Publicados">Posted</small></div><div><span id="sKilled">0</span><small data-es="Descartados">Dropped</small></div><div class="g"><span id="sScaled">0</span><small data-es="Serie">Series</small></div></div>
+  </div>
+</section>
 
-    <div class="pipeline reveal d1">
-      <div class="step">
-        <div class="n">01</div>
-        <h4>Strategy</h4>
-        <p>Funnel first. We start with the business goal, not the moodboard.</p>
-        <div class="arr">→</div>
-      </div>
-      <div class="step">
-        <div class="n">02</div>
-        <h4>Make</h4>
-        <p>Shoot, edit, motion, AI. All in-house. No vendor chain.</p>
-        <div class="arr">→</div>
-      </div>
-      <div class="step">
-        <div class="n">03</div>
-        <h4>Ship</h4>
-        <p>Live on Meta, TikTok and YouTube. Hooks tested, winners scaled.</p>
-        <div class="arr">→</div>
-      </div>
-      <div class="step">
-        <div class="n">04</div>
-        <h4>Iterate</h4>
-        <p>Weekly refresh. Keep what works, kill what doesn't. Repeat.</p>
-      </div>
+<!-- ============ SERVICES ============ -->
+<section class="sec" id="services" style="padding-top:40px">
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="dot"></span><span data-es="Qué incluye">What's included</span></div>
+    <h2 class="split" style="margin-top:22px" data-es="Todo lo que mueve el número<span class='g'>.</span>">Everything that moves the number<span class="g">.</span></h2>
+    <div class="svc">
+      <div class="row reveal"><div class="i">01</div><h3 data-es="Estrategia de contenido">Content strategy</h3><p data-es="Posicionamiento, pilares, banco de hooks y calendario mensual.">Positioning, content pillars, a hook bank and a monthly calendar.</p></div>
+      <div class="row reveal"><div class="i">02</div><h3 data-es="Guiones y grabación">Scripts &amp; production</h3><p data-es="Guiones, dirección y grabación con equipo propio. En estudio o en tu negocio.">Scripts, direction and filming with our own crew and gear. In studio or on location.</p></div>
+      <div class="row reveal"><div class="i">03</div><h3 data-es="Edición, motion e IA">Editing, motion &amp; AI</h3><p data-es="Reels, carruseles y shorts con motion graphics y variantes de hooks.">Reels, carousels and shorts with motion graphics and hook variants.</p></div>
+      <div class="row reveal"><div class="i">04</div><h3 data-es="Manejo de redes">Channel management</h3><p data-es="Publicación, captions y comunidad en Instagram, TikTok, YouTube y LinkedIn.">Publishing, captions and community on Instagram, TikTok, YouTube and LinkedIn.</p></div>
+      <div class="row reveal"><div class="i">05</div><h3 data-es="Reporte semanal">Weekly reporting</h3><p data-es="Alcance, retención, seguidores y clientes en un solo tablero. Sabes qué funcionó y qué sigue.">Reach, retention, followers and leads in one dashboard. You know what worked and what's next.</p></div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-sec" id="contact">
-  <div class="img-side">
-    <div class="ph"></div>
-    <div class="cap">EDIT BAY · LIVE</div>
-  </div>
-  <div class="txt-side">
-    <span class="eyebrow">Let's go</span>
-    <h2>Let's build<br/>the next one<span class="pd">.</span></h2>
-    <p class="sub">Two-week kickoff. Strategy, shoot, first ads live.</p>
-    <div class="actions">
-      <a href="mailto:primeproductionmediallc@gmail.com" class="btn-primary">Start a project <span class="arr">→</span></a>
-    </div>
-    <div class="mail">
-      <span class="lbl">Direct</span>
-      <a href="mailto:primeproductionmediallc@gmail.com">primeproductionmediallc@gmail.com</a>
+<!-- ============ FOUNDER ============ -->
+<section class="sec" id="founder" style="padding-top:40px">
+  <div class="wrap founder">
+    <div class="fimg reveal"><img src="assets/founder.webp" alt="Kevin Rodriguez, founder of Prime Production Media" loading="lazy"><div class="tag" data-es="Kevin Rodriguez · Fundador">Kevin Rodriguez · Founder</div></div>
+    <div>
+      <div class="eyebrow reveal"><span class="dot"></span><span data-es="Por qué existe Prime">Why Prime exists</span></div>
+      <p class="quote split" style="margin-top:22px" data-es="“Vi demasiadas marcas buenas publicar todos los días sin llegar a ningún lado<span class='g'>.</span> Contenido sin sistema es solo ruido<span class='g'>.</span>”">“I watched too many good brands post every day and get nowhere<span class="g">.</span> Content without a system is just noise<span class="g">.</span>”</p>
+      <p class="lead reveal" style="margin-top:24px" data-es="Estratega de contenido, director y editor. Trabajo con marcas en Estados Unidos y Latinoamérica, en inglés y en español.">Content strategist, director and editor. I work with brands across the US and Latin America, in English and Spanish.</p>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ============ FIT ============ -->
+<section class="sec" id="fit" style="padding-top:40px">
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="dot"></span><span data-es="¿Es para ti?">Is it for you?</span></div>
+    <h2 class="split" style="margin-top:22px" data-es="No trabajamos con todos<span class='g'>.</span>">We don't work with everyone<span class="g">.</span></h2>
+    <div class="fit">
+      <div class="fbox yes reveal"><h3 data-es="Prime es para ti si">Prime is for you if</h3><ul>
+        <li><b>✓</b><span data-es="Ya vendes y quieres que tus redes te traigan clientes.">You already sell and want your socials to bring clients.</span></li>
+        <li><b>✓</b><span data-es="Puedes aparecer en cámara (o tienes a alguien que lo haga).">You can show up on camera (or have someone who can).</span></li>
+        <li><b>✓</b><span data-es="Quieres un socio que piense la estrategia, no solo que edite.">You want a partner that owns the strategy, not just the edit.</span></li>
+        <li><b>✓</b><span data-es="Te mueves rápido y confías en el proceso.">You move fast and trust the process.</span></li></ul></div>
+      <div class="fbox no reveal"><h3 data-es="No es para ti si">Not for you if</h3><ul>
+        <li><b>✕</b><span data-es="Buscas un viral de suerte sin plan.">You want one lucky viral with no plan.</span></li>
+        <li><b>✕</b><span data-es="Solo comparas precios.">You're shopping on price alone.</span></li>
+        <li><b>✕</b><span data-es="Quieres decidir cada cuadro del video.">You want to dictate every frame.</span></li>
+        <li><b>✕</b><span data-es="Esperas resultados en una semana.">You expect results in one week.</span></li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OFFER + FORM ============ -->
+<section class="sec" id="audit" style="padding-top:40px">
+  <div class="wrap">
+    <div class="offer">
+      <div>
+        <div class="eyebrow"><span class="dot" style="background:var(--ink)"></span><span data-es="Auditoría de contenido gratis">Free content audit</span></div>
+        <h2 data-es="3 mejoras para tu contenido<span class='g' style='color:#0A0A0A'>.</span> Gratis<span class='g' style='color:#0A0A0A'>.</span>">3 fixes for your content<span style="color:#0A0A0A">.</span> Free<span style="color:#0A0A0A">.</span></h2>
+        <p style="color:#444;max-width:440px" data-es="En 30 minutos revisamos tu perfil y tu contenido, y te decimos exactamente qué publicaríamos este mes. Lo puedes aplicar con o sin nosotros.">In 30 minutes we review your profile and content and tell you exactly what we'd post this month. Use it with us or without us.</p>
+        <div class="olist">
+          <div><span>1</span><p data-es="Análisis de tu perfil y tus últimos 30 posts.">A teardown of your profile and last 30 posts.</p></div>
+          <div><span>2</span><p data-es="3 hooks que publicaríamos esta semana.">3 hooks we'd post this week.</p></div>
+          <div><span>3</span><p data-es="Un plan de contenido de 30 días para tu nicho.">A 30-day content plan for your niche.</p></div>
+        </div>
+        <div class="slots"><i></i><i></i><i></i><i></i><span data-es="Tomamos 4 marcas nuevas al mes.">We onboard 4 new brands per month.</span></div>
+      </div>
+      <form class="funnel" id="funnel" novalidate>
+        <div class="fprog"><b id="fprog"></b></div>
+        <div class="fstep on" data-step="0">
+          <div class="q" data-es="¿Qué vendes?">What do you sell?</div>
+          <div class="opts" data-name="business">
+            <button type="button" class="opt" data-v="E-commerce / DTC"><span data-es="Tienda online / productos">E-commerce / products</span><span class="k">A</span></button>
+            <button type="button" class="opt" data-v="Services / local business"><span data-es="Servicios / negocio local">Services / local business</span><span class="k">B</span></button>
+            <button type="button" class="opt" data-v="Personal brand / coach"><span data-es="Marca personal / coach">Personal brand / coach</span><span class="k">C</span></button>
+            <button type="button" class="opt" data-v="Other"><span data-es="Otro">Something else</span><span class="k">D</span></button>
+          </div>
+        </div>
+        <div class="fstep" data-step="1">
+          <div class="q" data-es="¿Cuánto facturas al mes?">Monthly revenue?</div>
+          <div class="opts" data-name="revenue">
+            <button type="button" class="opt" data-v="<$10k"><span data-es="Menos de $10k">Under $10k</span><span class="k">A</span></button>
+            <button type="button" class="opt" data-v="$10k-50k"><span>$10k – $50k</span><span class="k">B</span></button>
+            <button type="button" class="opt" data-v="$50k-250k"><span>$50k – $250k</span><span class="k">C</span></button>
+            <button type="button" class="opt" data-v="$250k+"><span data-es="Más de $250k">$250k+</span><span class="k">D</span></button>
+          </div>
+        </div>
+        <div class="fstep" data-step="2">
+          <div class="q" data-es="¿Qué tan seguido publicas hoy?">How often do you post today?</div>
+          <div class="opts" data-name="posting">
+            <button type="button" class="opt" data-v="Not posting yet"><span data-es="Todavía no publico">Not posting yet</span><span class="k">A</span></button>
+            <button type="button" class="opt" data-v="A few times a month"><span data-es="Unas veces al mes">A few times a month</span><span class="k">B</span></button>
+            <button type="button" class="opt" data-v="Weekly"><span data-es="Cada semana">Every week</span><span class="k">C</span></button>
+            <button type="button" class="opt" data-v="Daily"><span data-es="Todos los días">Every day</span><span class="k">D</span></button>
+          </div>
+        </div>
+        <div class="fstep" data-step="3">
+          <div class="q" data-es="¿A dónde te mandamos la auditoría?">Where do we send your audit?</div>
+          <div class="field"><label data-es="Nombre">Name</label><input name="name" autocomplete="name" required></div>
+          <div class="field"><label>Email</label><input name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label data-es="WhatsApp / teléfono">WhatsApp / phone</label><input name="phone" type="tel" autocomplete="tel"></div>
+          <div class="field"><label data-es="Web o Instagram de tu marca">Website or Instagram</label><input name="brand"></div>
+          <div class="err" id="ferr"></div>
+          <button type="submit" class="btn btn-g" style="width:100%;margin-top:6px" id="fsend"><span data-es="Reservar mi auditoría">Book my audit</span><span class="arr">→</span></button>
+        </div>
+        <div class="fstep" data-step="4">
+          <div class="fdone"><div class="big">✓ <span data-es="Listo<span class='g'>.</span>">Done<span class="g">.</span></span></div>
+            <p style="color:var(--dim);margin-top:12px" data-es="Te escribimos en menos de 24 horas con un horario para tu auditoría de contenido.">We'll reach out within 24 hours with a time for your content audit.</p></div>
+        </div>
+        <div class="fnav"><button type="button" class="back" id="fback" style="visibility:hidden" data-es="← Atrás">← Back</button><span class="eyebrow" id="fcount">1 / 4</span></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="faq" style="padding-top:40px">
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="dot"></span>FAQ</div>
+    <h2 class="split" style="margin-top:22px" data-es="Preguntas<span class='g'>.</span>">Questions<span class="g">.</span></h2>
+    <div class="faq" id="faqlist">
+      <div class="qa"><button type="button"><span data-es="¿Cuánto cuesta?">How much does it cost?</span><i>+</i></button><div class="a"><p data-es="Depende de cuántas piezas al mes y en qué canales. Después de la auditoría te damos una cotización mensual exacta, antes de que firmes nada.">It depends on how many pieces per month and which channels. After the audit you get an exact monthly quote, before you sign anything.</p></div></div>
+      <div class="qa"><button type="button"><span data-es="¿En cuánto tiempo veo resultados?">How fast will I see results?</span><i>+</i></button><div class="a"><p data-es="El primer contenido sale en 7 días. Las primeras señales llegan en 2 a 4 semanas y el crecimiento real en 60 a 90 días. El orgánico se acumula.">First content goes live in 7 days. Early signal shows up in 2–4 weeks; real momentum in 60–90 days. Organic compounds.</p></div></div>
+      <div class="qa"><button type="button"><span data-es="¿Necesito tener contenido grabado?">Do I need existing content?</span><i>+</i></button><div class="a"><p data-es="No. Planeamos, grabamos y editamos todo. Si ya tienes material, también lo usamos.">No. We plan, shoot and edit everything. If you already have footage, we'll use it too.</p></div></div>
+      <div class="qa"><button type="button"><span data-es="¿En qué plataformas trabajan?">Which platforms?</span><i>+</i></button><div class="a"><p data-es="Instagram, TikTok, YouTube Shorts y LinkedIn.">Instagram, TikTok, YouTube Shorts and LinkedIn.</p></div></div>
+      <div class="qa"><button type="button"><span data-es="¿También hacen anuncios?">Do you also run ads?</span><i>+</i></button><div class="a"><p data-es="Sí, cuando tiene sentido. Podemos impulsar con anuncios lo que ya funcionó en orgánico, pero el motor es el contenido.">Yes, when it makes sense. We can boost what already won organically, but the engine is the content.</p></div></div>
+      <div class="qa"><button type="button"><span data-es="¿Trabajan fuera de Miami y en español?">Do you work outside Miami and in Spanish?</span><i>+</i></button><div class="a"><p data-es="Sí. Trabajamos con marcas en Estados Unidos y Latinoamérica, en inglés y en español.">Yes. We work with brands across the US and Latin America, in English and Spanish.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL ============ -->
+<section class="final">
+  <div class="wrap">
+    <h2 class="split">Make<span class="g">.</span> Ship<span class="g">.</span> Repeat<span class="g">.</span></h2>
+    <p class="reveal" data-es="Tus próximos 30 días de contenido, planeados. Empieza con la auditoría gratis.">Your next 30 days of content, planned. Start with the free audit.</p>
+    <a href="#audit" class="btn btn-g reveal"><span data-es="Pide tu auditoría gratis">Get a free content audit</span><span class="arr">→</span></a>
+  </div>
+</section>
+</main>
+
 <footer>
   <div class="wrap">
-    <div class="f-row">
-      <div class="brand-l">
-        <svg viewBox="0 0 100 100" width="30" height="30">
-          <path fill="#C6FF3D" d="M30 12 H62 Q86 12 86 38 Q86 60 62 60 H44 V88 H30 Z M44 26 V46 H60 Q72 46 72 36 Q72 26 60 26 Z"/>
-          <path fill="#C6FF3D" d="M30 60 L44 60 L44 78 L30 88 Z"/>
-        </svg>
-        Prime<span class="pd">.</span>
-      </div>
-      <div class="links">
-        <a href="#studio">Studio</a>
-        <a href="#services">Services</a>
-        <a href="#process">Process</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-    <div class="f-bottom">
-      <div>© 2026 Prime Production Media LLC<span class="pd"> .</span></div>
-      <div>Marketing · Production · Media · AI · LLC</div>
-    </div>
+    <a class="brand" href="#top"><img src="assets/p.png" alt="">PRIME<span class="g">.</span></a>
+    <div><a href="mailto:contact@primeproductionmedia.com">contact@primeproductionmedia.com</a></div>
+    <div>© 2026 Prime Production Media LLC</div>
   </div>
 </footer>
 
+<div class="sticky" id="sticky"><a href="#audit" class="btn btn-g"><span data-es="Pide tu auditoría gratis">Get a free content audit</span><span class="arr">→</span></a></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
-// Nav scrolled
-(function(){
-  const nav = document.getElementById('nav');
-  const onScroll = ()=>{ nav.classList.toggle('scrolled', window.scrollY>40); };
-  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
-})();
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/contact@primeproductionmedia.com';
+const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+gsap.registerPlugin(ScrollTrigger);
+if (location.search.includes('sim')) gsap.ticker.useRAF(false); // headless preview: tick without requestAnimationFrame
 
-// Reveal
-(function(){
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
-  },{threshold:.12, rootMargin:'0px 0px -80px 0px'});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-})();
-
-// Smooth anchor
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click', e=>{
-    const id = a.getAttribute('href');
-    if(id.length>1){
-      const t = document.querySelector(id);
-      if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth', block:'start'}); }
-    }
+/* ---------------- i18n ---------------- */
+let LANG = 'en';
+const HOOKS = {
+  en: ['Stop scrolling<span class="g">.</span>', '3 mistakes killing your reach<span class="g">.</span>', 'We posted 18 hooks<span class="g">.</span> This one won<span class="g">.</span>', 'Part 2 drops Friday<span class="g">.</span>'],
+  es: ['Deja de scrollear<span class="g">.</span>', '3 errores que matan tu alcance<span class="g">.</span>', 'Publicamos 18 hooks<span class="g">.</span> Ganó este<span class="g">.</span>', 'La parte 2 sale el viernes<span class="g">.</span>'],
+};
+const DAYS = {
+  en: [['MON', 'Strategy & hooks'], ['TUE', 'Scripts'], ['WED', 'Shoot day'], ['THU', 'Edit & motion'], ['FRI', 'Published on IG, TikTok & YouTube'], ['SAT', 'Read the data'], ['SUN', 'Keep. Cut. Repeat.']],
+  es: [['LUN', 'Estrategia y hooks'], ['MAR', 'Guiones'], ['MIÉ', 'Día de grabación'], ['JUE', 'Edición y motion'], ['VIE', 'Publicado en IG, TikTok y YouTube'], ['SÁB', 'Leemos los datos'], ['DOM', 'Mantener. Cortar. Repetir.']],
+};
+function setLang(l) {
+  LANG = l; document.documentElement.lang = l;
+  document.querySelectorAll('[data-es]').forEach((el) => {
+    if (el.dataset.en === undefined) el.dataset.en = el.innerHTML;
+    el.innerHTML = l === 'es' ? el.dataset.es : el.dataset.en;
   });
-});
-</script>
+  document.querySelectorAll('.lang button').forEach((b) => b.classList.toggle('on', b.dataset.lang === l));
+  renderDays(); dayIdx >= 0 && showDay(dayIdx, true);
+  try { localStorage.setItem('prime-lang', l); } catch (e) {}
+  ScrollTrigger.refresh();
+}
+document.querySelectorAll('.lang button').forEach((b) => b.addEventListener('click', () => setLang(b.dataset.lang)));
 
+/* ---------------- nav + sticky ---------------- */
+const nav = document.getElementById('nav'), sticky = document.getElementById('sticky');
+ScrollTrigger.create({start: 40, onUpdate: (s) => nav.classList.toggle('scrolled', s.scroll() > 40)});
+ScrollTrigger.create({trigger: '.hero', start: 'bottom 60%', endTrigger: '#audit', end: 'top 90%',
+  onToggle: (s) => sticky.classList.toggle('show', s.isActive)});
+
+/* ---------------- loader + hero intro ---------------- */
+function intro() {
+  const tl = gsap.timeline();
+  if (!RM) {
+    tl.from('#loader img', {scale: .6, opacity: 0, duration: .45, ease: 'back.out(2)'})
+      .to('#loader .words > span', {opacity: 1, y: 0, duration: .32, stagger: .14, ease: 'power3.out'}, '-=.1')
+      .to('#loader', {yPercent: -100, duration: .7, ease: 'power4.inOut'}, '+=.35')
+      .set('#loader', {display: 'none'});
+  } else tl.set('#loader', {display: 'none'});
+  tl.from('.hero h1 .line-mask > span', {yPercent: 110, duration: .9, stagger: .09, ease: 'power4.out'}, RM ? 0 : '-=.35')
+    .from('.h-in', {opacity: 0, y: 26, duration: .7, stagger: .08, ease: 'power3.out'}, '-=.6')
+    .from('.chip', {scale: .6, opacity: 0, duration: .55, stagger: .12, ease: 'back.out(2)'}, '-=.4')
+    .add(() => { countUp(document.querySelectorAll('.chip [data-count]')); hookLoop(); });
+}
+
+/* ---------------- counters ---------------- */
+function countUp(els) {
+  els.forEach((el) => {
+    const to = parseFloat(el.dataset.count), dec = +(el.dataset.dec || 0), pre = el.dataset.pre || '', suf = el.dataset.suf || '';
+    const o = {v: 0};
+    gsap.to(o, {v: to, duration: 1.4, ease: 'power2.out', onUpdate: () => (el.textContent = pre + o.v.toFixed(dec) + suf)});
+  });
+}
+
+/* ---------------- phone: cycling hooks (story-style) ---------------- */
+const hookbox = document.getElementById('hookbox');
+const bars = [...document.querySelectorAll('.ad .bars b')];
+let hi = 0;
+function hookLoop() {
+  const html = HOOKS[LANG][hi % 4];
+  const el = document.createElement('div'); el.className = 'hook'; el.innerHTML = html; hookbox.appendChild(el);
+  const old = hookbox.querySelectorAll('.hook');
+  if (old.length > 1) gsap.to(old[0], {yPercent: -40, opacity: 0, duration: .45, ease: 'power3.in', onComplete: () => old[0].remove()});
+  gsap.from(el, {yPercent: 50, opacity: 0, duration: .6, ease: 'power3.out', delay: .1});
+  const b = bars[hi % 4];
+  if (hi % 4 === 0) gsap.set(bars, {scaleX: 0});
+  gsap.fromTo(b, {scaleX: 0}, {scaleX: 1, duration: 2.6, ease: 'none', onComplete: () => { hi++; hookLoop(); }});
+  // nudge the metrics like a live dashboard
+  if (hi > 0) document.querySelectorAll('.chip').forEach((c, i) => gsap.fromTo(c, {y: 0}, {y: -6, duration: .25, yoyo: true, repeat: 1, delay: i * .08, ease: 'power2.out'}));
+}
+
+/* ---------------- marquee ---------------- */
+const mq = document.getElementById('mq'); mq.innerHTML += mq.innerHTML;
+gsap.to(mq, {xPercent: -50, duration: 22, ease: 'none', repeat: -1});
+
+/* ---------------- generic reveals + split headlines ---------------- */
+// wrap each word in a mask (DOM-based so inline elements like the green periods stay intact)
+function splitWords(h) {
+  const out = []; let last = null;
+  [...h.childNodes].forEach((n) => {
+    if (n.nodeType === 3) {
+      n.textContent.split(/(\s+)/).forEach((p) => {
+        if (!p) return;
+        if (/^\s+$/.test(p)) { out.push(document.createTextNode(' ')); last = null; return; }
+        const m = document.createElement('span'); m.className = 'line-mask'; m.style.cssText = 'display:inline-block;vertical-align:top';
+        const i = document.createElement('span'); i.style.display = 'inline-block'; i.textContent = p; m.appendChild(i); out.push(m); last = i;
+      });
+    } else if (last) last.appendChild(n.cloneNode(true));
+    else out.push(n.cloneNode(true));
+  });
+  h.innerHTML = ''; out.forEach((x) => h.appendChild(x));
+}
+document.querySelectorAll('.split').forEach((h) => {
+  ScrollTrigger.create({trigger: h, start: 'top 85%', once: true, onEnter: () => {
+    // wrap words on the fly so language switches keep working
+    if (!h.dataset.done) { splitWords(h); h.dataset.done = 1; }
+    gsap.from(h.querySelectorAll('.line-mask > span'), {yPercent: 110, duration: .85, stagger: .05, ease: 'power4.out'});
+  }});
+});
+gsap.utils.toArray('.reveal').forEach((el) => gsap.to(el, {opacity: 1, y: 0, duration: .8, ease: 'power3.out', scrollTrigger: {trigger: el, start: 'top 88%', once: true}}));
+
+/* problem cards: count then strike through */
+gsap.utils.toArray('.pcard').forEach((c, i) => ScrollTrigger.create({trigger: c, start: 'top 80%', once: true, onEnter: () => {
+  countUp(c.querySelectorAll('[data-count]'));
+  gsap.to(c.querySelector('.strike'), {scaleX: 1, duration: .5, delay: 1.2 + i * .15, ease: 'power3.inOut'});
+}}));
+
+/* ---------------- system steps: rail fills with scroll ---------------- */
+const steps = [...document.querySelectorAll('.step')];
+gsap.to('#rail', {scaleY: 1, ease: 'none', scrollTrigger: {trigger: '#steps', start: 'top 70%', end: 'bottom 60%', scrub: .4,
+  onUpdate: (s) => steps.forEach((st, i) => st.classList.toggle('on', s.progress >= i / steps.length - .02))}});
+
+/* ---------------- 7-day cycle ---------------- */
+const daysEl = document.getElementById('days'); let dayIdx = -1;
+function renderDays() { daysEl.innerHTML = DAYS[LANG].map(([d]) => `<div class="day"><div class="d">${d}</div></div>`).join(''); }
+function showDay(i, force) {
+  if (i === dayIdx && !force) return; dayIdx = i;
+  [...daysEl.children].forEach((d, j) => d.classList.toggle('on', j === i));
+  const [d, t] = DAYS[LANG][i];
+  document.getElementById('dk').textContent = d;
+  const dt = document.getElementById('dt'); dt.textContent = t;
+  if (!force) gsap.from(dt, {y: 20, opacity: 0, duration: .35, ease: 'power3.out'});
+}
+renderDays(); showDay(0, true);
+ScrollTrigger.create({trigger: '#week', start: 'top 75%', end: 'bottom 25%', scrub: true, onUpdate: (s) => showDay(Math.min(6, Math.floor(s.progress * 7)))});
+
+/* ---------------- test 18 → keep 3 → scale 1 ---------------- */
+const tgrid = document.getElementById('tgrid');
+const KEEP = [3, 10, 14], WIN = 10;
+tgrid.innerHTML = Array.from({length: 18}, (_, i) => `<div class="tile" data-i="${i}"><div class="x">✕</div><div class="h">HOOK ${String(i + 1).padStart(2, '0')}</div><div class="bar"><b></b></div></div>`).join('');
+const tiles = [...tgrid.children];
+const perf = tiles.map((_, i) => (KEEP.includes(i) ? (i === WIN ? 96 : 70 + i) : 12 + ((i * 37) % 38)));
+const sT = document.getElementById('sTested'), sK = document.getElementById('sKilled'), sS = document.getElementById('sScaled');
+const ttl = gsap.timeline({paused: true});
+ttl.from(tiles, {scale: .6, opacity: 0, duration: .4, stagger: .03, ease: 'back.out(2)'})
+   .add(() => {}, '+=.05')
+   .to(tiles.map((t) => t.querySelector('.bar b')), {width: (i) => perf[i] + '%', duration: 1, stagger: .02, ease: 'power2.out'})
+   .to({}, {duration: .01, onStart: () => (sT.textContent = 18)}, '<')
+   .to(tiles.filter((_, i) => !KEEP.includes(i)), {opacity: .22, duration: .4, stagger: .02})
+   .to(tiles.filter((_, i) => !KEEP.includes(i)).map((t) => t.querySelector('.x')), {opacity: 1, duration: .3, stagger: .02}, '<')
+   .add(() => { sK.textContent = 15; KEEP.forEach((i) => tiles[i].classList.add('keep')); })
+   .to(tiles[WIN], {scale: 1.18, duration: .5, ease: 'back.out(2)', onStart: () => { tiles[WIN].classList.add('win'); sS.textContent = 1; }}, '+=.3')
+   .to(tiles[WIN], {scale: 1.08, duration: .3});
+ScrollTrigger.create({trigger: tgrid, start: 'top 75%', once: true, onEnter: () => ttl.play()});
+
+/* ---------------- FAQ ---------------- */
+document.querySelectorAll('.qa').forEach((q) => q.querySelector('button').addEventListener('click', () => {
+  const a = q.querySelector('.a'), open = q.classList.toggle('open');
+  a.style.height = open ? a.scrollHeight + 'px' : 0;
+}));
+
+/* ---------------- funnel form ---------------- */
+const form = document.getElementById('funnel'), fsteps = [...form.querySelectorAll('.fstep')];
+const data = {}; let cur = 0;
+function go(n) {
+  const from = fsteps[cur], to = fsteps[n];
+  gsap.to(from, {opacity: 0, x: n > cur ? -30 : 30, duration: .2, onComplete: () => {
+    from.classList.remove('on'); to.classList.add('on');
+    gsap.fromTo(to, {opacity: 0, x: n > cur ? 30 : -30}, {opacity: 1, x: 0, duration: .3, ease: 'power3.out'});
+    cur = n;
+    document.getElementById('fprog').style.width = Math.min(100, (n + 1) * 25) + '%';
+    document.getElementById('fcount').textContent = n < 4 ? `${n + 1} / 4` : '';
+    document.getElementById('fback').style.visibility = n > 0 && n < 4 ? 'visible' : 'hidden';
+  }});
+}
+form.querySelectorAll('.opts').forEach((g) => g.querySelectorAll('.opt').forEach((o) => o.addEventListener('click', () => {
+  g.querySelectorAll('.opt').forEach((x) => x.classList.remove('sel')); o.classList.add('sel');
+  data[g.dataset.name] = o.dataset.v;
+  setTimeout(() => go(cur + 1), 220);
+})));
+document.getElementById('fback').addEventListener('click', () => cur > 0 && go(cur - 1));
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const err = document.getElementById('ferr'); err.textContent = '';
+  const fd = new FormData(form); const name = (fd.get('name') || '').trim(), email = (fd.get('email') || '').trim();
+  if (!name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { err.textContent = LANG === 'es' ? 'Escribe tu nombre y un email válido.' : 'Add your name and a valid email.'; return; }
+  const btn = document.getElementById('fsend'); btn.disabled = true; btn.style.opacity = .6;
+  const payload = {...data, name, email, phone: fd.get('phone'), brand: fd.get('brand'), language: LANG,
+    _subject: `New content audit request — ${name} (${data.business || ''})`, _template: 'table', _captcha: 'false'};
+  try {
+    const r = await fetch(FORM_ENDPOINT, {method: 'POST', headers: {'Content-Type': 'application/json', Accept: 'application/json'}, body: JSON.stringify(payload)});
+    if (!r.ok) throw new Error(r.status);
+    go(4);
+  } catch (x) {
+    err.innerHTML = LANG === 'es' ? 'No se pudo enviar. Escríbenos a <a class="g" href="mailto:contact@primeproductionmedia.com">contact@primeproductionmedia.com</a>' : 'Could not send. Email us at <a class="g" href="mailto:contact@primeproductionmedia.com">contact@primeproductionmedia.com</a>';
+    btn.disabled = false; btn.style.opacity = 1;
+  }
+});
+
+/* ---------------- boot ---------------- */
+let saved = null; try { saved = localStorage.getItem('prime-lang'); } catch (e) {}
+const startLang = saved || ((navigator.language || 'en').toLowerCase().startsWith('es') ? 'es' : 'en');
+if (startLang === 'es') setLang('es');
+// ?shot → render the final state of every animation (for screenshots)
+if (location.search.includes('shot')) {
+  document.documentElement.classList.add('shot');
+  document.getElementById('loader').style.display = 'none';
+  document.querySelectorAll('.reveal').forEach((e) => { e.style.opacity = 1; e.style.transform = 'none'; });
+  setTimeout(() => { countUp(document.querySelectorAll('[data-count]')); ttl.progress(1); gsap.set('.strike', {scaleX: 1}); gsap.set('#rail', {scaleY: 1}); steps.forEach((s) => s.classList.add('on')); showDay(4); gsap.globalTimeline.getChildren().forEach((t) => t.progress && t.progress(1)); }, 50);
+}
+let started = location.search.includes('shot') ? true : false; const go2 = () => { if (!started) { started = true; intro(); } };
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(go2); window.addEventListener('load', go2); setTimeout(go2, 1800);
+</script>
 </body>
 </html>
