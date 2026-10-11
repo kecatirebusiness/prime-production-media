@@ -6,694 +6,677 @@
 <title>Prime Production Media — Content that brings clients.</title>
 <meta name="description" content="Organic content strategy, production and distribution under one roof. We plan, film and publish your content every week. Book a free content audit.">
 <meta property="og:title" content="Prime Production Media — Make. Ship. Repeat.">
-<meta property="og:description" content="Organic content strategy, production and distribution under one roof.">
+<meta property="og:description" content="Content that brings clients. No ad spend.">
 <meta property="og:image" content="assets/og.png">
 <meta name="theme-color" content="#0A0A0A">
 <link rel="icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#0A0A0A;--ink2:#121212;--ink3:#1A1A1A;--line:#262626;--line2:#333;--white:#fff;--dim:#9a9a9a;--mute:#6b6b6b;--g:#C6FF3D;--gs:#E2FF8A;--ease:cubic-bezier(.2,.8,.2,1)}
+:root{--ink:#0A0A0A;--ink2:#121212;--ink3:#1B1B1B;--line:#262626;--line2:#333;--white:#fff;--dim:#9a9a9a;--mute:#6b6b6b;--g:#C6FF3D;--gs:#E2FF8A;--ease:cubic-bezier(.2,.8,.2,1)}
 *{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%;scroll-behavior:auto}
-body{background:var(--ink);color:var(--white);font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
-img{display:block;max-width:100%}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--white);font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}img{display:block;max-width:100%}
+svg{display:block;overflow:visible}
 .g{color:var(--g)}
-.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
-.eyebrow{font-weight:600;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--dim)}
-.eyebrow .dot{display:inline-block;width:7px;height:7px;background:var(--g);margin-right:10px;vertical-align:1px}
-h1,h2,h3{font-weight:900;letter-spacing:-.035em;line-height:.95}
-h2{font-size:clamp(40px,9vw,96px)}
-.lead{font-size:18px;color:#cfcfcf;max-width:560px}
-section{position:relative}
-.sec{padding:110px 0}
-.line-mask{display:block;overflow:hidden;padding-bottom:.06em}
-.line-mask>span{display:block}
-/* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase;padding:20px 26px;border-radius:999px;transition:transform .35s var(--ease),background .25s}
-.btn-g{background:var(--g);color:var(--ink)}
-.btn-g:hover{background:var(--gs);transform:translateY(-2px)}
-.btn-o{border:1px solid var(--line2);color:var(--white)}
-.btn-o:hover{border-color:var(--white)}
-.btn .arr{display:inline-block;transition:transform .35s var(--ease)}
-.btn:hover .arr{transform:translateX(4px)}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+.eyebrow{font-weight:600;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--dim);display:inline-flex;align-items:center;gap:10px}
+.eyebrow i{width:7px;height:7px;background:var(--g);display:inline-block}
+h1,h2{font-weight:900;letter-spacing:-.04em;line-height:.93}
+h2{font-size:clamp(42px,10.5vw,96px);margin-top:18px}
+.sub{font-size:17px;color:#bdbdbd;max-width:460px;margin-top:16px}
+.sec{padding:96px 0;position:relative}
+.center{text-align:center}.center .sub{margin-left:auto;margin-right:auto}
+.lm{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.07em}.lm>span{display:inline-block}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;padding:20px 28px;border-radius:999px;transition:transform .35s var(--ease),background .25s}
+.btn-g{background:var(--g);color:var(--ink)}.btn-g:hover{background:var(--gs)}
+.btn-o{border:1px solid var(--line2)}
+.btn .arr{display:inline-block;transition:transform .3s var(--ease)}.btn:hover .arr{transform:translateX(4px)}
+.reveal{opacity:0;transform:translateY(36px)}
 /* nav */
-nav.top{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:rgba(10,10,10,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
-nav.top.scrolled{border-bottom-color:var(--line)}
-.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.02em;font-size:20px}
-.brand img{width:30px;height:30px}
-.nav-r{display:flex;align-items:center;gap:10px}
+nav.top{position:fixed;inset:0 0 auto 0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:rgba(10,10,10,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px;letter-spacing:-.02em}.brand img{width:30px;height:30px}
+.nav-r{display:flex;gap:10px;align-items:center}
 .lang{display:flex;border:1px solid var(--line2);border-radius:999px;overflow:hidden;font-weight:600;font-size:11px;letter-spacing:.15em}
-.lang button{padding:8px 11px;color:var(--dim)}
-.lang button.on{background:var(--white);color:var(--ink)}
-.nav-cta{display:none}
-@media(min-width:760px){.nav-cta{display:inline-flex;padding:12px 18px;font-size:11px}}
+.lang button{padding:8px 11px;color:var(--dim)}.lang button.on{background:var(--white);color:var(--ink)}
+.nav-cta{display:none}@media(min-width:760px){.nav-cta{display:inline-flex;padding:12px 18px;font-size:11px}}
+#progress{position:fixed;top:0;left:0;height:3px;background:var(--g);width:100%;transform-origin:0 50%;transform:scaleX(0);z-index:70}
 /* loader */
-#loader{position:fixed;inset:0;z-index:100;background:var(--ink);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:22px;animation:loaderSafety .5s 3.2s forwards}
-@keyframes loaderSafety{to{opacity:0;visibility:hidden}}
-#loader img{width:70px;height:70px}
-#loader .words{font-weight:900;font-size:clamp(30px,9vw,64px);letter-spacing:-.04em;display:flex;gap:.28em}
-#loader .words>span{opacity:0;transform:translateY(30px);display:inline-block}
+#loader{position:fixed;inset:0;z-index:100;background:var(--g);display:flex;align-items:center;justify-content:center;animation:ls .5s 3s forwards}
+@keyframes ls{to{opacity:0;visibility:hidden}}
+#loader .w{font-weight:900;font-size:clamp(32px,10vw,110px);letter-spacing:-.05em;color:var(--ink);display:flex;gap:.25em}
+#loader .w span{display:inline-block;transform:translateY(110%)}
+#loader .w b{display:inline-block;overflow:hidden;padding-bottom:.08em}
 /* hero */
-.hero{min-height:100svh;padding:110px 0 60px;display:flex;align-items:center}
-.hero-grid{display:grid;gap:48px;align-items:center}
-.hero-grid>*{min-width:0}
-.shot .hero{min-height:844px}
-@media(min-width:980px){.hero-grid{grid-template-columns:1.15fr .85fr}}
-.hero h1{font-size:clamp(50px,13.6vw,150px);margin:22px 0 26px}
-.hero .sub{font-size:18px;color:#d0d0d0;max-width:520px}
-.hero .ctas{display:flex;flex-direction:column;gap:12px;margin-top:32px}
-@media(min-width:560px){.hero .ctas{flex-direction:row}}
-.micro{font-size:13px;color:var(--mute);margin-top:16px}
-.micro b{color:var(--dim);font-weight:600}
-/* phone */
-.stage{position:relative;display:flex;flex-direction:column;align-items:center;padding:10px 0 30px}
-.chips{display:flex;gap:8px;width:100%;max-width:360px;margin-top:16px}
-.chips .chip{position:static;flex:1;min-width:0}
-.phone{position:relative;width:270px;height:560px;border-radius:44px;border:10px solid #1f1f1f;background:#000;overflow:hidden}
-.phone .notch{position:absolute;top:10px;left:50%;width:90px;height:24px;margin-left:-45px;border-radius:14px;background:#000;z-index:5;border:1px solid #1f1f1f}
-.ad{position:absolute;inset:0;background:var(--ink2);display:flex;flex-direction:column;justify-content:space-between;padding:52px 18px 18px}
-.ad .bars{display:flex;gap:4px}
-.ad .bars i{flex:1;height:3px;background:#333;position:relative;overflow:hidden}
-.ad .bars i b{position:absolute;inset:0;background:var(--white);transform-origin:0 50%;transform:scaleX(0)}
-.ad .acct{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:12px;font-weight:600}
-.ad .acct img{width:26px;height:26px;border-radius:50%;background:var(--ink)}
-.ad .acct span{color:var(--mute);font-weight:500}
-.hookbox{position:relative;flex:1;display:flex;align-items:center}
-.hook{position:absolute;left:0;right:0;font-weight:900;font-size:34px;line-height:.98;letter-spacing:-.035em}
-.ad .shop{display:flex;justify-content:space-between;align-items:center;background:var(--g);color:var(--ink);font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:13px 16px;border-radius:12px}
-.chip{position:absolute;background:var(--white);color:var(--ink);border-radius:14px;padding:10px 14px;font-weight:700;font-size:12px;line-height:1.1;min-width:116px}
-.chip small{display:block;font-weight:600;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#666;margin-bottom:4px}
-.chip strong{font-size:20px;font-weight:900;letter-spacing:-.03em}
-.chip .up{color:#1a7f00;font-size:11px;margin-left:4px}
-.chip.c2{background:var(--g)}
-@media(min-width:560px){.chip strong{font-size:24px}.chips{display:block;margin:0;max-width:none}.chips .chip{position:absolute;min-width:116px}.chip.c1{left:calc(50% - 250px);top:90px}.chip.c2{right:calc(50% - 250px);top:250px}.chip.c3{left:calc(50% - 240px);bottom:150px}}
-.illus{margin-top:12px;text-align:center;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.hero{padding:104px 0 40px;min-height:100svh;display:flex;align-items:center;overflow:hidden}
+.hgrid{display:grid;gap:30px;align-items:center;width:100%}
+@media(min-width:980px){.hgrid{grid-template-columns:1fr 1fr}}
+.hgrid>*{min-width:0}
+.hero h1{font-size:clamp(54px,14.5vw,132px);margin:18px 0 0}
+.hero .ctas{display:flex;flex-direction:column;gap:12px;margin-top:28px}@media(min-width:560px){.hero .ctas{flex-direction:row}}
+.stage{position:relative;height:440px;max-width:520px;margin:0 auto;width:100%}
+@media(min-width:560px){.stage{height:540px}}
+.ph{position:absolute;top:30px;width:172px;height:350px;left:50%;margin-left:-86px;border-radius:30px;background:#000;border:7px solid #1f1f1f;overflow:hidden}
+@media(min-width:560px){.ph{width:210px;height:430px;margin-left:-105px;border-radius:36px}}
+.ph .scr{position:absolute;inset:0;background:var(--ink2);overflow:hidden}
+.toast{position:absolute;z-index:9;background:var(--white);color:var(--ink);border-radius:14px;padding:10px 13px;font-weight:700;font-size:12px;display:flex;align-items:center;gap:9px;white-space:nowrap;opacity:0}
+.toast .ic{width:28px;height:28px;border-radius:8px;background:var(--ink);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.toast small{display:block;font-weight:500;color:#666;font-size:10px}
+.toast.gr{background:var(--g)}
 /* marquee */
-.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:18px 0}
-.marquee .track{display:inline-flex;gap:0;will-change:transform}
-.marquee span{font-weight:900;font-size:clamp(26px,5vw,44px);letter-spacing:-.03em;padding-right:36px}
-.marquee span i{font-style:normal;color:var(--g)}
-/* problem */
-.cards3{display:grid;gap:14px;margin-top:56px}
-@media(min-width:860px){.cards3{grid-template-columns:repeat(3,1fr)}}
-.pcard{border:1px solid var(--line);border-radius:22px;padding:28px;background:var(--ink2)}
-.cards3>*{min-width:0}
-.pcard .num .u{font-size:.46em;letter-spacing:-.02em;margin-left:.32em}
-.pcard .num{font-weight:900;font-size:clamp(60px,16vw,84px);white-space:nowrap;letter-spacing:-.05em;line-height:1.08;position:relative;display:inline-flex;align-items:baseline;padding-top:2px}
-.pcard .num .strike{position:absolute;left:-6px;right:-6px;top:64%;height:6px;background:var(--g);transform-origin:0 50%;transform:scaleX(0)}
-.pcard h3{font-size:24px;margin:14px 0 10px;letter-spacing:-.02em}
-.pcard p{color:var(--dim);font-size:15px}
-/* pipeline */
-.pipe{display:grid;gap:56px}
-@media(min-width:980px){.pipe{grid-template-columns:.9fr 1.1fr;gap:80px}}
-.steps{position:relative;padding-left:34px}
-.steps .rail{position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:var(--line)}
-.steps .rail b{position:absolute;inset:0;background:var(--g);transform-origin:50% 0;transform:scaleY(0)}
-.step{position:relative;padding:4px 0 46px;opacity:.28;transition:opacity .4s}
-.step.on{opacity:1}
-.step .knot{position:absolute;left:-34px;top:8px;width:20px;height:20px;border-radius:50%;background:var(--ink);border:2px solid var(--line2);transition:all .4s}
-.step.on .knot{background:var(--g);border-color:var(--g)}
-.step .n{font-weight:600;font-size:12px;letter-spacing:.25em;color:var(--dim)}
-.step h3{font-size:clamp(34px,6vw,54px);margin:6px 0 10px}
-.step p{color:#c9c9c9;max-width:440px}
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:16px 0}
+.marquee .tr{display:inline-flex;will-change:transform}
+.marquee span{font-weight:900;font-size:clamp(26px,5vw,44px);letter-spacing:-.03em;padding-right:34px}.marquee span i{font-style:normal;color:var(--g)}
+/* pain */
+.pains{display:grid;gap:14px;margin-top:44px}@media(min-width:860px){.pains{grid-template-columns:repeat(3,1fr)}}
+.pain{border:1px solid var(--line);border-radius:24px;padding:26px;background:var(--ink2);display:flex;align-items:center;gap:22px}
+@media(min-width:860px){.pain{flex-direction:column;align-items:flex-start}}
+.pain svg{width:96px;height:96px;flex-shrink:0}
+.pain b{display:block;font-weight:900;font-size:28px;letter-spacing:-.03em;line-height:1}
+.pain span{color:var(--dim);font-size:14px;display:block;margin-top:6px}
+/* engine */
+.egrid{display:grid;gap:30px;align-items:center}@media(min-width:980px){.egrid{grid-template-columns:.85fr 1.15fr}}
+.engine{width:100%;max-width:440px;margin:0 auto}
+/* multiply */
+.mult{position:relative;max-width:560px;margin:40px auto 0;aspect-ratio:1/1.05}
+.tile{position:absolute;width:13.5%;aspect-ratio:9/14;border-radius:9px;background:var(--ink3);border:1px solid var(--line2);display:flex;align-items:center;justify-content:center}
+.tile svg{width:44%;height:44%}
+.tile.k1{background:var(--white)}.tile.k1 svg path,.tile.k1 svg rect,.tile.k1 svg circle{stroke:var(--ink)}
+.tile.k2{background:var(--g);border-color:var(--g)}.tile.k2 svg path,.tile.k2 svg rect,.tile.k2 svg circle{stroke:var(--ink)}
+.cam{position:absolute;left:50%;top:50%;width:26%;aspect-ratio:1;margin-left:-13%;transform:translateY(-50%);border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center;z-index:3}
+.cam svg{width:46%;height:46%}
+.bigcount{font-weight:900;font-size:clamp(70px,18vw,150px);letter-spacing:-.05em;line-height:.9}
+.legend{display:flex;justify-content:center;gap:18px;margin-top:18px;font-weight:600;font-size:13px;color:var(--dim)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:7px;vertical-align:-1px}
 /* week */
-.week{margin-top:56px;border:1px solid var(--line);border-radius:24px;padding:22px;background:var(--ink2);position:relative;overflow:hidden}
-.days{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;position:relative}
-.day{border-radius:10px;padding:12px 0;text-align:center;background:var(--ink3);transition:background .3s,color .3s}
-.day .d{font-weight:900;font-size:11px;letter-spacing:0}
-@media(min-width:560px){.days{gap:8px}.day{padding:16px 6px;border-radius:14px}.day .d{font-size:15px}}
-.day.on{background:var(--g);color:var(--ink)}
-.dayinfo{margin-top:22px;min-height:84px}
-.dayinfo .k{font-weight:600;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--g)}
-.dayinfo .t{font-weight:900;font-size:clamp(28px,6vw,46px);letter-spacing:-.03em;line-height:1}
-.playhead{position:absolute;top:0;bottom:0;width:2px;background:var(--white);left:0;opacity:.0}
-/* test grid */
-.tgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:48px;max-width:720px}
-.tile{aspect-ratio:9/16;border-radius:10px;background:var(--ink3);border:1px solid var(--line2);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:7px}
-.tile .h{font-weight:700;font-size:9px;letter-spacing:.12em;color:var(--dim)}
-.tile .bar{height:4px;border-radius:2px;background:#2c2c2c;margin-top:6px;overflow:hidden}
-.tile .bar b{display:block;height:100%;width:0;background:var(--white)}
-.tile .x{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:28px;color:#555;opacity:0}
-.tile.keep{border-color:var(--g)}
-.tile.win{background:var(--g);color:var(--ink)}
-.tile.win .h{color:var(--ink)}
-.tstats{display:flex;gap:26px;margin-top:28px;flex-wrap:wrap}
-.tstats div{font-weight:900;font-size:48px;letter-spacing:-.04em;line-height:1}
-.tstats small{display:block;font-weight:600;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--dim);margin-top:6px}
-/* services */
-.svc{display:grid;gap:0;margin-top:48px;border-top:1px solid var(--line)}
-.svc .row{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:26px 0;border-bottom:1px solid var(--line);align-items:start}
-@media(min-width:860px){.svc .row{grid-template-columns:80px 1fr 1fr;align-items:center}}
-.svc .i{font-weight:600;font-size:12px;letter-spacing:.25em;color:var(--g);padding-top:8px}
-.svc h3{font-size:clamp(26px,4.4vw,40px)}
-.svc p{color:var(--dim);grid-column:2}
-@media(min-width:860px){.svc p{grid-column:auto}}
+.week{margin-top:46px;position:relative}
+.wtrack{position:relative;display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.wline{position:absolute;left:7%;right:7%;top:27px;height:3px;background:var(--line)}
+.wline b{position:absolute;inset:0;background:var(--g);transform-origin:0 50%;transform:scaleX(0)}
+.wd{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;z-index:1}
+.wd .dot{width:56px;height:56px;border-radius:50%;background:var(--ink3);border:2px solid var(--line2);display:flex;align-items:center;justify-content:center;transition:all .3s}
+@media(max-width:520px){.wd .dot{width:44px;height:44px}.wline{top:21px}}
+.wd .dot svg{width:46%;height:46%}
+.wd.on .dot{background:var(--g);border-color:var(--g);transform:scale(1.08)}
+.wd.on .dot svg path,.wd.on .dot svg rect,.wd.on .dot svg circle,.wd.on .dot svg polyline,.wd.on .dot svg line{stroke:var(--ink)}
+.wd small{font-weight:900;font-size:12px;letter-spacing:.05em;color:var(--mute)}
+.wd.on small{color:var(--white)}
+.wnow{margin-top:26px;text-align:center;font-weight:900;font-size:clamp(28px,7vw,52px);letter-spacing:-.03em;min-height:1.2em}
+/* growth */
+.chart{max-width:760px;margin:40px auto 0;position:relative}
+.ill{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);text-align:center;margin-top:12px}
 /* founder */
-.founder{display:grid;gap:36px;align-items:center}
-@media(min-width:900px){.founder{grid-template-columns:.8fr 1.2fr;gap:70px}}
-.fimg{border-radius:26px;overflow:hidden;aspect-ratio:4/5;position:relative}
-.fimg img{width:100%;height:100%;object-fit:cover}
-.fimg .tag{position:absolute;left:16px;bottom:16px;background:var(--ink);border-radius:999px;padding:9px 14px;font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase}
-.quote{font-weight:900;font-size:clamp(30px,5.2vw,52px);letter-spacing:-.035em;line-height:1.02}
-/* fit */
-.fit{display:grid;gap:14px;margin-top:48px}
-@media(min-width:860px){.fit{grid-template-columns:1fr 1fr}}
-.fbox{border-radius:22px;padding:30px;border:1px solid var(--line)}
-.fbox.yes{background:var(--white);color:var(--ink);border-color:var(--white)}
-.fbox h3{font-size:26px;margin-bottom:18px}
-.fbox li{list-style:none;display:flex;gap:12px;padding:10px 0;border-top:1px solid rgba(0,0,0,.1);font-weight:500}
-.fbox.no li{border-top-color:var(--line);color:var(--dim)}
-.fbox li b{flex-shrink:0;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;margin-top:1px}
-.fbox.yes li b{background:var(--ink);color:var(--g)}
-.fbox.no li b{background:var(--ink3);color:#777}
-/* offer + form */
-.offer{border-radius:30px;background:var(--white);color:var(--ink);padding:34px 22px;display:grid;gap:36px}
-@media(min-width:980px){.offer{grid-template-columns:1fr 1fr;padding:60px;gap:60px}}
-.offer .eyebrow{color:#666}
-.offer h2{font-size:clamp(40px,7vw,76px);margin:16px 0 22px}
-.olist{margin-top:26px}
-.olist div{display:grid;grid-template-columns:38px 1fr;gap:12px;padding:14px 0;border-top:1px solid #e6e6e6;font-weight:600}
-.olist div span{font-weight:900;font-size:14px;width:30px;height:30px;border-radius:50%;background:var(--ink);color:var(--g);display:flex;align-items:center;justify-content:center}
-.slots{display:flex;align-items:center;gap:10px;margin-top:22px;font-weight:600;font-size:13px;letter-spacing:.06em}
-.slots i{width:12px;height:12px;border-radius:3px;background:var(--ink)}
-form.funnel{background:var(--ink);color:var(--white);border-radius:24px;padding:24px;position:relative;overflow:hidden}
-.fprog{height:4px;background:var(--ink3);border-radius:2px;overflow:hidden;margin-bottom:22px}
-.fprog b{display:block;height:100%;width:25%;background:var(--g);transition:width .5s var(--ease)}
-.fstep{display:none}
-.fstep.on{display:block}
-.fstep .q{font-weight:900;font-size:26px;letter-spacing:-.03em;line-height:1.05;margin-bottom:18px}
-.opts{display:grid;gap:10px}
-.opt{display:flex;align-items:center;justify-content:space-between;text-align:left;width:100%;padding:17px 18px;border:1px solid var(--line2);border-radius:14px;font-weight:600;font-size:15px;transition:all .2s}
+.fwrap{display:grid;gap:30px;align-items:center}@media(min-width:900px){.fwrap{grid-template-columns:.8fr 1.2fr;gap:70px}}
+.fimg{position:relative;max-width:420px;margin:0 auto;width:100%}
+.fimg img{border-radius:26px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.badge{position:absolute;right:10px;bottom:-14px;width:130px;height:130px;border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center}
+.badge svg.ring{position:absolute;inset:0;width:100%;height:100%}
+.badge img{width:44px;height:44px}
+.quote{font-weight:900;font-size:clamp(30px,6vw,54px);letter-spacing:-.035em;line-height:1.02}
+@media(min-width:900px){.badge{right:-14px}}
+#founder{overflow:hidden}
+/* fit chips */
+.chips2{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:34px}
+.chip2{display:inline-flex;align-items:center;gap:9px;padding:12px 16px;border-radius:999px;font-weight:700;font-size:14px;border:1px solid var(--line2)}
+.chip2.y{background:var(--white);color:var(--ink);border-color:var(--white)}
+.chip2.n{color:var(--mute);text-decoration:line-through;text-decoration-color:#555}
+/* offer */
+.offer{border-radius:30px;background:var(--white);color:var(--ink);padding:30px 20px;display:grid;gap:30px}
+@media(min-width:980px){.offer{grid-template-columns:1fr 1fr;padding:56px;gap:56px}}
+.offer .eyebrow{color:#666}.offer .eyebrow i{background:var(--ink)}
+.offer h2{font-size:clamp(42px,9vw,80px)}
+.gets{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
+.get{border:1.5px solid #e6e6e6;border-radius:18px;padding:16px 10px;text-align:center}
+.get .ic{width:44px;height:44px;border-radius:12px;background:var(--ink);display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+.get .ic svg{width:22px;height:22px}
+.get b{display:block;font-weight:700;font-size:13px;line-height:1.2}
+form.funnel{background:var(--ink);color:var(--white);border-radius:24px;padding:22px;position:relative;overflow:hidden}
+.fprog{height:4px;background:var(--ink3);border-radius:2px;overflow:hidden;margin-bottom:20px}.fprog b{display:block;height:100%;width:25%;background:var(--g);transition:width .5s var(--ease)}
+.fstep{display:none}.fstep.on{display:block}
+.fstep .q{font-weight:900;font-size:25px;letter-spacing:-.03em;line-height:1.05;margin-bottom:16px}
+.opts{display:grid;gap:9px}
+.opt{display:flex;align-items:center;gap:12px;text-align:left;width:100%;padding:15px 16px;border:1px solid var(--line2);border-radius:14px;font-weight:600;font-size:15px;transition:all .2s}
+.opt .e{font-size:20px;width:26px;text-align:center}
 .opt:hover,.opt.sel{border-color:var(--g);background:rgba(198,255,61,.08)}
-.opt .k{font-size:11px;color:var(--mute);letter-spacing:.2em}
-.field{margin-bottom:12px}
-.field label{display:block;font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin-bottom:7px}
-.field input{width:100%;padding:16px;border-radius:12px;border:1px solid var(--line2);background:var(--ink2);color:var(--white);font:inherit;font-size:16px;outline:none}
-.field input:focus{border-color:var(--g)}
-.fnav{display:flex;justify-content:space-between;align-items:center;margin-top:18px}
+.field{margin-bottom:11px}.field label{display:block;font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);margin-bottom:6px}
+.field input{width:100%;padding:15px;border-radius:12px;border:1px solid var(--line2);background:var(--ink2);color:var(--white);font:inherit;font-size:16px;outline:none}.field input:focus{border-color:var(--g)}
+.fnav{display:flex;justify-content:space-between;align-items:center;margin-top:16px}
 .back{font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
-.fdone{text-align:center;padding:30px 6px}
-.fdone .big{font-weight:900;font-size:40px;letter-spacing:-.03em}
-.err{color:#ff8a8a;font-size:13px;margin-top:8px;min-height:18px}
+.err{color:#ff8a8a;font-size:13px;margin-top:6px;min-height:18px}
+.fdone{text-align:center;padding:30px 6px}.fdone .big{font-weight:900;font-size:40px;letter-spacing:-.03em}
 /* faq */
-.faq{margin-top:44px;border-top:1px solid var(--line)}
+.faq{margin-top:36px;border-top:1px solid var(--line)}
 .qa{border-bottom:1px solid var(--line)}
-.qa button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;text-align:left;padding:24px 0;font-weight:700;font-size:19px;letter-spacing:-.01em}
+.qa button{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;text-align:left;padding:22px 0;font-weight:700;font-size:18px}
 .qa button i{font-style:normal;width:30px;height:30px;flex-shrink:0;border-radius:50%;border:1px solid var(--line2);display:flex;align-items:center;justify-content:center;transition:transform .35s var(--ease)}
 .qa.open button i{transform:rotate(45deg);background:var(--g);color:var(--ink);border-color:var(--g)}
-.qa .a{height:0;overflow:hidden;color:var(--dim);transition:height .4s var(--ease)}
-.qa .a p{padding:0 0 24px;max-width:720px}
+.qa .a{height:0;overflow:hidden;color:var(--dim);transition:height .4s var(--ease)}.qa .a p{padding:0 0 22px;max-width:680px}
 /* final */
-.final{text-align:center;padding:140px 0 120px}
-.final h2{font-size:clamp(64px,16vw,190px);letter-spacing:-.05em}
-.final p{color:var(--dim);margin:22px auto 34px;max-width:460px}
-footer{border-top:1px solid var(--line);padding:34px 0 120px;color:var(--mute);font-size:13px}
-footer .wrap{display:flex;flex-direction:column;gap:16px}
-@media(min-width:760px){footer .wrap{flex-direction:row;justify-content:space-between;align-items:center}footer{padding-bottom:40px}}
-/* sticky mobile cta */
-.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:70;transform:translateY(140%);transition:transform .45s var(--ease)}
-.sticky.show{transform:none}
-.sticky .btn{width:100%;padding:18px}
+.final{padding:120px 0 110px;text-align:center;overflow:hidden}
+.final h2{font-size:clamp(70px,19vw,210px);letter-spacing:-.055em}
+footer{border-top:1px solid var(--line);padding:30px 0 110px;color:var(--mute);font-size:13px}
+footer .wrap{display:flex;flex-direction:column;gap:14px}@media(min-width:760px){footer .wrap{flex-direction:row;justify-content:space-between;align-items:center}footer{padding-bottom:36px}}
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:70;transform:translateY(140%);transition:transform .45s var(--ease)}.sticky.show{transform:none}.sticky .btn{width:100%;padding:18px}
 @media(min-width:760px){.sticky{display:none}}
-.reveal{opacity:0;transform:translateY(40px)}
 @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none}#loader{display:none}}
+/* svg strokes */
+.st{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.stg{fill:none;stroke:var(--g);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.stk{fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 </style>
 </head>
 <body>
+<div id="progress"></div>
+<div id="loader" aria-hidden="true"><div class="w"><b><span>Make.</span></b><b><span>Ship.</span></b><b><span>Repeat.</span></b></div></div>
 
-<div id="loader" aria-hidden="true">
-  <img src="assets/p.png" alt="">
-  <div class="words"><span>Make<span class="g">.</span></span><span>Ship<span class="g">.</span></span><span>Repeat<span class="g">.</span></span></div>
-</div>
-
-<nav class="top" id="nav">
+<nav class="top">
   <a class="brand" href="#top"><img src="assets/p.png" alt="Prime">PRIME<span class="g">.</span></a>
   <div class="nav-r">
-    <div class="lang" role="group" aria-label="Language"><button data-lang="en" class="on">EN</button><button data-lang="es">ES</button></div>
+    <div class="lang"><button data-lang="en" class="on">EN</button><button data-lang="es">ES</button></div>
     <a href="#audit" class="btn btn-g nav-cta" data-es="Auditoría gratis">Free audit</a>
   </div>
 </nav>
 
 <main id="top">
-<!-- ============ HERO ============ -->
+<!-- ================= HERO ================= -->
 <section class="hero">
-  <div class="wrap hero-grid">
+  <div class="wrap hgrid">
     <div>
-      <div class="eyebrow h-in"><span class="dot"></span><span data-es="Estudio de estrategia de contenido · Miami">Content strategy studio · Miami</span></div>
+      <div class="eyebrow hin"><i></i><span data-es="Estrategia de contenido orgánico">Organic content studio</span></div>
       <h1>
-        <span class="line-mask"><span data-es="Contenido que">Content that</span></span>
-        <span class="line-mask"><span data-es="trae clientes<span class='g'>.</span>">brings clients<span class="g">.</span></span></span>
-        <span class="line-mask"><span data-es="Sin pagar ads<span class='g'>.</span>">No ad spend<span class="g">.</span></span></span>
+        <span class="lm"><span data-es="Contenido">Content</span></span><br>
+        <span class="lm"><span data-es="que trae">that brings</span></span><br>
+        <span class="lm"><span data-es="clientes<span class='g'>.</span>">clients<span class="g">.</span></span></span>
       </h1>
-      <p class="sub h-in" data-es="Armamos tu estrategia de contenido, grabamos y editamos cada pieza y movemos tus redes con un sistema semanal. Crecimiento propio, no alquilado.">We build your content strategy, film and edit every piece and run your channels on a weekly system. Growth you own, not rent.</p>
-      <div class="ctas h-in">
-        <a href="#audit" class="btn btn-g"><span data-es="Pide tu auditoría gratis">Get a free content audit</span><span class="arr">→</span></a>
-        <a href="#system" class="btn btn-o" data-es="Mira cómo funciona">See how it works</a>
+      <p class="sub hin" data-es="Estrategia, grabación y publicación. Cada semana. Sin pagar anuncios.">Strategy, filming and posting. Every week. No ad spend.</p>
+      <div class="ctas hin">
+        <a href="#audit" class="btn btn-g"><span data-es="Auditoría gratis">Get a free audit</span><span class="arr">→</span></a>
+        <a href="#engine" class="btn btn-o" data-es="Cómo funciona">How it works</a>
       </div>
-      <p class="micro h-in" data-es="<b>30 minutos.</b> Sin presentaciones de ventas. Te vas con 3 ideas de contenido para tu nicho.">
-        <b>30 minutes.</b> No pitch deck. You leave with 3 content ideas built for your niche.</p>
     </div>
-    <div class="stage h-in">
-      <div class="phone">
-        <div class="notch"></div>
-        <div class="ad">
-          <div>
-            <div class="bars"><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i></div>
-            <div class="acct"><img src="assets/p.png" alt="">yourbrand <span data-es="· Reel">· Reel</span></div>
-          </div>
-          <div class="hookbox" id="hookbox"></div>
-          <div class="shop"><span data-es="Seguir">Follow</span><span>+</span></div>
-        </div>
-      </div>
-      <div class="chips">
-      <div class="chip c1"><small data-es="Vistas">Views</small><strong data-count="248" data-dec="0" data-suf="K">0</strong><span class="up">▲</span></div>
-      <div class="chip c2"><small data-es="Guardados">Saves</small><strong data-count="3.1" data-dec="1" data-suf="K">0</strong></div>
-      <div class="chip c3"><small data-es="Seguidores nuevos">New followers</small><strong data-count="1.9" data-pre="+" data-dec="1" data-suf="K">0</strong><span class="up">▲</span></div>
-      </div>
-      <div class="illus" data-es="Ejemplo ilustrativo">Illustrative example</div>
+    <div class="stage hin" id="stage">
+      <!-- left phone: carousel -->
+      <div class="ph" id="phL" style="transform:translateX(-62%) rotate(-9deg) scale(.86)"><div class="scr" id="carousel"></div></div>
+      <!-- right phone: analytics -->
+      <div class="ph" id="phR" style="transform:translateX(62%) rotate(9deg) scale(.86)"><div class="scr" id="stats"></div></div>
+      <!-- center phone: reel -->
+      <div class="ph" id="phC" style="z-index:3"><div class="scr" id="reel"></div></div>
+      <div class="toast" id="t1" style="left:0;top:18px"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24"><path class="stg" d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle class="stg" cx="9" cy="7" r="4"/><path class="stg" d="M19 8v6M22 11h-6"/></svg></span><div><span id="t1n">+248</span> <span data-es="seguidores">followers</span><small data-es="hoy">today</small></div></div>
+      <div class="toast gr" id="t2" style="right:0;top:150px"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24"><path class="stg" d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div><span data-es="Nuevo cliente">New lead</span><small data-es="desde Instagram">from Instagram DM</small></div></div>
+      <div class="toast" id="t3" style="left:6px;bottom:24px"><span class="ic"><svg width="16" height="16" viewBox="0 0 24 24"><path class="stg" d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></span><div><span>1.2K</span> <span data-es="guardados">saves</span><small data-es="este reel">this reel</small></div></div>
     </div>
   </div>
 </section>
 
-<div class="marquee" aria-hidden="true"><div class="track" id="mq">
-  <span>STRATEGY<i>.</i></span><span>SCRIPTS<i>.</i></span><span>SHOOT<i>.</i></span><span>EDIT<i>.</i></span><span>REELS<i>.</i></span><span>CAROUSELS<i>.</i></span><span>INSTAGRAM<i>.</i></span><span>TIKTOK<i>.</i></span><span>YOUTUBE<i>.</i></span>
-</div></div>
+<div class="marquee" aria-hidden="true"><div class="tr" id="mq"><span>STRATEGY<i>.</i></span><span>SCRIPTS<i>.</i></span><span>SHOOT<i>.</i></span><span>EDIT<i>.</i></span><span>REELS<i>.</i></span><span>CAROUSELS<i>.</i></span><span>POST<i>.</i></span><span>REPEAT<i>.</i></span></div></div>
 
-<!-- ============ PROBLEM ============ -->
-<section class="sec" id="problem">
+<!-- ================= PAIN ================= -->
+<section class="sec" id="pain">
   <div class="wrap">
-    <div class="eyebrow reveal"><span class="dot"></span><span data-es="El problema">The problem</span></div>
-    <h2 class="split" style="margin-top:22px" data-es="Tu contenido no falla<span class='g'>.</span> Falla tu sistema<span class='g'>.</span>">Your content isn't failing<span class="g">.</span> Your system is<span class="g">.</span></h2>
-    <div class="cards3">
-      <div class="pcard reveal"><div class="num"><span data-count="4" data-dec="0">0</span><span class="u" data-es="h al día">hrs a day</span><i class="strike"></i></div>
-        <h3 data-es="Haciendo contenido tú solo.">Making content alone.</h3><p data-es="Guion, grabación, edición y publicación. Mientras tanto, tu negocio espera.">Scripting, shooting, editing, posting. Meanwhile, your business waits.</p></div>
-      <div class="pcard reveal"><div class="num"><span data-count="1" data-dec="0">0</span><span class="u" data-es="idea">idea</span><i class="strike"></i></div>
-        <h3 data-es="Repetida hasta que muere.">Recycled until it dies.</h3><p data-es="Los mismos temas que tu nicho ya vio cien veces. La gente pasa de largo.">The same topics your niche has seen a hundred times. People scroll past.</p></div>
-      <div class="pcard reveal"><div class="num"><span data-count="0" data-dec="0">0</span><span class="u" data-es="sistema">system</span><i class="strike"></i></div>
-        <h3 data-es="Publicar y rezar.">Post and pray.</h3><p data-es="Sin hooks probados, sin leer los datos, sin plan para la próxima semana.">No hooks tested, no data read, no plan for next week.</p></div>
+    <div class="eyebrow reveal"><i></i><span data-es="¿Te suena?">Sound familiar?</span></div>
+    <h2 class="split" data-es="Publicas<span class='g'>.</span> Nada pasa<span class='g'>.</span>">You post<span class="g">.</span> Nothing happens<span class="g">.</span></h2>
+    <div class="pains">
+      <div class="pain reveal">
+        <svg viewBox="0 0 96 96" id="pClock"><circle class="st" cx="48" cy="48" r="38"/><g id="hrHand"><line class="st" x1="48" y1="48" x2="48" y2="26" style="stroke-width:3"/></g><g id="mnHand"><line class="stg" x1="48" y1="48" x2="48" y2="16"/></g><circle cx="48" cy="48" r="3.5" fill="#fff"/></svg>
+        <div><b data-es="4 h al día">4 hrs a day</b><span data-es="haciendo contenido tú solo">making content alone</span></div>
+      </div>
+      <div class="pain reveal">
+        <svg viewBox="0 0 96 96" id="pLoop"><rect class="st" x="14" y="22" width="30" height="40" rx="5" id="lpA"/><rect class="st" x="52" y="22" width="30" height="40" rx="5" id="lpB"/><path class="stg" d="M20 76 h56" /><path class="stg" d="M68 70 l8 6 -8 6"/><text x="29" y="47" text-anchor="middle" fill="#fff" font-weight="900" font-size="16" font-family="Inter">A</text><text x="67" y="47" text-anchor="middle" fill="#fff" font-weight="900" font-size="16" font-family="Inter">A</text></svg>
+        <div><b data-es="Las mismas ideas">Same ideas</b><span data-es="que tu nicho ya vio">your niche already saw</span></div>
+      </div>
+      <div class="pain reveal">
+        <svg viewBox="0 0 96 96"><path class="st" d="M8 84 H90" style="stroke:#444"/><path class="st" d="M8 14 V84" style="stroke:#444"/><path id="flat" class="stg" d="M10 66 L26 60 L38 64 L50 61 L62 65 L74 62 L90 64"/></svg>
+        <div><b data-es="Cero crecimiento">Zero growth</b><span data-es="mes tras mes">month after month</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ SYSTEM ============ -->
-<section class="sec" id="system" style="padding-top:40px">
-  <div class="wrap pipe">
+<!-- ================= ENGINE ================= -->
+<section class="sec" id="engine" style="padding-top:30px">
+  <div class="wrap egrid">
     <div>
-      <div class="eyebrow reveal"><span class="dot"></span><span data-es="El sistema Prime">The Prime system</span></div>
-      <h2 class="split" style="margin-top:22px" data-es="Un equipo<span class='g'>.</span> Un techo<span class='g'>.</span> Un número<span class='g'>.</span>">One team<span class="g">.</span> One roof<span class="g">.</span> One number<span class="g">.</span></h2>
-      <p class="lead reveal" style="margin-top:26px" data-es="El estratega se sienta al lado del editor. La estrategia, la grabación y la publicación pasan en el mismo cuarto, la misma semana.">The strategist sits next to the editor. Strategy, shoot and publishing happen in the same room, the same week.</p>
+      <div class="eyebrow reveal"><i></i><span data-es="El motor Prime">The Prime engine</span></div>
+      <h2 class="split" data-es="Tu negocio entra<span class='g'>.</span> Clientes salen<span class='g'>.</span>">Your business in<span class="g">.</span> Clients out<span class="g">.</span></h2>
+      <p class="sub reveal" data-es="Un sistema de 4 pasos que corre cada semana. Tú solo apareces en cámara.">A 4-step system that runs every week. You just show up on camera.</p>
     </div>
-    <div class="steps" id="steps">
-      <div class="rail"><b id="rail"></b></div>
-      <div class="step"><i class="knot"></i><div class="n">01</div><h3 data-es="Estrategia<span class='g'>.</span>">Strategy<span class="g">.</span></h3><p data-es="Posicionamiento, pilares de contenido y un banco de hooks basado en lo que tu cliente busca, guarda y comparte. Cada pieza nace de una meta de negocio.">Positioning, content pillars and a hook bank built from what your buyer searches, saves and shares. Every piece starts from a business goal.</p></div>
-      <div class="step"><i class="knot"></i><div class="n">02</div><h3 data-es="Producción<span class='g'>.</span>">Production<span class="g">.</span></h3><p data-es="Guiones, grabación, edición, motion e IA. Todo en casa. Tú solo apareces frente a la cámara.">Scripts, shoot, edit, motion and AI. All in-house. You just show up on camera.</p></div>
-      <div class="step"><i class="knot"></i><div class="n">03</div><h3 data-es="Distribución<span class='g'>.</span>">Distribution<span class="g">.</span></h3><p data-es="Instagram, TikTok, YouTube y LinkedIn. Publicamos con calendario, escribimos los captions y cuidamos la comunidad.">Instagram, TikTok, YouTube and LinkedIn. We publish on a calendar, write the captions and work the community.</p></div>
-      <div class="step"><i class="knot"></i><div class="n">04</div><h3 data-es="Repetir<span class='g'>.</span>">Repeat<span class="g">.</span></h3><p data-es="Cada semana leemos retención, guardados y seguidores. Lo que funciona se vuelve serie. Lo que no, se cambia.">Every week we read retention, saves and follows. Winners become series. Losers get cut.</p></div>
-    </div>
+    <svg class="engine" id="engSvg" viewBox="0 0 400 760"></svg>
   </div>
 </section>
 
-<!-- ============ 7-DAY CYCLE ============ -->
-<section class="sec" id="cycle" style="padding-top:40px">
+<!-- ================= MULTIPLY ================= -->
+<section class="sec center" id="mult" style="padding-top:30px">
   <div class="wrap">
-    <div class="eyebrow reveal"><span class="dot"></span><span data-es="El ciclo de 7 días">The 7-day cycle</span></div>
-    <h2 class="split" style="margin-top:22px" data-es="Estrategia el lunes<span class='g'>.</span> Publicado el viernes<span class='g'>.</span>">Strategy Monday<span class="g">.</span> Posted Friday<span class="g">.</span></h2>
-    <div class="week reveal" id="week">
-      <div class="days" id="days"></div>
-      <div class="dayinfo"><div class="k" id="dk"></div><div class="t" id="dt"></div></div>
+    <div class="eyebrow reveal"><i></i><span data-es="Una grabación">One shoot</span></div>
+    <div class="bigcount" style="margin-top:14px"><span id="mcount">1</span> <span data-es="piezas">posts</span><span class="g">.</span></div>
+    <p class="sub reveal" data-es="Grabamos una vez al mes. Sale contenido para todo el mes.">We film once a month. You get content for the whole month.</p>
+    <div class="mult" id="multBox"><div class="cam"><svg viewBox="0 0 24 24"><path class="stk" d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle class="stk" cx="12" cy="13" r="4"/></svg></div></div>
+    <div class="legend"><span><i style="background:#fff"></i>Reels</span><span><i style="background:var(--g)"></i><span data-es="Carruseles">Carousels</span></span><span><i style="background:#333;border:1px solid #555"></i><span data-es="Historias">Stories</span></span></div>
+  </div>
+</section>
+
+<!-- ================= WEEK ================= -->
+<section class="sec center" id="week" style="padding-top:30px">
+  <div class="wrap">
+    <div class="eyebrow reveal"><i></i><span data-es="Tu semana con Prime">Your week with Prime</span></div>
+    <h2 class="split" data-es="Lunes idea<span class='g'>.</span> Viernes publicado<span class='g'>.</span>">Monday idea<span class="g">.</span> Friday posted<span class="g">.</span></h2>
+    <div class="week" id="weekBox">
+      <div class="wline"><b id="wfill"></b></div>
+      <div class="wtrack" id="wtrack"></div>
+      <div class="wnow" id="wnow"></div>
     </div>
   </div>
 </section>
 
-<!-- ============ TEST 18 ============ -->
-<section class="sec" id="test" style="padding-top:40px">
+<!-- ================= GROWTH ================= -->
+<section class="sec center" id="growth" style="padding-top:30px">
   <div class="wrap">
-    <div class="eyebrow reveal"><span class="dot"></span><span data-es="Cómo encontramos ganadores">How we find winners</span></div>
-    <h2 class="split" style="margin-top:22px" data-es="Publicamos 18<span class='g'>.</span> Quedan 3<span class='g'>.</span> 1 se vuelve serie<span class='g'>.</span>">Post 18<span class="g">.</span> Keep 3<span class="g">.</span> Turn 1 into a series<span class="g">.</span></h2>
-    <p class="lead reveal" style="margin-top:24px" data-es="La mayoría publica y espera. Nosotros publicamos 18 hooks al mes, leemos la retención y los guardados, y convertimos al ganador en una serie que trae seguidores cada semana.">Most brands post and hope. We publish 18 hooks a month, read retention and saves, and turn the winner into a series that brings followers every week.</p>
-    <div class="tgrid" id="tgrid"></div>
-    <div class="tstats"><div><span id="sTested">0</span><small data-es="Publicados">Posted</small></div><div><span id="sKilled">0</span><small data-es="Descartados">Dropped</small></div><div class="g"><span id="sScaled">0</span><small data-es="Serie">Series</small></div></div>
+    <div class="eyebrow reveal"><i></i><span data-es="Así se acumula">How it compounds</span></div>
+    <h2 class="split" data-es="El orgánico se acumula<span class='g'>.</span>">Organic compounds<span class="g">.</span></h2>
+    <div class="chart"><svg id="chartSvg" viewBox="0 0 760 420"></svg><div class="ill" data-es="Ejemplo ilustrativo">Illustrative example</div></div>
   </div>
 </section>
 
-<!-- ============ SERVICES ============ -->
-<section class="sec" id="services" style="padding-top:40px">
-  <div class="wrap">
-    <div class="eyebrow reveal"><span class="dot"></span><span data-es="Qué incluye">What's included</span></div>
-    <h2 class="split" style="margin-top:22px" data-es="Todo lo que mueve el número<span class='g'>.</span>">Everything that moves the number<span class="g">.</span></h2>
-    <div class="svc">
-      <div class="row reveal"><div class="i">01</div><h3 data-es="Estrategia de contenido">Content strategy</h3><p data-es="Posicionamiento, pilares, banco de hooks y calendario mensual.">Positioning, content pillars, a hook bank and a monthly calendar.</p></div>
-      <div class="row reveal"><div class="i">02</div><h3 data-es="Guiones y grabación">Scripts &amp; production</h3><p data-es="Guiones, dirección y grabación con equipo propio. En estudio o en tu negocio.">Scripts, direction and filming with our own crew and gear. In studio or on location.</p></div>
-      <div class="row reveal"><div class="i">03</div><h3 data-es="Edición, motion e IA">Editing, motion &amp; AI</h3><p data-es="Reels, carruseles y shorts con motion graphics y variantes de hooks.">Reels, carousels and shorts with motion graphics and hook variants.</p></div>
-      <div class="row reveal"><div class="i">04</div><h3 data-es="Manejo de redes">Channel management</h3><p data-es="Publicación, captions y comunidad en Instagram, TikTok, YouTube y LinkedIn.">Publishing, captions and community on Instagram, TikTok, YouTube and LinkedIn.</p></div>
-      <div class="row reveal"><div class="i">05</div><h3 data-es="Reporte semanal">Weekly reporting</h3><p data-es="Alcance, retención, seguidores y clientes en un solo tablero. Sabes qué funcionó y qué sigue.">Reach, retention, followers and leads in one dashboard. You know what worked and what's next.</p></div>
+<!-- ================= FOUNDER ================= -->
+<section class="sec" id="founder" style="padding-top:30px">
+  <div class="wrap fwrap">
+    <div class="fimg reveal"><img src="assets/founder.webp" alt="Kevin Rodriguez" loading="lazy">
+      <div class="badge"><svg class="ring" id="ring" viewBox="0 0 130 130"><defs><path id="circ" d="M65,65 m-48,0 a48,48 0 1,1 96,0 a48,48 0 1,1 -96,0"/></defs><text font-family="Inter" font-weight="900" font-size="12.5" letter-spacing="2.6" fill="#0A0A0A"><textPath href="#circ">MAKE. SHIP. REPEAT. MAKE. SHIP. REPEAT. </textPath></text></svg><img src="assets/favicon.png" alt=""></div>
     </div>
-  </div>
-</section>
-
-<!-- ============ FOUNDER ============ -->
-<section class="sec" id="founder" style="padding-top:40px">
-  <div class="wrap founder">
-    <div class="fimg reveal"><img src="assets/founder.webp" alt="Kevin Rodriguez, founder of Prime Production Media" loading="lazy"><div class="tag" data-es="Kevin Rodriguez · Fundador">Kevin Rodriguez · Founder</div></div>
     <div>
-      <div class="eyebrow reveal"><span class="dot"></span><span data-es="Por qué existe Prime">Why Prime exists</span></div>
-      <p class="quote split" style="margin-top:22px" data-es="“Vi demasiadas marcas buenas publicar todos los días sin llegar a ningún lado<span class='g'>.</span> Contenido sin sistema es solo ruido<span class='g'>.</span>”">“I watched too many good brands post every day and get nowhere<span class="g">.</span> Content without a system is just noise<span class="g">.</span>”</p>
-      <p class="lead reveal" style="margin-top:24px" data-es="Estratega de contenido, director y editor. Trabajo con marcas en Estados Unidos y Latinoamérica, en inglés y en español.">Content strategist, director and editor. I work with brands across the US and Latin America, in English and Spanish.</p>
+      <div class="eyebrow reveal"><i></i>Kevin Rodriguez · <span data-es="Fundador">Founder</span></div>
+      <p class="quote split" style="margin-top:20px" data-es="“Contenido sin sistema es solo ruido<span class='g'>.</span>”">“Content without a system is just noise<span class="g">.</span>”</p>
+      <div class="chips2" style="justify-content:flex-start">
+        <span class="chip2 y reveal">✓ <span data-es="Ya vendes">You already sell</span></span>
+        <span class="chip2 y reveal">✓ <span data-es="Quieres clientes de redes">You want clients from social</span></span>
+        <span class="chip2 y reveal">✓ <span data-es="Puedes salir en cámara">You can show up on camera</span></span>
+        <span class="chip2 n reveal" data-es="Viral de suerte">Lucky virals</span>
+        <span class="chip2 n reveal" data-es="Resultados en 1 semana">Results in 1 week</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ FIT ============ -->
-<section class="sec" id="fit" style="padding-top:40px">
-  <div class="wrap">
-    <div class="eyebrow reveal"><span class="dot"></span><span data-es="¿Es para ti?">Is it for you?</span></div>
-    <h2 class="split" style="margin-top:22px" data-es="No trabajamos con todos<span class='g'>.</span>">We don't work with everyone<span class="g">.</span></h2>
-    <div class="fit">
-      <div class="fbox yes reveal"><h3 data-es="Prime es para ti si">Prime is for you if</h3><ul>
-        <li><b>✓</b><span data-es="Ya vendes y quieres que tus redes te traigan clientes.">You already sell and want your socials to bring clients.</span></li>
-        <li><b>✓</b><span data-es="Puedes aparecer en cámara (o tienes a alguien que lo haga).">You can show up on camera (or have someone who can).</span></li>
-        <li><b>✓</b><span data-es="Quieres un socio que piense la estrategia, no solo que edite.">You want a partner that owns the strategy, not just the edit.</span></li>
-        <li><b>✓</b><span data-es="Te mueves rápido y confías en el proceso.">You move fast and trust the process.</span></li></ul></div>
-      <div class="fbox no reveal"><h3 data-es="No es para ti si">Not for you if</h3><ul>
-        <li><b>✕</b><span data-es="Buscas un viral de suerte sin plan.">You want one lucky viral with no plan.</span></li>
-        <li><b>✕</b><span data-es="Solo comparas precios.">You're shopping on price alone.</span></li>
-        <li><b>✕</b><span data-es="Quieres decidir cada cuadro del video.">You want to dictate every frame.</span></li>
-        <li><b>✕</b><span data-es="Esperas resultados en una semana.">You expect results in one week.</span></li></ul></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ OFFER + FORM ============ -->
-<section class="sec" id="audit" style="padding-top:40px">
+<!-- ================= OFFER ================= -->
+<section class="sec" id="audit" style="padding-top:30px">
   <div class="wrap">
     <div class="offer">
       <div>
-        <div class="eyebrow"><span class="dot" style="background:var(--ink)"></span><span data-es="Auditoría de contenido gratis">Free content audit</span></div>
-        <h2 data-es="3 mejoras para tu contenido<span class='g' style='color:#0A0A0A'>.</span> Gratis<span class='g' style='color:#0A0A0A'>.</span>">3 fixes for your content<span style="color:#0A0A0A">.</span> Free<span style="color:#0A0A0A">.</span></h2>
-        <p style="color:#444;max-width:440px" data-es="En 30 minutos revisamos tu perfil y tu contenido, y te decimos exactamente qué publicaríamos este mes. Lo puedes aplicar con o sin nosotros.">In 30 minutes we review your profile and content and tell you exactly what we'd post this month. Use it with us or without us.</p>
-        <div class="olist">
-          <div><span>1</span><p data-es="Análisis de tu perfil y tus últimos 30 posts.">A teardown of your profile and last 30 posts.</p></div>
-          <div><span>2</span><p data-es="3 hooks que publicaríamos esta semana.">3 hooks we'd post this week.</p></div>
-          <div><span>3</span><p data-es="Un plan de contenido de 30 días para tu nicho.">A 30-day content plan for your niche.</p></div>
+        <div class="eyebrow"><i></i><span data-es="Auditoría gratis · 30 min">Free audit · 30 min</span></div>
+        <h2 data-es="Tu plan de contenido<span style='color:#0A0A0A'>.</span> Gratis<span style='color:#0A0A0A'>.</span>">Your content plan<span style="color:#0A0A0A">.</span> Free<span style="color:#0A0A0A">.</span></h2>
+        <div class="gets">
+          <div class="get"><div class="ic"><svg viewBox="0 0 24 24"><circle class="stg" cx="11" cy="11" r="7"/><path class="stg" d="M21 21l-4.3-4.3"/></svg></div><b data-es="Análisis de tu perfil">Profile teardown</b></div>
+          <div class="get"><div class="ic"><svg viewBox="0 0 24 24"><path class="stg" d="M12 2v6M12 22v-4M4.9 4.9l4.2 4.2M14.8 14.8l4.3 4.3M2 12h6M18 12h4"/></svg></div><b data-es="3 hooks listos">3 ready hooks</b></div>
+          <div class="get"><div class="ic"><svg viewBox="0 0 24 24"><rect class="stg" x="3" y="4" width="18" height="18" rx="2"/><path class="stg" d="M16 2v4M8 2v4M3 10h18"/></svg></div><b data-es="Plan de 30 días">30-day plan</b></div>
         </div>
-        <div class="slots"><i></i><i></i><i></i><i></i><span data-es="Tomamos 4 marcas nuevas al mes.">We onboard 4 new brands per month.</span></div>
       </div>
       <form class="funnel" id="funnel" novalidate>
         <div class="fprog"><b id="fprog"></b></div>
-        <div class="fstep on" data-step="0">
-          <div class="q" data-es="¿Qué vendes?">What do you sell?</div>
+        <div class="fstep on" data-step="0"><div class="q" data-es="¿Qué vendes?">What do you sell?</div>
           <div class="opts" data-name="business">
-            <button type="button" class="opt" data-v="E-commerce / DTC"><span data-es="Tienda online / productos">E-commerce / products</span><span class="k">A</span></button>
-            <button type="button" class="opt" data-v="Services / local business"><span data-es="Servicios / negocio local">Services / local business</span><span class="k">B</span></button>
-            <button type="button" class="opt" data-v="Personal brand / coach"><span data-es="Marca personal / coach">Personal brand / coach</span><span class="k">C</span></button>
-            <button type="button" class="opt" data-v="Other"><span data-es="Otro">Something else</span><span class="k">D</span></button>
-          </div>
-        </div>
-        <div class="fstep" data-step="1">
-          <div class="q" data-es="¿Cuánto facturas al mes?">Monthly revenue?</div>
+            <button type="button" class="opt" data-v="E-commerce"><span class="e">🛍️</span><span data-es="Productos / tienda online">Products / online store</span></button>
+            <button type="button" class="opt" data-v="Services / local"><span class="e">🏪</span><span data-es="Servicios / negocio local">Services / local business</span></button>
+            <button type="button" class="opt" data-v="Personal brand"><span class="e">🎤</span><span data-es="Marca personal / coach">Personal brand / coach</span></button>
+            <button type="button" class="opt" data-v="Other"><span class="e">✨</span><span data-es="Otro">Something else</span></button>
+          </div></div>
+        <div class="fstep" data-step="1"><div class="q" data-es="¿Cuánto facturas al mes?">Monthly revenue?</div>
           <div class="opts" data-name="revenue">
-            <button type="button" class="opt" data-v="<$10k"><span data-es="Menos de $10k">Under $10k</span><span class="k">A</span></button>
-            <button type="button" class="opt" data-v="$10k-50k"><span>$10k – $50k</span><span class="k">B</span></button>
-            <button type="button" class="opt" data-v="$50k-250k"><span>$50k – $250k</span><span class="k">C</span></button>
-            <button type="button" class="opt" data-v="$250k+"><span data-es="Más de $250k">$250k+</span><span class="k">D</span></button>
-          </div>
-        </div>
-        <div class="fstep" data-step="2">
-          <div class="q" data-es="¿Qué tan seguido publicas hoy?">How often do you post today?</div>
+            <button type="button" class="opt" data-v="<$10k"><span class="e">🌱</span><span data-es="Menos de $10k">Under $10k</span></button>
+            <button type="button" class="opt" data-v="$10k-50k"><span class="e">📈</span><span>$10k – $50k</span></button>
+            <button type="button" class="opt" data-v="$50k-250k"><span class="e">🚀</span><span>$50k – $250k</span></button>
+            <button type="button" class="opt" data-v="$250k+"><span class="e">🏆</span><span data-es="Más de $250k">$250k+</span></button>
+          </div></div>
+        <div class="fstep" data-step="2"><div class="q" data-es="¿Qué tan seguido publicas?">How often do you post?</div>
           <div class="opts" data-name="posting">
-            <button type="button" class="opt" data-v="Not posting yet"><span data-es="Todavía no publico">Not posting yet</span><span class="k">A</span></button>
-            <button type="button" class="opt" data-v="A few times a month"><span data-es="Unas veces al mes">A few times a month</span><span class="k">B</span></button>
-            <button type="button" class="opt" data-v="Weekly"><span data-es="Cada semana">Every week</span><span class="k">C</span></button>
-            <button type="button" class="opt" data-v="Daily"><span data-es="Todos los días">Every day</span><span class="k">D</span></button>
-          </div>
-        </div>
-        <div class="fstep" data-step="3">
-          <div class="q" data-es="¿A dónde te mandamos la auditoría?">Where do we send your audit?</div>
-          <div class="field"><label data-es="Nombre">Name</label><input name="name" autocomplete="name" required></div>
-          <div class="field"><label>Email</label><input name="email" type="email" autocomplete="email" required></div>
+            <button type="button" class="opt" data-v="Not posting"><span class="e">😶</span><span data-es="Todavía no publico">Not posting yet</span></button>
+            <button type="button" class="opt" data-v="Monthly"><span class="e">🗓️</span><span data-es="Unas veces al mes">A few times a month</span></button>
+            <button type="button" class="opt" data-v="Weekly"><span class="e">📆</span><span data-es="Cada semana">Every week</span></button>
+            <button type="button" class="opt" data-v="Daily"><span class="e">🔥</span><span data-es="Todos los días">Every day</span></button>
+          </div></div>
+        <div class="fstep" data-step="3"><div class="q" data-es="¿A dónde te mandamos el plan?">Where do we send your plan?</div>
+          <div class="field"><label data-es="Nombre">Name</label><input name="name" autocomplete="name"></div>
+          <div class="field"><label>Email</label><input name="email" type="email" autocomplete="email"></div>
           <div class="field"><label data-es="WhatsApp / teléfono">WhatsApp / phone</label><input name="phone" type="tel" autocomplete="tel"></div>
-          <div class="field"><label data-es="Web o Instagram de tu marca">Website or Instagram</label><input name="brand"></div>
+          <div class="field"><label data-es="Instagram o web">Instagram or website</label><input name="brand"></div>
           <div class="err" id="ferr"></div>
-          <button type="submit" class="btn btn-g" style="width:100%;margin-top:6px" id="fsend"><span data-es="Reservar mi auditoría">Book my audit</span><span class="arr">→</span></button>
+          <button type="submit" class="btn btn-g" style="width:100%" id="fsend"><span data-es="Quiero mi auditoría">Book my audit</span><span class="arr">→</span></button>
         </div>
-        <div class="fstep" data-step="4">
-          <div class="fdone"><div class="big">✓ <span data-es="Listo<span class='g'>.</span>">Done<span class="g">.</span></span></div>
-            <p style="color:var(--dim);margin-top:12px" data-es="Te escribimos en menos de 24 horas con un horario para tu auditoría de contenido.">We'll reach out within 24 hours with a time for your content audit.</p></div>
-        </div>
+        <div class="fstep" data-step="4"><div class="fdone"><div class="big">✓ <span data-es="Listo<span class='g'>.</span>">Done<span class="g">.</span></span></div><p style="color:var(--dim);margin-top:10px" data-es="Te escribimos en menos de 24 horas.">We'll reach out within 24 hours.</p></div></div>
         <div class="fnav"><button type="button" class="back" id="fback" style="visibility:hidden" data-es="← Atrás">← Back</button><span class="eyebrow" id="fcount">1 / 4</span></div>
       </form>
     </div>
   </div>
 </section>
 
-<!-- ============ FAQ ============ -->
-<section class="sec" id="faq" style="padding-top:40px">
+<!-- ================= FAQ ================= -->
+<section class="sec" id="faq" style="padding-top:30px">
   <div class="wrap">
-    <div class="eyebrow reveal"><span class="dot"></span>FAQ</div>
-    <h2 class="split" style="margin-top:22px" data-es="Preguntas<span class='g'>.</span>">Questions<span class="g">.</span></h2>
-    <div class="faq" id="faqlist">
-      <div class="qa"><button type="button"><span data-es="¿Cuánto cuesta?">How much does it cost?</span><i>+</i></button><div class="a"><p data-es="Depende de cuántas piezas al mes y en qué canales. Después de la auditoría te damos una cotización mensual exacta, antes de que firmes nada.">It depends on how many pieces per month and which channels. After the audit you get an exact monthly quote, before you sign anything.</p></div></div>
-      <div class="qa"><button type="button"><span data-es="¿En cuánto tiempo veo resultados?">How fast will I see results?</span><i>+</i></button><div class="a"><p data-es="El primer contenido sale en 7 días. Las primeras señales llegan en 2 a 4 semanas y el crecimiento real en 60 a 90 días. El orgánico se acumula.">First content goes live in 7 days. Early signal shows up in 2–4 weeks; real momentum in 60–90 days. Organic compounds.</p></div></div>
-      <div class="qa"><button type="button"><span data-es="¿Necesito tener contenido grabado?">Do I need existing content?</span><i>+</i></button><div class="a"><p data-es="No. Planeamos, grabamos y editamos todo. Si ya tienes material, también lo usamos.">No. We plan, shoot and edit everything. If you already have footage, we'll use it too.</p></div></div>
-      <div class="qa"><button type="button"><span data-es="¿En qué plataformas trabajan?">Which platforms?</span><i>+</i></button><div class="a"><p data-es="Instagram, TikTok, YouTube Shorts y LinkedIn.">Instagram, TikTok, YouTube Shorts and LinkedIn.</p></div></div>
-      <div class="qa"><button type="button"><span data-es="¿También hacen anuncios?">Do you also run ads?</span><i>+</i></button><div class="a"><p data-es="Sí, cuando tiene sentido. Podemos impulsar con anuncios lo que ya funcionó en orgánico, pero el motor es el contenido.">Yes, when it makes sense. We can boost what already won organically, but the engine is the content.</p></div></div>
-      <div class="qa"><button type="button"><span data-es="¿Trabajan fuera de Miami y en español?">Do you work outside Miami and in Spanish?</span><i>+</i></button><div class="a"><p data-es="Sí. Trabajamos con marcas en Estados Unidos y Latinoamérica, en inglés y en español.">Yes. We work with brands across the US and Latin America, in English and Spanish.</p></div></div>
+    <div class="eyebrow reveal"><i></i>FAQ</div>
+    <div class="faq">
+      <div class="qa"><button type="button"><span data-es="¿Cuánto cuesta?">How much is it?</span><i>+</i></button><div class="a"><p data-es="Depende de cuántas piezas al mes y en qué canales. Después de la auditoría tienes una cotización exacta.">It depends on pieces per month and channels. After the audit you get an exact quote.</p></div></div>
+      <div class="qa"><button type="button"><span data-es="¿Cuándo veo resultados?">When do I see results?</span><i>+</i></button><div class="a"><p data-es="Primer contenido en 7 días. Primeras señales en 2 a 4 semanas. Crecimiento real en 60 a 90 días.">First content in 7 days. Early signal in 2–4 weeks. Real momentum in 60–90 days.</p></div></div>
+      <div class="qa"><button type="button"><span data-es="¿En qué redes?">Which platforms?</span><i>+</i></button><div class="a"><p data-es="Instagram, TikTok, YouTube Shorts y LinkedIn.">Instagram, TikTok, YouTube Shorts and LinkedIn.</p></div></div>
+      <div class="qa"><button type="button"><span data-es="¿También hacen anuncios?">Do you run ads too?</span><i>+</i></button><div class="a"><p data-es="Si tiene sentido, impulsamos con anuncios lo que ya ganó en orgánico. El motor es el contenido.">When it makes sense, we boost what already won organically. The engine is the content.</p></div></div>
+      <div class="qa"><button type="button"><span data-es="¿Trabajan en español?">Do you work in Spanish?</span><i>+</i></button><div class="a"><p data-es="Sí. Estados Unidos y Latinoamérica, en inglés y en español.">Yes. US and Latin America, in English and Spanish.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- ============ FINAL ============ -->
 <section class="final">
   <div class="wrap">
     <h2 class="split">Make<span class="g">.</span> Ship<span class="g">.</span> Repeat<span class="g">.</span></h2>
-    <p class="reveal" data-es="Tus próximos 30 días de contenido, planeados. Empieza con la auditoría gratis.">Your next 30 days of content, planned. Start with the free audit.</p>
-    <a href="#audit" class="btn btn-g reveal"><span data-es="Pide tu auditoría gratis">Get a free content audit</span><span class="arr">→</span></a>
+    <a href="#audit" class="btn btn-g reveal" style="margin-top:34px"><span data-es="Empieza con la auditoría gratis">Start with the free audit</span><span class="arr">→</span></a>
   </div>
 </section>
 </main>
-
-<footer>
-  <div class="wrap">
-    <a class="brand" href="#top"><img src="assets/p.png" alt="">PRIME<span class="g">.</span></a>
-    <div><a href="mailto:contact@primeproductionmedia.com">contact@primeproductionmedia.com</a></div>
-    <div>© 2026 Prime Production Media LLC</div>
-  </div>
-</footer>
-
-<div class="sticky" id="sticky"><a href="#audit" class="btn btn-g"><span data-es="Pide tu auditoría gratis">Get a free content audit</span><span class="arr">→</span></a></div>
+<footer><div class="wrap"><a class="brand" href="#top"><img src="assets/p.png" alt="">PRIME<span class="g">.</span></a><a href="mailto:contact@primeproductionmedia.com">contact@primeproductionmedia.com</a><div>© 2026 Prime Production Media LLC</div></div></footer>
+<div class="sticky" id="sticky"><a href="#audit" class="btn btn-g"><span data-es="Auditoría gratis">Get a free audit</span><span class="arr">→</span></a></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
 const FORM_ENDPOINT = 'https://formsubmit.co/ajax/contact@primeproductionmedia.com';
-const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
 gsap.registerPlugin(ScrollTrigger);
-if (location.search.includes('sim')) gsap.ticker.useRAF(false); // headless preview: tick without requestAnimationFrame
+const NS = 'http://www.w3.org/2000/svg';
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const svgEl = (tag, attrs = {}, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent && parent.appendChild(e); return e; };
+// tiny icon set (24x24 strokes)
+const IC = {
+  bulb: '<path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2V18h6v-1.3c0-.8.4-1.5 1-2A7 7 0 0 0 12 2z"/>',
+  target: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',
+  pen: '<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/>',
+  cam: '<path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/>',
+  cut: '<circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/>',
+  send: '<path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/>',
+  chart: '<path d="M3 3v18h18"/><path d="M7 16v-4M12 16V8M17 16v-7"/>',
+  loop: '<path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/>',
+  play: '<polygon points="7 4 19 12 7 20 7 4"/>',
+  grid: '<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>',
+  circ: '<circle cx="12" cy="12" r="8"/>',
+  user: '<circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/>',
+  heart: '<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/>',
+  phone: '<rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/>',
+};
+const icon = (name, cls = 'st', size = 24) => `<svg viewBox="0 0 24 24" width="${size}" height="${size}"><g class="${cls}">${IC[name]}</g></svg>`;
 
 /* ---------------- i18n ---------------- */
 let LANG = 'en';
-const HOOKS = {
-  en: ['Stop scrolling<span class="g">.</span>', '3 mistakes killing your reach<span class="g">.</span>', 'We posted 18 hooks<span class="g">.</span> This one won<span class="g">.</span>', 'Part 2 drops Friday<span class="g">.</span>'],
-  es: ['Deja de scrollear<span class="g">.</span>', '3 errores que matan tu alcance<span class="g">.</span>', 'Publicamos 18 hooks<span class="g">.</span> Ganó este<span class="g">.</span>', 'La parte 2 sale el viernes<span class="g">.</span>'],
-};
-const DAYS = {
-  en: [['MON', 'Strategy & hooks'], ['TUE', 'Scripts'], ['WED', 'Shoot day'], ['THU', 'Edit & motion'], ['FRI', 'Published on IG, TikTok & YouTube'], ['SAT', 'Read the data'], ['SUN', 'Keep. Cut. Repeat.']],
-  es: [['LUN', 'Estrategia y hooks'], ['MAR', 'Guiones'], ['MIÉ', 'Día de grabación'], ['JUE', 'Edición y motion'], ['VIE', 'Publicado en IG, TikTok y YouTube'], ['SÁB', 'Leemos los datos'], ['DOM', 'Mantener. Cortar. Repetir.']],
+const T = {
+  en: {eng: ['Your business', 'Strategy', 'Production', 'Distribution', 'Data', 'New clients'], engS: ['offer · audience · goals', 'pillars · hooks · calendar', 'scripts · shoot · edit', 'IG · TikTok · YouTube', 'retention · saves · leads', ''],
+       week: [['MON', 'bulb', 'Ideas & hooks'], ['TUE', 'pen', 'Scripts'], ['WED', 'cam', 'Shoot day'], ['THU', 'cut', 'Edit & motion'], ['FRI', 'send', 'Posted'], ['SAT', 'chart', 'Read the data'], ['SUN', 'loop', 'Repeat']],
+       chart: ['Week 1', 'Day 30', 'Day 60', 'Day 90'], cTags: ['First posts', 'Hook that works', 'A series is born', 'Steady leads'], cY: 'Reach', posts: 'posts'},
+  es: {eng: ['Tu negocio', 'Estrategia', 'Producción', 'Distribución', 'Datos', 'Clientes nuevos'], engS: ['oferta · público · metas', 'pilares · hooks · calendario', 'guiones · grabación · edición', 'IG · TikTok · YouTube', 'retención · guardados · leads', ''],
+       week: [['LUN', 'bulb', 'Ideas y hooks'], ['MAR', 'pen', 'Guiones'], ['MIÉ', 'cam', 'Grabación'], ['JUE', 'cut', 'Edición y motion'], ['VIE', 'send', 'Publicado'], ['SÁB', 'chart', 'Leemos los datos'], ['DOM', 'loop', 'Repetir']],
+       chart: ['Semana 1', 'Día 30', 'Día 60', 'Día 90'], cTags: ['Primeros posts', 'Un hook que pega', 'Nace una serie', 'Clientes constantes'], cY: 'Alcance', posts: 'piezas'},
 };
 function setLang(l) {
   LANG = l; document.documentElement.lang = l;
-  document.querySelectorAll('[data-es]').forEach((el) => {
-    if (el.dataset.en === undefined) el.dataset.en = el.innerHTML;
-    el.innerHTML = l === 'es' ? el.dataset.es : el.dataset.en;
-  });
-  document.querySelectorAll('.lang button').forEach((b) => b.classList.toggle('on', b.dataset.lang === l));
-  renderDays(); dayIdx >= 0 && showDay(dayIdx, true);
+  $$('[data-es]').forEach((el) => { if (el.dataset.en === undefined) el.dataset.en = el.innerHTML; el.innerHTML = l === 'es' ? el.dataset.es : el.dataset.en; });
+  $$('.lang button').forEach((b) => b.classList.toggle('on', b.dataset.lang === l));
+  buildEngine(); buildWeek(); buildChart(); setDay(curDay, true);
   try { localStorage.setItem('prime-lang', l); } catch (e) {}
   ScrollTrigger.refresh();
 }
-document.querySelectorAll('.lang button').forEach((b) => b.addEventListener('click', () => setLang(b.dataset.lang)));
+$$('.lang button').forEach((b) => b.addEventListener('click', () => setLang(b.dataset.lang)));
 
-/* ---------------- nav + sticky ---------------- */
-const nav = document.getElementById('nav'), sticky = document.getElementById('sticky');
-ScrollTrigger.create({start: 40, onUpdate: (s) => nav.classList.toggle('scrolled', s.scroll() > 40)});
-ScrollTrigger.create({trigger: '.hero', start: 'bottom 60%', endTrigger: '#audit', end: 'top 90%',
-  onToggle: (s) => sticky.classList.toggle('show', s.isActive)});
+/* ---------------- global UI ---------------- */
+gsap.to('#progress', {scaleX: 1, ease: 'none', scrollTrigger: {start: 0, end: 'max', scrub: .2}});
+ScrollTrigger.create({trigger: '.hero', start: 'bottom 60%', endTrigger: '#audit', end: 'top 90%', onToggle: (s) => $('#sticky').classList.toggle('show', s.isActive)});
+const mq = $('#mq'); mq.innerHTML += mq.innerHTML; gsap.to(mq, {xPercent: -50, duration: 20, ease: 'none', repeat: -1});
 
-/* ---------------- loader + hero intro ---------------- */
-function intro() {
-  const tl = gsap.timeline();
-  if (!RM) {
-    tl.from('#loader img', {scale: .6, opacity: 0, duration: .45, ease: 'back.out(2)'})
-      .to('#loader .words > span', {opacity: 1, y: 0, duration: .32, stagger: .14, ease: 'power3.out'}, '-=.1')
-      .to('#loader', {yPercent: -100, duration: .7, ease: 'power4.inOut'}, '+=.35')
-      .set('#loader', {display: 'none'});
-  } else tl.set('#loader', {display: 'none'});
-  tl.from('.hero h1 .line-mask > span', {yPercent: 110, duration: .9, stagger: .09, ease: 'power4.out'}, RM ? 0 : '-=.35')
-    .from('.h-in', {opacity: 0, y: 26, duration: .7, stagger: .08, ease: 'power3.out'}, '-=.6')
-    .from('.chip', {scale: .6, opacity: 0, duration: .55, stagger: .12, ease: 'back.out(2)'}, '-=.4')
-    .add(() => { countUp(document.querySelectorAll('.chip [data-count]')); hookLoop(); });
-}
-
-/* ---------------- counters ---------------- */
-function countUp(els) {
-  els.forEach((el) => {
-    const to = parseFloat(el.dataset.count), dec = +(el.dataset.dec || 0), pre = el.dataset.pre || '', suf = el.dataset.suf || '';
-    const o = {v: 0};
-    gsap.to(o, {v: to, duration: 1.4, ease: 'power2.out', onUpdate: () => (el.textContent = pre + o.v.toFixed(dec) + suf)});
-  });
-}
-
-/* ---------------- phone: cycling hooks (story-style) ---------------- */
-const hookbox = document.getElementById('hookbox');
-const bars = [...document.querySelectorAll('.ad .bars b')];
-let hi = 0;
-function hookLoop() {
-  const html = HOOKS[LANG][hi % 4];
-  const el = document.createElement('div'); el.className = 'hook'; el.innerHTML = html; hookbox.appendChild(el);
-  const old = hookbox.querySelectorAll('.hook');
-  if (old.length > 1) gsap.to(old[0], {yPercent: -40, opacity: 0, duration: .45, ease: 'power3.in', onComplete: () => old[0].remove()});
-  gsap.from(el, {yPercent: 50, opacity: 0, duration: .6, ease: 'power3.out', delay: .1});
-  const b = bars[hi % 4];
-  if (hi % 4 === 0) gsap.set(bars, {scaleX: 0});
-  gsap.fromTo(b, {scaleX: 0}, {scaleX: 1, duration: 2.6, ease: 'none', onComplete: () => { hi++; hookLoop(); }});
-  // nudge the metrics like a live dashboard
-  if (hi > 0) document.querySelectorAll('.chip').forEach((c, i) => gsap.fromTo(c, {y: 0}, {y: -6, duration: .25, yoyo: true, repeat: 1, delay: i * .08, ease: 'power2.out'}));
-}
-
-/* ---------------- marquee ---------------- */
-const mq = document.getElementById('mq'); mq.innerHTML += mq.innerHTML;
-gsap.to(mq, {xPercent: -50, duration: 22, ease: 'none', repeat: -1});
-
-/* ---------------- generic reveals + split headlines ---------------- */
-// wrap each word in a mask (DOM-based so inline elements like the green periods stay intact)
 function splitWords(h) {
   const out = []; let last = null;
   [...h.childNodes].forEach((n) => {
-    if (n.nodeType === 3) {
-      n.textContent.split(/(\s+)/).forEach((p) => {
-        if (!p) return;
-        if (/^\s+$/.test(p)) { out.push(document.createTextNode(' ')); last = null; return; }
-        const m = document.createElement('span'); m.className = 'line-mask'; m.style.cssText = 'display:inline-block;vertical-align:top';
-        const i = document.createElement('span'); i.style.display = 'inline-block'; i.textContent = p; m.appendChild(i); out.push(m); last = i;
-      });
-    } else if (last) last.appendChild(n.cloneNode(true));
-    else out.push(n.cloneNode(true));
+    if (n.nodeType === 3) n.textContent.split(/(\s+)/).forEach((p) => {
+      if (!p) return; if (/^\s+$/.test(p)) { out.push(document.createTextNode(' ')); last = null; return; }
+      const m = document.createElement('span'); m.className = 'lm'; const i = document.createElement('span'); i.textContent = p; m.appendChild(i); out.push(m); last = i;
+    });
+    else if (last) last.appendChild(n.cloneNode(true)); else out.push(n.cloneNode(true));
   });
   h.innerHTML = ''; out.forEach((x) => h.appendChild(x));
 }
-document.querySelectorAll('.split').forEach((h) => {
-  ScrollTrigger.create({trigger: h, start: 'top 85%', once: true, onEnter: () => {
-    // wrap words on the fly so language switches keep working
-    if (!h.dataset.done) { splitWords(h); h.dataset.done = 1; }
-    gsap.from(h.querySelectorAll('.line-mask > span'), {yPercent: 110, duration: .85, stagger: .05, ease: 'power4.out'});
-  }});
-});
-gsap.utils.toArray('.reveal').forEach((el) => gsap.to(el, {opacity: 1, y: 0, duration: .8, ease: 'power3.out', scrollTrigger: {trigger: el, start: 'top 88%', once: true}}));
-
-/* problem cards: count then strike through */
-gsap.utils.toArray('.pcard').forEach((c, i) => ScrollTrigger.create({trigger: c, start: 'top 80%', once: true, onEnter: () => {
-  countUp(c.querySelectorAll('[data-count]'));
-  gsap.to(c.querySelector('.strike'), {scaleX: 1, duration: .5, delay: 1.2 + i * .15, ease: 'power3.inOut'});
+$$('.split').forEach((h) => ScrollTrigger.create({trigger: h, start: 'top 86%', once: true, onEnter: () => {
+  if (!h.dataset.done) { splitWords(h); h.dataset.done = 1; }
+  gsap.from($$('.lm > span', h), {yPercent: 110, duration: .8, stagger: .06, ease: 'power4.out'});
 }}));
+$$('.reveal').forEach((el) => gsap.to(el, {opacity: 1, y: 0, duration: .8, ease: 'power3.out', scrollTrigger: {trigger: el, start: 'top 90%', once: true}}));
 
-/* ---------------- system steps: rail fills with scroll ---------------- */
-const steps = [...document.querySelectorAll('.step')];
-gsap.to('#rail', {scaleY: 1, ease: 'none', scrollTrigger: {trigger: '#steps', start: 'top 70%', end: 'bottom 60%', scrub: .4,
-  onUpdate: (s) => steps.forEach((st, i) => st.classList.toggle('on', s.progress >= i / steps.length - .02))}});
+/* ---------------- HERO phones ---------------- */
+// center: reel with a person silhouette, side actions, hearts and progress
+$('#reel').innerHTML = `
+  <svg viewBox="0 0 200 410" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+    <rect width="200" height="410" fill="#1B1B1B"/>
+    <rect x="0" y="230" width="200" height="180" fill="#151515"/>
+    <g id="person"><circle cx="100" cy="150" r="38" fill="#2c2c2c"/><path d="M38 300 q0-70 62-70 q62 0 62 70 v110 h-124z" fill="#2c2c2c"/></g>
+    <g id="caption"><rect x="16" y="60" width="132" height="16" rx="4" fill="#C6FF3D"/><rect x="16" y="82" width="96" height="16" rx="4" fill="#fff"/></g>
+    <g transform="translate(168 230)" id="acts">
+      <g transform="translate(0 0)">${IC.heart.replace(/<path/g, '<path class="st" style="stroke-width:2.2"')}</g>
+    </g>
+    <g id="sideIcons" class="st" style="stroke-width:2.2">
+      <g transform="translate(164 232) scale(.9)">${IC.heart}</g>
+      <g transform="translate(164 276) scale(.9)"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></g>
+      <g transform="translate(164 320) scale(.9)"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></g>
+    </g>
+    <g id="hearts"></g>
+    <rect x="16" y="372" width="96" height="10" rx="5" fill="#fff" opacity=".8"/>
+    <rect x="0" y="402" width="200" height="4" fill="#333"/><rect id="rprog" x="0" y="402" width="200" height="4" fill="#C6FF3D" transform="scale(0 1)"/>
+  </svg>`;
+$('#acts').remove();
+// left: carousel slides
+$('#carousel').innerHTML = `<div id="slides" style="display:flex;height:100%;width:500%"></div><div id="cdots" style="position:absolute;bottom:14px;left:0;right:0;display:flex;justify-content:center;gap:5px"></div>`;
+const SL = [['#C6FF3D', 'grid'], ['#fff', 'chart'], ['#1B1B1B', 'bulb'], ['#C6FF3D', 'target'], ['#fff', 'loop']];
+$('#slides').innerHTML = SL.map(([c, ic]) => `<div style="width:20%;height:100%;background:${c};display:flex;flex-direction:column;justify-content:center;padding:20px;gap:12px">
+  ${icon(ic, c === '#1B1B1B' ? 'stg' : 'stk', 54)}
+  <div style="height:12px;width:80%;border-radius:4px;background:${c === '#1B1B1B' ? '#fff' : '#0A0A0A'}"></div><div style="height:12px;width:55%;border-radius:4px;background:${c === '#1B1B1B' ? '#555' : 'rgba(0,0,0,.35)'}"></div></div>`).join('');
+$('#cdots').innerHTML = SL.map(() => '<i style="width:6px;height:6px;border-radius:50%;background:#888;display:block"></i>').join('');
+// right: stats screen
+$('#stats').innerHTML = `<div style="padding:26px 16px">
+  <div style="font-weight:600;font-size:9px;letter-spacing:.2em;color:#888" data-es="VISTAS · 7 DÍAS">VIEWS · 7 DAYS</div>
+  <div style="font-weight:900;font-size:34px;letter-spacing:-.04em;margin-top:4px"><span id="views">0</span>K</div>
+  <div id="bars" style="display:flex;align-items:flex-end;gap:6px;height:150px;margin-top:22px"></div>
+  <div style="margin-top:20px;display:grid;gap:8px">${[['user', '+1.9K'], ['heart', '24K'], ['send', '3.4K']].map(([i, v]) => `<div style="display:flex;align-items:center;gap:8px;background:#1B1B1B;border-radius:10px;padding:8px 10px">${icon(i, 'stg', 16)}<b style="font-weight:800;font-size:13px">${v}</b></div>`).join('')}</div></div>`;
+$('#bars').innerHTML = [30, 45, 38, 60, 72, 66, 95].map((h, i) => `<i style="flex:1;height:${h}%;background:${i === 6 ? '#C6FF3D' : '#3a3a3a'};border-radius:4px;transform-origin:50% 100%;transform:scaleY(0);display:block"></i>`).join('');
 
-/* ---------------- 7-day cycle ---------------- */
-const daysEl = document.getElementById('days'); let dayIdx = -1;
-function renderDays() { daysEl.innerHTML = DAYS[LANG].map(([d]) => `<div class="day"><div class="d">${d}</div></div>`).join(''); }
-function showDay(i, force) {
-  if (i === dayIdx && !force) return; dayIdx = i;
-  [...daysEl.children].forEach((d, j) => d.classList.toggle('on', j === i));
-  const [d, t] = DAYS[LANG][i];
-  document.getElementById('dk').textContent = d;
-  const dt = document.getElementById('dt'); dt.textContent = t;
-  if (!force) gsap.from(dt, {y: 20, opacity: 0, duration: .35, ease: 'power3.out'});
+function heroLoop() {
+  // reel progress + hearts
+  gsap.fromTo('#rprog', {scaleX: 0}, {scaleX: 1, transformOrigin: '0 50%', duration: 4, ease: 'none', repeat: -1});
+  const hearts = $('#hearts');
+  const pop = () => {
+    const g = svgEl('g', {class: 'stg', transform: 'translate(160 300)'}, hearts); g.innerHTML = IC.heart; g.setAttribute('style', 'fill:#C6FF3D;stroke:#C6FF3D');
+    gsap.fromTo(g, {x: 0, y: 0, scale: .6, opacity: 1, transformOrigin: '12px 12px'}, {x: gsap.utils.random(-40, 6), y: -170, scale: 1.1, opacity: 0, duration: 1.8, ease: 'power1.out', onComplete: () => g.remove()});
+  };
+  gsap.timeline({repeat: -1}).call(pop).call(pop, null, .25).call(pop, null, .5).to({}, {duration: 1.4});
+  gsap.to('#person', {y: -4, duration: 1.2, yoyo: true, repeat: -1, ease: 'sine.inOut'});
+  gsap.fromTo('#caption rect', {scaleX: 0, transformOrigin: '0 50%'}, {scaleX: 1, duration: .5, stagger: .15, ease: 'power3.out', repeat: -1, repeatDelay: 3.5});
+  // carousel swipe
+  const dots = $$('#cdots i'); let ci = 0;
+  const swipe = () => { ci = (ci + 1) % 5; gsap.to('#slides', {xPercent: -20 * ci, duration: .6, ease: 'power3.inOut'}); dots.forEach((d, i) => (d.style.background = i === ci ? '#C6FF3D' : '#888')); };
+  dots[0].style.background = '#C6FF3D'; setInterval(swipe, 1600);
+  // stats
+  gsap.to($$('#bars i'), {scaleY: 1, duration: .8, stagger: .08, ease: 'back.out(1.6)'});
+  const v = {n: 0}; gsap.to(v, {n: 248, duration: 2.4, ease: 'power2.out', onUpdate: () => ($('#views').textContent = Math.round(v.n))});
+  // toasts
+  const tl = gsap.timeline({repeat: -1, repeatDelay: .6});
+  ['#t1', '#t2', '#t3'].forEach((t, i) => tl.fromTo(t, {opacity: 0, y: 20, scale: .9}, {opacity: 1, y: 0, scale: 1, duration: .45, ease: 'back.out(2)'}, i * 1.1).to(t, {opacity: 0, y: -10, duration: .35}, i * 1.1 + 2.6));
+  const f = {n: 120}; gsap.to(f, {n: 248, duration: 6, repeat: -1, ease: 'none', onUpdate: () => ($('#t1n').textContent = '+' + Math.round(f.n))});
+  // phones float
+  gsap.to('#phC', {y: -10, duration: 2.2, yoyo: true, repeat: -1, ease: 'sine.inOut'});
+  gsap.to('#phL', {y: 8, duration: 2.6, yoyo: true, repeat: -1, ease: 'sine.inOut'});
+  gsap.to('#phR', {y: 10, duration: 2.4, yoyo: true, repeat: -1, ease: 'sine.inOut', delay: .4});
 }
-renderDays(); showDay(0, true);
-ScrollTrigger.create({trigger: '#week', start: 'top 75%', end: 'bottom 25%', scrub: true, onUpdate: (s) => showDay(Math.min(6, Math.floor(s.progress * 7)))});
 
-/* ---------------- test 18 → keep 3 → scale 1 ---------------- */
-const tgrid = document.getElementById('tgrid');
-const KEEP = [3, 10, 14], WIN = 10;
-tgrid.innerHTML = Array.from({length: 18}, (_, i) => `<div class="tile" data-i="${i}"><div class="x">✕</div><div class="h">HOOK ${String(i + 1).padStart(2, '0')}</div><div class="bar"><b></b></div></div>`).join('');
-const tiles = [...tgrid.children];
-const perf = tiles.map((_, i) => (KEEP.includes(i) ? (i === WIN ? 96 : 70 + i) : 12 + ((i * 37) % 38)));
-const sT = document.getElementById('sTested'), sK = document.getElementById('sKilled'), sS = document.getElementById('sScaled');
-const ttl = gsap.timeline({paused: true});
-ttl.from(tiles, {scale: .6, opacity: 0, duration: .4, stagger: .03, ease: 'back.out(2)'})
-   .add(() => {}, '+=.05')
-   .to(tiles.map((t) => t.querySelector('.bar b')), {width: (i) => perf[i] + '%', duration: 1, stagger: .02, ease: 'power2.out'})
-   .to({}, {duration: .01, onStart: () => (sT.textContent = 18)}, '<')
-   .to(tiles.filter((_, i) => !KEEP.includes(i)), {opacity: .22, duration: .4, stagger: .02})
-   .to(tiles.filter((_, i) => !KEEP.includes(i)).map((t) => t.querySelector('.x')), {opacity: 1, duration: .3, stagger: .02}, '<')
-   .add(() => { sK.textContent = 15; KEEP.forEach((i) => tiles[i].classList.add('keep')); })
-   .to(tiles[WIN], {scale: 1.18, duration: .5, ease: 'back.out(2)', onStart: () => { tiles[WIN].classList.add('win'); sS.textContent = 1; }}, '+=.3')
-   .to(tiles[WIN], {scale: 1.08, duration: .3});
-ScrollTrigger.create({trigger: tgrid, start: 'top 75%', once: true, onEnter: () => ttl.play()});
+/* ---------------- PAIN illustrations ---------------- */
+ScrollTrigger.create({trigger: '#pain', start: 'top 75%', once: true, onEnter: () => {
+  gsap.to('#mnHand', {rotation: 360, svgOrigin: '48 48', duration: 1.2, ease: 'none', repeat: -1});
+  gsap.to('#hrHand', {rotation: 360, svgOrigin: '48 48', duration: 14, ease: 'none', repeat: -1});
+  gsap.timeline({repeat: -1, repeatDelay: .4}).to('#lpA', {x: 38, duration: .6, ease: 'power2.inOut'}).to('#lpB', {x: -38, duration: .6, ease: 'power2.inOut'}, 0).to(['#lpA', '#lpB'], {x: 0, duration: .6, ease: 'power2.inOut'}, '+=.5');
+  const fl = $('#flat'), L = fl.getTotalLength(); gsap.fromTo(fl, {strokeDasharray: L, strokeDashoffset: L}, {strokeDashoffset: 0, duration: 1.6, ease: 'none', repeat: -1, repeatDelay: .6});
+}});
+
+/* ---------------- ENGINE (the big explainer) ---------------- */
+let engTL;
+function buildEngine() {
+  const s = $('#engSvg'); s.innerHTML = '';
+  const t = T[LANG], X = 200;
+  const ys = [40, 175, 300, 425, 550, 690];
+  const ics = ['bulb', 'target', 'cam', 'send', 'chart', 'user'];
+  // conveyor
+  svgEl('line', {x1: X, y1: ys[0] + 40, x2: X, y2: ys[5] - 40, stroke: '#2a2a2a', 'stroke-width': 10, 'stroke-linecap': 'round'}, s);
+  const belt = svgEl('line', {x1: X, y1: ys[0] + 40, x2: X, y2: ys[5] - 40, stroke: '#C6FF3D', 'stroke-width': 3, 'stroke-dasharray': '6 14', id: 'belt'}, s);
+  const toks = svgEl('g', {id: 'toks'}, s);
+  ['play', 'grid', 'circ'].forEach((k, i) => { const tk = svgEl('g', {id: 'tk' + i, opacity: 0}, toks); svgEl('rect', {x: -16, y: -20, width: 32, height: 40, rx: 7, fill: i === 1 ? '#C6FF3D' : '#fff'}, tk); const ii = svgEl('g', {transform: 'translate(-8 -8) scale(.68)', class: 'stk'}, tk); ii.innerHTML = IC[k]; });
+  // stations
+  ys.forEach((y, i) => {
+    const g = svgEl('g', {class: 'station', id: 'stn' + i}, s);
+    const last = i === 5, first = i === 0;
+    const w = first || last ? 250 : 230;
+    svgEl('rect', {x: X - w / 2, y: y - 38, width: w, height: 76, rx: 38, fill: last ? '#C6FF3D' : first ? '#fff' : '#1B1B1B', stroke: '#333', 'stroke-width': first || last ? 0 : 2, class: 'pill'}, g);
+    const ic = svgEl('g', {transform: `translate(${X - w / 2 + 24} ${y - 14}) scale(1.15)`, class: first || last ? 'stk' : 'st'}, g); ic.innerHTML = IC[ics[i]];
+    const tx = svgEl('text', {x: X - w / 2 + 66, y: y + (t.engS[i] ? -2 : 7), fill: first || last ? '#0A0A0A' : '#fff', 'font-family': 'Inter', 'font-weight': 900, 'font-size': 21, 'letter-spacing': '-.5'}, g); tx.textContent = t.eng[i];
+    if (t.engS[i]) { const ts = svgEl('text', {x: X - w / 2 + 66, y: y + 19, fill: first ? '#555' : '#8a8a8a', 'font-family': 'Inter', 'font-weight': 600, 'font-size': 11.5}, g); ts.textContent = t.engS[i]; }
+    if (!first && !last) { const n = svgEl('text', {x: X + w / 2 - 22, y: y + 6, 'text-anchor': 'end', fill: '#555', 'font-family': 'Inter', 'font-weight': 900, 'font-size': 14}, g); n.textContent = '0' + i; }
+  });
+  // clients pop out at the bottom
+  const cg = svgEl('g', {id: 'clients'}, s);
+  [-110, -60, 60, 110].forEach((dx, i) => { const o = svgEl('g', {transform: `translate(${X + dx - 12} ${ys[5] + 52})`}, cg); const p = svgEl('g', {class: 'stg', opacity: 0, id: 'cl' + i}, o); p.innerHTML = IC.user; });
+  const plus = svgEl('text', {x: X, y: ys[5] + 78, 'text-anchor': 'middle', fill: '#C6FF3D', 'font-family': 'Inter', 'font-weight': 900, 'font-size': 18, opacity: 0, id: 'clplus'}, cg); plus.textContent = '+1';
+  // animation
+  engTL && engTL.kill();
+  gsap.set($$('.station', s), {opacity: 0, scale: .8, transformOrigin: '50% 50%'});
+  engTL = gsap.timeline({paused: true});
+  engTL.to($$('.station', s), {opacity: 1, scale: 1, duration: .45, stagger: .12, ease: 'back.out(1.8)'});
+  gsap.to(belt, {strokeDashoffset: -40, duration: .6, ease: 'none', repeat: -1});
+  const loop = gsap.timeline({repeat: -1, paused: true});
+  [0, 1, 2].forEach((i) => {
+    const tk = '#tk' + i, d = i * 1.3;
+    loop.fromTo(tk, {opacity: 0, x: X, y: ys[0] + 40, scale: .6}, {opacity: 1, scale: 1, duration: .3}, d)
+        .to(tk, {y: ys[5] - 46, duration: 3.6, ease: 'none'}, d + .3)
+        .to(tk, {opacity: 0, scale: .4, duration: .25}, d + 3.9);
+    ys.slice(1, 5).forEach((y, k) => loop.to('#stn' + (k + 1) + ' .pill', {fill: '#2b3a12', stroke: '#C6FF3D', duration: .15, yoyo: true, repeat: 1}, d + .3 + ((y - ys[0] - 40) / (ys[5] - 46 - ys[0] - 40)) * 3.6 - .1));
+    loop.to('#cl' + i, {opacity: 1, y: -6, duration: .3, ease: 'back.out(3)'}, d + 4.0).to('#clplus', {opacity: 1, y: -10, duration: .3}, d + 4.0).to('#clplus', {opacity: 0, y: 0, duration: .3}, d + 4.5);
+  });
+  loop.to('#cl3', {opacity: 1, duration: .3}, 6.6).to(['#cl0', '#cl1', '#cl2', '#cl3'], {opacity: 0, duration: .4}, 7.6);
+  engTL.add(() => loop.play());
+  if (engStarted) engTL.progress(1);
+}
+let engStarted = false;
+ScrollTrigger.create({trigger: '#engSvg', start: 'top 75%', once: true, onEnter: () => { engStarted = true; engTL.play(); }});
+
+/* ---------------- MULTIPLY: 1 shoot → 30 posts ---------------- */
+const MB = $('#multBox'); const kinds = ['k1', 'k2', '', 'k1', 'k2', '', 'k1', 'k1', 'k2', '', 'k2', 'k1', '', 'k1', 'k2', 'k1', '', 'k2', 'k1', 'k2', '', 'k1', 'k2', 'k1', '', 'k2', 'k1', 'k2', 'k1', ''];
+const kIcon = {k1: 'play', k2: 'grid', '': 'circ'};
+kinds.forEach((k, i) => {
+  const r = Math.floor(i / 6), c = i % 6; const el = document.createElement('div'); el.className = 'tile ' + k; el.innerHTML = icon(kIcon[k], k ? 'stk' : 'st');
+  el.style.left = (2 + c * 16.3) + '%'; el.style.top = (1 + r * 20) + '%'; MB.appendChild(el);
+});
+gsap.set('.tile', {opacity: 0});
+ScrollTrigger.create({trigger: MB, start: 'top 70%', once: true, onEnter: () => {
+  const tiles = $$('.tile', MB), box = MB.getBoundingClientRect();
+  const tl = gsap.timeline();
+  tl.from('.cam', {scale: 0, duration: .5, ease: 'back.out(2)'})
+    .to('.cam', {scale: 1.15, duration: .15, yoyo: true, repeat: 3})
+    .add(() => {
+      tiles.forEach((t, i) => {
+        const tb = t.getBoundingClientRect(); const dx = box.left + box.width / 2 - (tb.left + tb.width / 2), dy = box.top + box.height / 2 - (tb.top + tb.height / 2);
+        gsap.fromTo(t, {x: dx, y: dy, scale: .2, opacity: 0, rotation: gsap.utils.random(-40, 40)}, {x: 0, y: 0, scale: 1, opacity: 1, rotation: 0, duration: .9, delay: i * .045, ease: 'power3.out'});
+      });
+      const c = {n: 1}; gsap.to(c, {n: 30, duration: 1.8, ease: 'power1.out', onUpdate: () => ($('#mcount').textContent = Math.round(c.n))});
+    })
+    .to('.cam', {scale: 0, opacity: 0, duration: .4, delay: 1.6});
+}});
+
+/* ---------------- WEEK ---------------- */
+let curDay = -1;
+function buildWeek() {
+  $('#wtrack').innerHTML = T[LANG].week.map(([d, ic]) => `<div class="wd"><div class="dot">${icon(ic)}</div><small>${d}</small></div>`).join('');
+}
+function setDay(i, force) {
+  if (i < 0) return; if (i === curDay && !force) return; curDay = i;
+  $$('.wd').forEach((d, j) => d.classList.toggle('on', j <= i));
+  $('#wnow').innerHTML = T[LANG].week[i][2] + '<span class="g">.</span>';
+  if (!force) { gsap.fromTo('#wnow', {y: 16, opacity: 0}, {y: 0, opacity: 1, duration: .3}); gsap.fromTo($$('.wd .dot')[i], {scale: .7}, {scale: 1.08, duration: .4, ease: 'back.out(3)'}); }
+}
+ScrollTrigger.create({trigger: '#weekBox', start: 'top 80%', end: 'bottom 35%', scrub: true, onUpdate: (s) => { gsap.set('#wfill', {scaleX: s.progress}); setDay(Math.min(6, Math.floor(s.progress * 7))); }});
+
+/* ---------------- GROWTH chart ---------------- */
+let chartTL;
+function buildChart() {
+  const s = $('#chartSvg'); s.innerHTML = ''; const t = T[LANG];
+  const MOB = innerWidth < 640, CW = MOB ? 420 : 760; s.setAttribute('viewBox', `0 0 ${CW} 420`);
+  const x0 = 24, x1 = CW - 16, y0 = 380, y1 = 40;
+  for (let i = 0; i < 4; i++) svgEl('line', {x1: x0, x2: x1, y1: y0 - i * 100, y2: y0 - i * 100, stroke: '#222', 'stroke-width': 1}, s);
+  const pts = []; for (let i = 0; i <= 60; i++) { const k = i / 60; pts.push([x0 + k * (x1 - x0), y0 - (Math.pow(k, 2.2) * 300 + Math.sin(i * 1.3) * 6 * k + 6)]); }
+  const d = pts.map((p, i) => (i ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join(' ');
+  svgEl('path', {d: d + ` L ${x1} ${y0} L ${x0} ${y0} Z`, fill: '#C6FF3D', opacity: .08, id: 'area'}, s);
+  const line = svgEl('path', {d, class: 'stg', style: 'stroke-width:4', id: 'gline'}, s);
+  const ms = [0.05, 0.38, 0.68, 0.98];
+  ms.forEach((k, i) => {
+    const p = pts[Math.round(k * 60)];
+    const g = svgEl('g', {id: 'ms' + i, opacity: 0}, s);
+    svgEl('circle', {cx: p[0], cy: p[1], r: 9, fill: '#C6FF3D'}, g);
+    const fs = MOB ? 17 : 16, tw = Math.max(100, t.cTags[i].length * fs * .58 + 26);
+    const bx = Math.min(x1 - tw, Math.max(0, p[0] - tw / 2)), by = p[1] - 66;
+    svgEl('rect', {x: bx, y: by, width: tw, height: 42, rx: 12, fill: i === 3 ? '#C6FF3D' : '#fff'}, g);
+    const tx = svgEl('text', {x: bx + tw / 2, y: by + 27, 'text-anchor': 'middle', fill: '#0A0A0A', 'font-family': 'Inter', 'font-weight': 800, 'font-size': fs}, g); tx.textContent = t.cTags[i];
+    const lb = svgEl('text', {x: Math.min(x1 - 30, Math.max(30, p[0])), y: y0 + 30, 'text-anchor': 'middle', fill: '#777', 'font-family': 'Inter', 'font-weight': 700, 'font-size': MOB ? 15 : 14}, s); lb.textContent = t.chart[i];
+  });
+  const L = line.getTotalLength(); gsap.set(line, {strokeDasharray: L, strokeDashoffset: L});
+  chartTL && chartTL.kill();
+  chartTL = gsap.timeline({paused: true}).to(line, {strokeDashoffset: 0, duration: 2.4, ease: 'power1.inOut'});
+  ms.forEach((k, i) => chartTL.fromTo('#ms' + i, {opacity: 0, y: 14}, {opacity: 1, y: 0, duration: .4, ease: 'back.out(2)'}, k * 2.3));
+  if (chartStarted) chartTL.progress(1);
+}
+let chartStarted = false;
+ScrollTrigger.create({trigger: '#chartSvg', start: 'top 75%', once: true, onEnter: () => { chartStarted = true; chartTL.play(); }});
+
+/* ---------------- founder badge ---------------- */
+gsap.to('#ring', {rotation: 360, duration: 14, ease: 'none', repeat: -1, transformOrigin: '50% 50%'});
 
 /* ---------------- FAQ ---------------- */
-document.querySelectorAll('.qa').forEach((q) => q.querySelector('button').addEventListener('click', () => {
-  const a = q.querySelector('.a'), open = q.classList.toggle('open');
-  a.style.height = open ? a.scrollHeight + 'px' : 0;
-}));
+$$('.qa').forEach((q) => q.querySelector('button').addEventListener('click', () => { const a = q.querySelector('.a'), o = q.classList.toggle('open'); a.style.height = o ? a.scrollHeight + 'px' : 0; }));
 
 /* ---------------- funnel form ---------------- */
-const form = document.getElementById('funnel'), fsteps = [...form.querySelectorAll('.fstep')];
-const data = {}; let cur = 0;
+const form = $('#funnel'), fsteps = $$('.fstep', form); const data = {}; let cur = 0;
 function go(n) {
   const from = fsteps[cur], to = fsteps[n];
   gsap.to(from, {opacity: 0, x: n > cur ? -30 : 30, duration: .2, onComplete: () => {
     from.classList.remove('on'); to.classList.add('on');
-    gsap.fromTo(to, {opacity: 0, x: n > cur ? 30 : -30}, {opacity: 1, x: 0, duration: .3, ease: 'power3.out'});
-    cur = n;
-    document.getElementById('fprog').style.width = Math.min(100, (n + 1) * 25) + '%';
-    document.getElementById('fcount').textContent = n < 4 ? `${n + 1} / 4` : '';
-    document.getElementById('fback').style.visibility = n > 0 && n < 4 ? 'visible' : 'hidden';
+    gsap.fromTo(to, {opacity: 0, x: n > cur ? 30 : -30}, {opacity: 1, x: 0, duration: .3, ease: 'power3.out'}); cur = n;
+    $('#fprog').style.width = Math.min(100, (n + 1) * 25) + '%'; $('#fcount').textContent = n < 4 ? `${n + 1} / 4` : '';
+    $('#fback').style.visibility = n > 0 && n < 4 ? 'visible' : 'hidden';
   }});
 }
-form.querySelectorAll('.opts').forEach((g) => g.querySelectorAll('.opt').forEach((o) => o.addEventListener('click', () => {
-  g.querySelectorAll('.opt').forEach((x) => x.classList.remove('sel')); o.classList.add('sel');
-  data[g.dataset.name] = o.dataset.v;
-  setTimeout(() => go(cur + 1), 220);
-})));
-document.getElementById('fback').addEventListener('click', () => cur > 0 && go(cur - 1));
+$$('.opts', form).forEach((g) => $$('.opt', g).forEach((o) => o.addEventListener('click', () => { $$('.opt', g).forEach((x) => x.classList.remove('sel')); o.classList.add('sel'); data[g.dataset.name] = o.dataset.v; setTimeout(() => go(cur + 1), 220); })));
+$('#fback').addEventListener('click', () => cur > 0 && go(cur - 1));
 form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const err = document.getElementById('ferr'); err.textContent = '';
+  e.preventDefault(); const err = $('#ferr'); err.textContent = '';
   const fd = new FormData(form); const name = (fd.get('name') || '').trim(), email = (fd.get('email') || '').trim();
   if (!name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { err.textContent = LANG === 'es' ? 'Escribe tu nombre y un email válido.' : 'Add your name and a valid email.'; return; }
-  const btn = document.getElementById('fsend'); btn.disabled = true; btn.style.opacity = .6;
-  const payload = {...data, name, email, phone: fd.get('phone'), brand: fd.get('brand'), language: LANG,
-    _subject: `New content audit request — ${name} (${data.business || ''})`, _template: 'table', _captcha: 'false'};
+  const btn = $('#fsend'); btn.disabled = true; btn.style.opacity = .6;
   try {
-    const r = await fetch(FORM_ENDPOINT, {method: 'POST', headers: {'Content-Type': 'application/json', Accept: 'application/json'}, body: JSON.stringify(payload)});
-    if (!r.ok) throw new Error(r.status);
-    go(4);
-  } catch (x) {
-    err.innerHTML = LANG === 'es' ? 'No se pudo enviar. Escríbenos a <a class="g" href="mailto:contact@primeproductionmedia.com">contact@primeproductionmedia.com</a>' : 'Could not send. Email us at <a class="g" href="mailto:contact@primeproductionmedia.com">contact@primeproductionmedia.com</a>';
-    btn.disabled = false; btn.style.opacity = 1;
-  }
+    const r = await fetch(FORM_ENDPOINT, {method: 'POST', headers: {'Content-Type': 'application/json', Accept: 'application/json'},
+      body: JSON.stringify({...data, name, email, phone: fd.get('phone'), brand: fd.get('brand'), language: LANG, _subject: `New content audit request — ${name}`, _template: 'table', _captcha: 'false'})});
+    if (!r.ok) throw 0; go(4);
+  } catch (x) { err.innerHTML = (LANG === 'es' ? 'No se pudo enviar. Escríbenos a ' : 'Could not send. Email us at ') + '<a class="g" href="mailto:contact@primeproductionmedia.com">contact@primeproductionmedia.com</a>'; btn.disabled = false; btn.style.opacity = 1; }
 });
 
-/* ---------------- boot ---------------- */
-let saved = null; try { saved = localStorage.getItem('prime-lang'); } catch (e) {}
-const startLang = saved || ((navigator.language || 'en').toLowerCase().startsWith('es') ? 'es' : 'en');
-if (startLang === 'es') setLang('es');
-// ?shot → render the final state of every animation (for screenshots)
-if (location.search.includes('shot')) {
-  document.documentElement.classList.add('shot');
-  document.getElementById('loader').style.display = 'none';
-  document.querySelectorAll('.reveal').forEach((e) => { e.style.opacity = 1; e.style.transform = 'none'; });
-  setTimeout(() => { countUp(document.querySelectorAll('[data-count]')); ttl.progress(1); gsap.set('.strike', {scaleX: 1}); gsap.set('#rail', {scaleY: 1}); steps.forEach((s) => s.classList.add('on')); showDay(4); gsap.globalTimeline.getChildren().forEach((t) => t.progress && t.progress(1)); }, 50);
+/* ---------------- intro ---------------- */
+function intro() {
+  const tl = gsap.timeline();
+  if (!RM) tl.to('#loader .w span', {y: 0, duration: .5, stagger: .12, ease: 'power4.out'}).to('#loader', {yPercent: -100, duration: .7, ease: 'power4.inOut'}, '+=.3').set('#loader', {display: 'none'});
+  else tl.set('#loader', {display: 'none'});
+  tl.from('.hero h1 .lm > span', {yPercent: 110, duration: .9, stagger: .1, ease: 'power4.out'}, RM ? 0 : '-=.35')
+    .from('.hin', {opacity: 0, y: 26, duration: .7, stagger: .1, ease: 'power3.out'}, '-=.6')
+    .from(['#phL', '#phR'], {opacity: 0, x: 0, rotation: 0, duration: .8, ease: 'power3.out'}, '-=.6')
+    .add(heroLoop);
 }
-let started = location.search.includes('shot') ? true : false; const go2 = () => { if (!started) { started = true; intro(); } };
-if (document.fonts && document.fonts.ready) document.fonts.ready.then(go2); window.addEventListener('load', go2); setTimeout(go2, 1800);
+buildEngine(); buildWeek(); buildChart(); setDay(0, true);
+let saved = null; try { saved = localStorage.getItem('prime-lang'); } catch (e) {}
+if ((saved || ((navigator.language || 'en').toLowerCase().startsWith('es') ? 'es' : 'en')) === 'es') setLang('es');
+let started = false; const go2 = () => { if (!started) { started = true; intro(); } };
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(go2); addEventListener('load', go2); setTimeout(go2, 1800);
 </script>
 </body>
 </html>
