@@ -68,8 +68,9 @@
   const msg = (n, t, ok) => { const m = $('#m' + n); m.textContent = t || ''; m.className = 'msg ' + (t ? (ok ? 'ok' : 'err') : ''); };
 
   async function api(payload) {
-    const r = await fetch(API, {method: 'POST', headers: {'Content-Type': 'text/plain;charset=utf-8'}, body: JSON.stringify({doc: C.doc, ...payload})});
-    const j = await r.json();
+    let r, j;
+    try { r = await fetch(API, {method: 'POST', headers: {'Content-Type': 'text/plain;charset=utf-8'}, body: JSON.stringify({doc: C.doc, ...payload})}); j = await r.json(); }
+    catch (e) { throw new Error('No pudimos conectar. Revisa tu internet o recarga la página e intenta de nuevo.'); }
     if (!j.ok) throw new Error(j.error || 'Algo salió mal');
     return j;
   }
