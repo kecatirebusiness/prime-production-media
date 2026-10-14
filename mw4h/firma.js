@@ -1,6 +1,6 @@
 /* Prime Production Media — firma electrónica in-house */
 (() => {
-  const API = 'https://script.google.com/macros/s/__DEPLOY_ID__/exec';
+  const API = 'https://script.google.com/macros/s/AKfycbwgIvMEAFoHu4sBKyPY2BFmHTTzC9WVK89kjC1vjbCH8VrgrIDUdK5Sdc0FZLtaB1BZ/exec';
   const C = window.CONTRATO, A = window.PRIME_ASSETS;
   const $ = (s) => document.querySelector(s), $$ = (s) => [...document.querySelectorAll(s)];
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
