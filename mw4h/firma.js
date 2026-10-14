@@ -12,15 +12,14 @@
   const fav = document.createElement('link'); fav.rel = 'icon'; fav.href = A.logo; document.head.appendChild(fav);
 
   /* estado */
-  const S = {dom: '', nom: C.cliente.rep, car: C.cliente.cargo, ini: '', dia: '', email: '', token: '', verifiedAt: '', firma: '', modo: 'draw'};
-  const F = {dom: $('#fDom'), nom: $('#fNom'), car: $('#fCar'), ini: $('#fIni'), dia: $('#fDia'), email: $('#fEm')};
+  const S = {dom: '', nom: C.cliente.rep, car: C.cliente.cargo, ini: '', email: '', token: '', verifiedAt: '', firma: '', modo: 'draw'};
+  const F = {dom: $('#fDom'), nom: $('#fNom'), car: $('#fCar'), ini: $('#fIni'), email: $('#fEm')};
   F.nom.value = S.nom; F.car.value = S.car;
-  for (let i = 1; i <= 28; i++) F.dia.insertAdjacentHTML('beforeend', `<option value="${i}">Día ${i}</option>`);
   try { const saved = JSON.parse(localStorage.getItem('ppm_' + C.doc) || '{}'); Object.keys(F).forEach((k) => { if (saved[k]) { F[k].value = saved[k]; S[k] = saved[k]; } }); } catch (e) {}
 
   const val = {
     dom: () => S.dom, email: () => S.email, nom: () => S.nom, car: () => S.car,
-    fechaInicio: () => fechaLarga(S.ini), diaPago: () => S.dia,
+    fechaInicio: () => fechaLarga(S.ini),
   };
   const fill = (k, ph = '__________') => { const v = val[k](); return `<span class="fill ${v ? '' : 'empty'}" data-f="${k}">${esc(v || ph)}</span>`; };
   const segHTML = (segs) => segs.map((s) => {
@@ -78,7 +77,7 @@
   $('#b1').addEventListener('click', () => {
     const miss = [];
     if (S.dom.length < 6) miss.push('domicilio'); if (!S.nom) miss.push('nombre'); if (!S.car) miss.push('cargo');
-    if (!S.ini) miss.push('fecha de inicio'); if (!S.dia) miss.push('día de pago');
+    if (!S.ini) miss.push('fecha de inicio');
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(S.email)) miss.push('email válido');
     if (miss.length) return msg(1, 'Falta: ' + miss.join(', ') + '.');
     msg(1, 'Datos listos ✓', true); done(1); unlock(2); step(2);
@@ -152,7 +151,7 @@
   /* huella digital */
   const hex = (buf) => [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, '0')).join('');
   const sha = async (data) => hex(await crypto.subtle.digest('SHA-256', typeof data === 'string' ? new TextEncoder().encode(data) : data));
-  const campos = () => ({domicilio: S.dom, firmante: S.nom, cargo: S.car, email: S.email, fechaInicio: S.ini, diaPago: S.dia});
+  const campos = () => ({domicilio: S.dom, firmante: S.nom, cargo: S.car, email: S.email, fechaInicio: S.ini});
 
   /* PDF */
   const segPdf = (segs) => segs.map((s) => ({text: s.t.replace(/\{\{(\w+)\}\}/g, (_, k) => val[k]() || '__________'), bold: !!s.b}));
@@ -203,7 +202,7 @@
       r('Método de firma', S.modo === 'draw' ? 'Firma dibujada en pantalla' : 'Nombre escrito como firma'),
       r('Consentimiento', 'Aceptó firmar electrónicamente, la validez de su firma electrónica y recibir su copia por email.'),
       r('Confirmación', 'Escribió «LISTO» antes de firmar.'),
-      r('Datos completados por el Cliente', `Domicilio: ${S.dom} · Fecha de inicio: ${fechaLarga(S.ini)} · Día de pago: ${S.dia}`),
+      r('Datos completados por el Cliente', `Domicilio: ${S.dom} · Fecha de inicio: ${fechaLarga(S.ini)}`),
     ]}, layout: {hLineColor: () => '#ddd', vLineColor: () => '#ddd'}});
     body.push({text: 'La copia en PDF se envía al email verificado del firmante y a Prime Production Media LLC. El email de confirmación incluye la huella SHA-256 del archivo PDF para verificar que no fue modificado. Firma electrónica conforme a la ley federal ESIGN (15 U.S.C. § 7001 y ss.) y a la Ley Uniforme de Transacciones Electrónicas de Florida (§ 668.50, Estatutos de Florida).', fontSize: 8, color: '#555', margin: [0, 10, 0, 0]});
     return {
