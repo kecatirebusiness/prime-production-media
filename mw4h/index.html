@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0A0A0A">
+<title>Firma de contrato · Prime Production Media</title>
+<link rel="icon" href="/assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0A0A0A;--white:#fff;--green:#C6FF3D;--soft:#E2FF8A;--paper:#fff;--ink:#0A0A0A;--mut:#5b5b57;--line:#e3e3df;--bg:#F2F2EE;--bad:#d9412b;--ok:#1d9b4e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;padding-bottom:96px}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+[hidden]{display:none!important}
+.top{position:sticky;top:0;z-index:30;background:var(--black);color:#fff}
+.top-in{max-width:880px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:12px 16px}
+.top img{width:30px;height:30px}
+.top .brand{font-weight:900;letter-spacing:-.02em;font-size:15px;line-height:1.1}
+.top .brand i{font-style:normal;color:var(--green)}
+.top .chip{margin-left:auto;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:100px;background:#1c1c1a;color:var(--green);white-space:nowrap}
+.steps{max-width:880px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:0 16px 12px}
+.steps div{height:4px;border-radius:4px;background:#2a2a28;transition:background .4s}
+.steps div.on{background:var(--green)}
+.wrap{max-width:880px;margin:0 auto;padding:16px}
+.hero{background:var(--black);color:#fff;border-radius:20px;padding:22px 20px;margin-bottom:14px}
+.hero small{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--green)}
+.hero h1{font-weight:900;font-size:clamp(24px,6vw,34px);letter-spacing:-.025em;line-height:1.05;margin:8px 0 10px}
+.hero p{color:#c9c9c4;font-size:14.5px}
+.hero ol{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:16px}
+.hero li{background:#161615;border-radius:12px;padding:10px;font-size:12px;font-weight:700;color:#e9e9e4}
+.hero li b{display:block;color:var(--green);font-size:18px;font-weight:900}
+.paper{background:var(--paper);border-radius:18px;padding:26px 22px;box-shadow:0 1px 0 rgba(0,0,0,.04),0 20px 60px rgba(0,0,0,.06)}
+.ph{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;border-bottom:3px solid var(--black);padding-bottom:12px;margin-bottom:20px}
+.ph .b{font-weight:900;letter-spacing:-.02em;font-size:15px}
+.ph .b i{font-style:normal;background:var(--green);padding:0 4px}
+.ph .r{font-size:11px;color:var(--mut);text-align:right;line-height:1.4}
+.paper h2.t{font-weight:900;font-size:clamp(20px,5vw,26px);letter-spacing:-.02em;line-height:1.12;margin-bottom:4px}
+.paper .st{color:var(--mut);margin-bottom:16px}
+.paper p{margin-bottom:10px}
+.parties{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0 14px}
+.party{border:1.5px solid var(--black);border-radius:12px;padding:12px 14px;font-size:13.5px}
+.party small{display:block;font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+.party b{display:block;font-size:14.5px;margin-bottom:3px}
+.cl{margin-top:20px}
+.cl h3{font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+.cl ol{padding-left:20px}
+.cl li{margin-bottom:6px}
+.fill{background:#f1ffd0;border-bottom:2px solid var(--black);padding:0 4px;border-radius:3px;font-weight:700;white-space:nowrap}
+.fill.empty{background:#fff3c4;color:#8a6d00;font-weight:600}
+table.pagos{width:100%;border-collapse:collapse;margin:8px 0 12px;font-size:13px}
+.pagos th,.pagos td{border:1px solid var(--black);padding:7px 8px;text-align:left}
+.pagos th{background:var(--black);color:#fff;font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.pagos td:last-child{text-align:right;white-space:nowrap}
+.pagos tr.tot td{font-weight:800;background:#f1ffd0}
+.sigs{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+.sig{border-top:1.5px solid var(--black);padding-top:8px;font-size:13px}
+.sig small{display:block;font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.sig .img{height:64px;display:flex;align-items:flex-end;margin-bottom:6px}
+.sig .img img{max-height:64px;max-width:100%}
+.sig .ph2{height:64px;display:flex;align-items:center;color:#a5a59f;font-size:12px;border:1.5px dashed #cfcfc9;border-radius:10px;justify-content:center;margin-bottom:6px}
+
+/* panel de firma */
+.panel{background:var(--black);color:#fff;border-radius:20px;padding:20px;margin-top:16px;scroll-margin-top:90px}
+.panel h2{font-weight:900;font-size:22px;letter-spacing:-.02em;margin-bottom:4px}
+.panel .lead{color:#bdbdb7;font-size:14px;margin-bottom:16px}
+.stp{border:1px solid #2a2a28;border-radius:16px;padding:16px;margin-bottom:12px;transition:opacity .3s}
+.stp.lock{opacity:.4;pointer-events:none}
+.stp h3{display:flex;align-items:center;gap:10px;font-size:15.5px;font-weight:800;margin-bottom:12px}
+.stp h3 span{width:26px;height:26px;border-radius:50%;background:#222;color:var(--green);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;flex:none}
+.stp.done h3 span{background:var(--green);color:var(--black)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fld{display:flex;flex-direction:column;gap:5px}
+.fld.full{grid-column:1/-1}
+.fld label{font-size:12px;font-weight:700;color:#bdbdb7}
+.fld input,.fld select{width:100%;background:#151514;border:1.5px solid #2c2c2a;border-radius:12px;padding:13px 14px;font-size:16px;outline:none;color:#fff}
+.fld input:focus,.fld select:focus{border-color:var(--green)}
+.row{display:flex;gap:10px;align-items:stretch;flex-wrap:wrap}
+.row .fld{flex:1;min-width:160px}
+.btn{text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border-radius:12px;font-weight:800;font-size:15px;transition:transform .2s,background .2s}
+.btn:active{transform:scale(.98)}
+.btn-g{background:var(--green);color:var(--black)}
+.btn-g:hover{background:var(--soft)}
+.btn-o{border:1.5px solid #3a3a37;color:#fff}
+.btn[disabled]{opacity:.45;pointer-events:none}
+.msg{font-size:13px;margin-top:10px;min-height:18px}
+.msg.err{color:#ff8a76}
+.msg.ok{color:var(--green)}
+.code{letter-spacing:.4em;text-align:center;font-weight:800}
+.tabs{display:flex;background:#151514;border-radius:12px;padding:4px;margin-bottom:10px}
+.tabs button{flex:1;padding:10px;border-radius:9px;font-weight:700;font-size:14px;color:#bdbdb7}
+.tabs button.on{background:#fff;color:var(--black)}
+.pad{position:relative;background:#fff;border-radius:14px;height:190px;touch-action:none;overflow:hidden}
+.pad canvas{width:100%;height:100%;display:block}
+.pad .hint{position:absolute;left:0;right:0;bottom:44px;text-align:center;color:#b5b5ae;font-size:13px;pointer-events:none}
+.pad .base{position:absolute;left:18px;right:18px;bottom:38px;border-bottom:1.5px solid #d8d8d2;pointer-events:none}
+.pad .clear{position:absolute;right:10px;top:10px;font-size:12px;font-weight:700;color:#555;background:#f1f1ec;padding:6px 10px;border-radius:8px}
+.typed{background:#fff;border-radius:14px;height:190px;display:flex;align-items:center;justify-content:center;color:#0A0A0A;font-family:'Mrs Saint Delafield',cursive;font-size:56px;padding:0 16px;overflow:hidden;white-space:nowrap}
+.chk{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;color:#d9d9d4;margin:14px 0;cursor:pointer}
+.chk input{width:22px;height:22px;accent-color:var(--green);flex:none;margin-top:1px}
+.listo input{text-transform:uppercase;letter-spacing:.2em;font-weight:900;text-align:center}
+.legal{font-size:11.5px;color:#8d8d87;margin-top:12px}
+
+/* barra móvil */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(10,10,10,.96);padding:12px 16px calc(12px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px;color:#fff;transition:transform .35s}
+.bar.hide{transform:translateY(120%)}
+.bar div{flex:1;font-size:12.5px;color:#bdbdb7;line-height:1.3}
+.bar b{display:block;color:#fff;font-size:14px}
+/* overlay */
+.ov{position:fixed;inset:0;z-index:60;background:rgba(10,10,10,.92);display:flex;align-items:center;justify-content:center;padding:20px;color:#fff;text-align:center}
+.ov .box{max-width:420px}
+.spin{width:46px;height:46px;border-radius:50%;border:4px solid #333;border-top-color:var(--green);animation:sp 1s linear infinite;margin:0 auto 16px}
+@keyframes sp{to{transform:rotate(360deg)}}
+.done-ico{width:72px;height:72px;border-radius:50%;background:var(--green);color:var(--black);font-size:38px;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.ov h2{font-weight:900;font-size:26px;letter-spacing:-.02em;margin-bottom:8px}
+.ov p{color:#c9c9c4;margin-bottom:16px}
+.ov .hash{font-size:10.5px;color:#8d8d87;word-break:break-all;margin-top:10px}
+.signed-note{background:var(--black);color:#fff;border-radius:16px;padding:18px;margin-top:16px}
+.signed-note b{color:var(--green)}
+
+@media (max-width:640px){
+  .top .brand{font-size:13px}
+  .top .brand span{display:none!important}
+  .wrap{padding:10px}
+  .paper{padding:18px 15px;border-radius:14px}
+  .parties,.sigs,.grid{grid-template-columns:1fr}
+  .hero ol{grid-template-columns:repeat(2,1fr)}
+  .cl ol{padding-left:18px}
+  .fill{white-space:normal}
+  .pagos th:nth-child(2),.pagos td:nth-child(2){display:none}
+}
+@media (min-width:900px){body{padding-bottom:40px}.bar{display:none}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <img id="logo" alt="Prime">
+    <div class="brand">PRIME PRODUCTION MEDIA<i>.</i><br><span style="font-weight:500;font-size:11px;color:#9a9a94;letter-spacing:0">Firma electrónica de contratos</span></div>
+    <span class="chip" id="chip">Pendiente de firma</span>
+  </div>
+  <div class="steps" aria-hidden="true"><div class="on" id="s1"></div><div id="s2"></div><div id="s3"></div><div id="s4"></div></div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <small>Make Way 4 Health × Prime Production Media</small>
+    <h1>Revisa, completa y firma tu contrato.</h1>
+    <p>Lee el contrato completo. Al final completas los datos que faltan, verificas tu email y firmas desde tu teléfono. Recibirás tu copia en PDF por email al instante.</p>
+    <ol><li><b>1</b>Lee</li><li><b>2</b>Completa</li><li><b>3</b>Verifica tu email</li><li><b>4</b>Firma</li></ol>
+  </section>
+
+  <article class="paper" id="paper"></article>
+
+  <div class="signed-note" id="signedNote" hidden></div>
+
+  <section class="panel" id="firmar">
+    <h2>Completa y firma</h2>
+    <p class="lead">Tres pasos. Los datos que escribas aparecen en el contrato de arriba y en el PDF final.</p>
+
+    <div class="stp" id="st1">
+      <h3><span>1</span>Datos que faltan</h3>
+      <div class="grid">
+        <div class="fld full"><label for="fDom">Domicilio de Make Way 4 Health</label><input id="fDom" autocomplete="street-address" placeholder="Dirección, ciudad, estado, ZIP"></div>
+        <div class="fld"><label for="fNom">Nombre de quien firma</label><input id="fNom" autocomplete="name"></div>
+        <div class="fld"><label for="fCar">Cargo</label><input id="fCar" autocomplete="organization-title"></div>
+        <div class="fld"><label for="fIni">Fecha de inicio</label><input id="fIni" type="date"></div>
+        <div class="fld"><label for="fDia">Día de pago de cada mes</label><select id="fDia"><option value="">Elige un día</option></select></div>
+        <div class="fld full"><label for="fEm">Email de quien firma (aquí llega tu copia)</label><input id="fEm" type="email" autocomplete="email" inputmode="email" placeholder="nombre@empresa.com"></div>
+      </div>
+      <button class="btn btn-g" id="b1" style="margin-top:14px;width:100%">Continuar</button>
+      <p class="msg" id="m1"></p>
+    </div>
+
+    <div class="stp lock" id="st2">
+      <h3><span>2</span>Verifica tu email</h3>
+      <p style="font-size:13.5px;color:#bdbdb7;margin-bottom:12px">Te enviaremos un código de 6 dígitos desde contact@primeproductionmedia.com para confirmar que eres tú.</p>
+      <button class="btn btn-o" id="bCode" style="width:100%">Enviar código a mi email</button>
+      <div class="row" style="margin-top:12px" id="codeRow" hidden>
+        <div class="fld"><input id="fCode" class="code" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="••••••"></div>
+        <button class="btn btn-g" id="bVer">Verificar</button>
+      </div>
+      <p class="msg" id="m2"></p>
+    </div>
+
+    <div class="stp lock" id="st3">
+      <h3><span>3</span>Tu firma</h3>
+      <div class="tabs"><button class="on" data-mode="draw">Dibujar</button><button data-mode="type">Escribir</button></div>
+      <div class="pad" id="pad"><canvas id="cv"></canvas><div class="base"></div><div class="hint" id="hint">Firma aquí con tu dedo</div><button class="clear" id="clr" type="button">Borrar</button></div>
+      <div class="typed" id="typed" hidden></div>
+      <label class="chk"><input type="checkbox" id="cons"><span>Acepto firmar este contrato de forma electrónica, entiendo que mi firma electrónica tiene la misma validez que una firma manuscrita, y acepto recibir mi copia por email.</span></label>
+      <div class="fld listo"><label for="fListo">Para firmar, escribe <b style="color:var(--green)">LISTO</b></label><input id="fListo" autocomplete="off" autocapitalize="characters" placeholder="LISTO"></div>
+      <button class="btn btn-g" id="bSign" style="margin-top:14px;width:100%" disabled>Firmar contrato</button>
+      <p class="msg" id="m3"></p>
+      <p class="legal">Firma electrónica válida conforme a la ley federal ESIGN y a la Ley Uniforme de Transacciones Electrónicas de Florida (Cap. 668, Estatutos de Florida). Se registran la fecha y hora, tu email verificado, la dirección IP y el navegador, y se calcula una huella digital (SHA-256) del documento.</p>
+    </div>
+  </section>
+</main>
+
+<div class="bar" id="bar"><div><b>Pendiente de firma</b>Revisa el contrato y fírmalo al final</div><a class="btn btn-g" href="#firmar">Firmar</a></div>
+
+<div class="ov" id="ov" hidden><div class="box" id="ovBox"></div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.10/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.10/vfs_fonts.js"></script>
+<script src="assets.js"></script>
+<script src="contrato.js"></script>
+<script src="firma.js"></script>
+</body>
+</html>
