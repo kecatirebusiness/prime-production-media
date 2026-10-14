@@ -159,7 +159,7 @@
   function pdfDef(firmaCliente, audit) {
     const p = C.proveedor, c = C.cliente, B = '#0A0A0A';
     const body = [
-      {columns: [{text: [{text: 'PRIME PRODUCTION MEDIA', bold: true, fontSize: 13}, {text: '.', bold: true, fontSize: 13, background: '#C6FF3D'}]}, {text: `Contrato N.º ${C.doc}\nEmitido el ${fechaLarga(C.emitido)}`, alignment: 'right', fontSize: 8, color: '#555'}]},
+      {columns: [{text: [{text: 'PRIME PRODUCTION MEDIA', bold: !fontsOk, font: fontsOk ? 'InterBlack' : 'Roboto', fontSize: 13}, {text: '.', bold: !fontsOk, font: fontsOk ? 'InterBlack' : 'Roboto', fontSize: 13, background: '#C6FF3D'}]}, {text: `Contrato N.º ${C.doc}\nEmitido el ${fechaLarga(C.emitido)}`, alignment: 'right', fontSize: 8, color: '#555'}]},
       {canvas: [{type: 'line', x1: 0, y1: 6, x2: 504, y2: 6, lineWidth: 2.5, lineColor: B}], margin: [0, 0, 0, 14]},
       {text: C.titulo, style: 'title'}, {text: C.subtitulo, color: '#555', margin: [0, 0, 0, 10]},
       {text: C.intro, margin: [0, 0, 0, 8]},
@@ -208,15 +208,35 @@
     body.push({text: 'La copia en PDF se envía al email verificado del firmante y a Prime Production Media LLC. El email de confirmación incluye la huella SHA-256 del archivo PDF para verificar que no fue modificado. Firma electrónica conforme a la ley federal ESIGN (15 U.S.C. § 7001 y ss.) y a la Ley Uniforme de Transacciones Electrónicas de Florida (§ 668.50, Estatutos de Florida).', fontSize: 8, color: '#555', margin: [0, 10, 0, 0]});
     return {
       pageSize: 'LETTER', pageMargins: [54, 54, 54, 54], content: body,
-      defaultStyle: {fontSize: 9.6, lineHeight: 1.25, color: B},
-      styles: {title: {fontSize: 17, bold: true, margin: [0, 0, 0, 4]}, h: {fontSize: 9.6, bold: true, margin: [0, 10, 0, 4], characterSpacing: 0.4}, k: {fontSize: 7.5, bold: true, characterSpacing: 1}},
+      defaultStyle: {fontSize: 9.6, lineHeight: 1.25, color: B, font: fontsOk ? 'Inter' : 'Roboto'},
+      styles: {title: {fontSize: 17, bold: !fontsOk, font: fontsOk ? 'InterBlack' : 'Roboto', margin: [0, 0, 0, 4]}, h: {fontSize: 9.6, bold: true, margin: [0, 10, 0, 4], characterSpacing: 0.4}, k: {fontSize: 7.5, bold: true, characterSpacing: 1}},
       footer: (cur, tot) => ({columns: [{text: `${C.doc} · Prime Production Media LLC`, fontSize: 7, color: '#888'}, {text: `Página ${cur} de ${tot}`, alignment: 'right', fontSize: 7, color: '#888'}], margin: [54, 16, 54, 0]}),
       pageBreakBefore: (node, after) => node.headlineLevel === 1 && after.length === 0,
       info: {title: `${C.doc} · ${C.titulo}`, author: 'Prime Production Media LLC', subject: `Contrato con ${C.cliente.nombre}`},
     };
   }
-  const pdfBuffer = (def) => new Promise((res) => pdfMake.createPdf(def).getBuffer((b) => res(b)));
+  /* letra de la marca (Inter) para el PDF */
   const b64 = (u8) => { let s = ''; for (let i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000)); return btoa(s); };
+  const INTER = {
+    r: 'https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf',
+    b: 'https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf',
+    k: 'https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuBWYMZg.ttf',
+  };
+  let fontsOk = false;
+  const fontsReady = (async () => {
+    try {
+      const get = async (u) => b64(new Uint8Array(await (await fetch(u)).arrayBuffer()));
+      const [r, b, k] = await Promise.all([get(INTER.r), get(INTER.b), get(INTER.k)]);
+      Object.assign(pdfMake.vfs, {'Inter-Regular.ttf': r, 'Inter-Bold.ttf': b, 'Inter-Black.ttf': k});
+      pdfMake.fonts = Object.assign({}, pdfMake.fonts, {
+        Inter: {normal: 'Inter-Regular.ttf', bold: 'Inter-Bold.ttf', italics: 'Inter-Regular.ttf', bolditalics: 'Inter-Bold.ttf'},
+        InterBlack: {normal: 'Inter-Black.ttf', bold: 'Inter-Black.ttf', italics: 'Inter-Black.ttf', bolditalics: 'Inter-Black.ttf'},
+        Roboto: (pdfMake.fonts && pdfMake.fonts.Roboto) || {normal: 'Roboto-Regular.ttf', bold: 'Roboto-Medium.ttf', italics: 'Roboto-Italic.ttf', bolditalics: 'Roboto-MediumItalic.ttf'},
+      });
+      fontsOk = true;
+    } catch (e) { fontsOk = false; }
+  })();
+  const pdfBuffer = (def) => new Promise((res) => pdfMake.createPdf(def).getBuffer((b) => res(b)));
   const ov = (html) => { $('#ovBox').innerHTML = html; $('#ov').hidden = !html; };
 
   async function getIp() { try { const c = new AbortController(); setTimeout(() => c.abort(), 2500); const r = await fetch('https://api.ipify.org?format=json', {signal: c.signal}); return (await r.json()).ip; } catch (e) { return ''; } }
@@ -232,6 +252,7 @@
       const now = new Date();
       const fingerprint = await sha(JSON.stringify({doc: C.doc, version: C.version, titulo: C.titulo, proveedor: C.proveedor, cliente: C.cliente, clausulas: C.clausulas, pagos: C.pagos, campos: campos()}));
       const audit = {fingerprint, firmadoISO: now.toISOString(), firmadoLargo: ahoraLargo(now), tz: Intl.DateTimeFormat().resolvedOptions().timeZone || '', ip: await getIp(), ua: navigator.userAgent.slice(0, 240)};
+      await Promise.race([fontsReady, new Promise((r) => setTimeout(r, 6000))]);
       const buf = await pdfBuffer(pdfDef(firmaImg, audit));
       const pdfHash = await sha(buf);
       const res = await api({action: 'sign', token: S.token, pdf: b64(buf), pdfHash, fingerprint, signer: {name: S.nom, title: S.car, company: C.cliente.nombre}, fields: campos(), meta: {ip: audit.ip, ua: audit.ua, tz: audit.tz, clientTime: audit.firmadoISO, metodo: S.modo}});
